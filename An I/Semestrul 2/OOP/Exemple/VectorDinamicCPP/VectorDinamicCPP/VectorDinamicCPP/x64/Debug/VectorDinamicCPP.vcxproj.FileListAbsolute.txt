@@ -1,0 +1,2 @@
+D:\UBB-FMI\An I\Sem II\OOP\Exemple\VectorDinamicCPP\VectorDinamicCPP\x64\Debug\VectorDinamicCPP.exe.lastcodeanalysissucceeded
+D:\UBB-FMI\An I\Sem II\OOP\Exemple\VectorDinamicCPP\VectorDinamicCPP\VectorDinamicCPP\x64\Debug\NativeCodeAnalysis.read.1.tlog
