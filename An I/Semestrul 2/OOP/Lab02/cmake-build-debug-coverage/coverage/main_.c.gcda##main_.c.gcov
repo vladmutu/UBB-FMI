@@ -1,0 +1,25 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab02/main_.c
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\main_.c.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\main_.c.gcda
+        -:    0:Runs:1
+        -:    1:/*
+        -:    2: * main source file
+        -:    3: */
+        -:    4:#define _CRTDBG_MAP_ALLOC
+        -:    5:#include <stdlib.h>
+        -:    6:#include <crtdbg.h>
+        -:    7:
+        -:    8:#include "ui.h"
+        -:    9:#include "tests.h"
+        -:   10:/*
+        -:   11: *main file
+        -:   12: */
+function main called 1 returned 100% blocks executed 100%
+        1:   13:int main() {
+        1:   14:    runAllTests();
+        1:   14-block  0
+call    0 returned 1
+        -:   15:    //run();
+        -:   16:    _CrtDumpMemoryLeaks();
+        1:   17:    return 0;
+        -:   18:}

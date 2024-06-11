@@ -1,0 +1,594 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab02/tests.c
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\tests.c.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\tests.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 3/13/2024.
+        -:    3://source file pentru functiile de test
+        -:    4:
+        -:    5:#include "tests.h"
+        -:    6:#include "electronic.h"
+        -:    7:#include "electronicrepository.h"
+        -:    8:#include "electronicservice.h"
+        -:    9:#include "assert.h"
+        -:   10:#include "string.h"
+        -:   11:#include <stdio.h>
+        -:   12:
+        -:   13:/*
+        -:   14: * functie de test pentru crearea unui electrocasnic
+        -:   15: */
+function testCreateElectronic called 1 returned 100% blocks executed 70%
+        1:   16:void testCreateElectronic()
+        -:   17:{
+        -:   18:    Electronic elem;
+        1:   19:    int ID = 1;
+        1:   20:    char type[] = "masina";
+        1:   21:    char producer[] = "Renault";
+        1:   22:    char model[] = "Clio";
+        1:   23:    int price = 4500;
+        1:   24:    int quantity = 5;
+        1:   25:    elem = createElectronic(ID, type, producer, model, price, quantity);
+        1:   25-block  0
+call    0 returned 1
+       1*:   26:    assert(elem.ID == ID);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   26-block  0
+call    2 never executed
+        1:   26-block  1
+       1*:   27:    assert(strcmp(elem.type, type) == 0);
+        1:   27-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   27-block  1
+call    2 never executed
+        1:   27-block  2
+       1*:   28:    assert(strcmp(elem.producer, producer) == 0);
+        1:   28-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   28-block  1
+call    2 never executed
+        1:   28-block  2
+       1*:   29:    assert(strcmp(elem.model, model) == 0);
+        1:   29-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   29-block  1
+call    2 never executed
+        1:   29-block  2
+       1*:   30:    assert(elem.price == price);
+        1:   30-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   30-block  1
+call    2 never executed
+        1:   30-block  2
+       1*:   31:    assert(elem.quantity == quantity);
+        1:   31-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   31-block  1
+call    2 never executed
+        1:   31-block  2
+        1:   32:}
+        -:   33:
+        -:   34:/*
+        -:   35: * functie de test pentru validator electrocasnic
+        -:   36: */
+function testValidateElectronic called 1 returned 100% blocks executed 81%
+        1:   37:void testValidateElectronic()
+        -:   38:{
+        -:   39:    Electronic elem;
+        1:   40:    int ID = 1;
+        1:   41:    char type[] = "";
+        1:   42:    char producer[] = "Renault";
+        1:   43:    char model[] = "Clio";
+        1:   44:    int price = 4500;
+        1:   45:    int quantity = 5;
+        1:   46:    elem = createElectronic(ID, type, producer, model, price, quantity);
+        1:   46-block  0
+call    0 returned 1
+       1*:   47:    assert(validateElectronic(elem) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   47-block  0
+call    3 never executed
+        1:   47-block  1
+        1:   48:    char type1[] = "masina";
+        1:   49:    char producer1[] = "";
+        1:   50:    elem = createElectronic(ID, type1, producer1, model, price, quantity);
+        1:   50-block  0
+call    0 returned 1
+       1*:   51:    assert(validateElectronic(elem) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   51-block  0
+call    3 never executed
+        1:   51-block  1
+        1:   52:    char producer2[] = "Renault";
+        1:   53:    char model1[] = "";
+        1:   54:    elem = createElectronic(ID, type1, producer2, model1, price, quantity);
+        1:   54-block  0
+call    0 returned 1
+       1*:   55:    assert(validateElectronic(elem) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   55-block  0
+call    3 never executed
+        1:   55-block  1
+        1:   56:    char type3[] = "masina";
+        1:   57:    char producer3[] = "Renault";
+        1:   58:    char model3[] = "Clio";
+        1:   59:    elem = createElectronic(ID, type3, producer3, model3, price, quantity);
+        1:   59-block  0
+call    0 returned 1
+       1*:   60:    assert(validateElectronic(elem) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   60-block  0
+call    3 never executed
+        1:   60-block  1
+        1:   61:    ID = -1;
+        1:   62:    elem = createElectronic(ID, type3, producer3, model3, price, quantity);
+        1:   62-block  0
+call    0 returned 1
+       1*:   63:    assert(validateElectronic(elem) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   63-block  0
+call    3 never executed
+        1:   63-block  1
+        1:   64:    ID = 1;
+        1:   65:    price = -1;
+        1:   66:    elem = createElectronic(ID, type3, producer3, model3, price, quantity);
+        1:   66-block  0
+call    0 returned 1
+       1*:   67:    assert(validateElectronic(elem) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   67-block  0
+call    3 never executed
+        1:   67-block  1
+        1:   68:    price = 4500;
+        1:   69:    quantity = -1;
+        1:   70:    elem = createElectronic(ID, type3, producer3, model3, price, quantity);
+        1:   70-block  0
+call    0 returned 1
+       1*:   71:    assert(validateElectronic(elem) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   71-block  0
+call    3 never executed
+        1:   71-block  1
+        1:   72:}
+        -:   73:
+        -:   74:/*
+        -:   75: * functie de test pentru adaugarea in repo a unui electrocasnic
+        -:   76: */
+function testAdd called 1 returned 100% blocks executed 91%
+        1:   77:void testAdd()
+        -:   78:{
+        1:   79:    MyList *Electronice = createEmpty();
+        1:   79-block  0
+call    0 returned 1
+        1:   80:    testResize();
+call    0 returned 1
+        1:   81:    Electronic elem1 = createElectronic(1, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   82:    Electronic elem2 = createElectronic(2, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   83:    Electronic elem3 = createElectronic(3, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   84:    Electronic elem4 = createElectronic(4, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   85:    Electronic elem5 = createElectronic(5, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   86:    Electronic elem6 = createElectronic(6, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   87:    Electronic elem7 = createElectronic(7, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   88:    Electronic elem8 = createElectronic(8, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   89:    Electronic elem9 = createElectronic(9, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   90:    Electronic elem10 = createElectronic(10, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:   91:    Electronic elem11 = createElectronic(11, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+       1*:   92:    assert(Electronice->lg == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   92-block  0
+call    2 never executed
+        1:   92-block  1
+        1:   93:    add(Electronice, elem1);
+        1:   93-block  0
+call    0 returned 1
+        1:   94:    add(Electronice, elem2);
+call    0 returned 1
+        1:   95:    add(Electronice, elem3);
+call    0 returned 1
+        1:   96:    add(Electronice, elem4);
+call    0 returned 1
+        1:   97:    add(Electronice, elem5);
+call    0 returned 1
+        1:   98:    add(Electronice, elem6);
+call    0 returned 1
+        1:   99:    add(Electronice, elem7);
+call    0 returned 1
+        1:  100:    add(Electronice, elem8);
+call    0 returned 1
+        1:  101:    add(Electronice, elem9);
+call    0 returned 1
+        1:  102:    add(Electronice, elem10);
+call    0 returned 1
+        1:  103:    add(Electronice, elem11);
+call    0 returned 1
+       1*:  104:    assert(Electronice->lg == 11);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  104-block  0
+call    2 never executed
+        1:  104-block  1
+       1*:  105:    assert(Electronice->capacity == 20);
+        1:  105-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  105-block  1
+call    2 never executed
+        1:  105-block  2
+        1:  106:}
+        -:  107:
+        -:  108:/*
+        -:  109: * functie de test pentru marirea dimeansiunii vectorului dinamic
+        -:  110: */
+function testResize called 2 returned 100% blocks executed 82%
+        2:  111:void testResize()
+        -:  112:{
+        2:  113:    MyList *Electronice = createEmpty();
+        2:  113-block  0
+call    0 returned 2
+        2:  114:    Electronic elem = createElectronic(1, "masina", "renault", "clio", 4500, 15);
+call    0 returned 2
+       2*:  115:    assert(Electronice->lg == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    %%%%%:  115-block  0
+call    2 never executed
+        2:  115-block  1
+        2:  116:    add(Electronice, elem);
+        2:  116-block  0
+call    0 returned 2
+        2:  117:    resize(Electronice);
+call    0 returned 2
+       2*:  118:    assert(Electronice->capacity == 20);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    %%%%%:  118-block  0
+call    2 never executed
+        2:  118-block  1
+        2:  119:}
+        -:  120:
+        -:  121:/*
+        -:  122: *functie de test pentru crearea unei liste
+        -:  123: * care sa fie goala
+        -:  124: */
+function testCreateEmpty called 1 returned 100% blocks executed 75%
+        1:  125:void testCreateEmpty()
+        -:  126:{
+        1:  127:    MyList * Electronics = createEmpty();
+        1:  127-block  0
+call    0 returned 1
+       1*:  128:    assert(Electronics != NULL);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  128-block  0
+call    2 never executed
+        1:  128-block  1
+       1*:  129:    assert(Electronics->lg == 0);
+        1:  129-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  129-block  1
+call    2 never executed
+        1:  129-block  2
+        1:  130:}
+        -:  131:
+        -:  132:/*
+        -:  133: * functie de test pentru stergerea unui element din lista de electrocasnice
+        -:  134: */
+function testDelete called 1 returned 100% blocks executed 74%
+        1:  135:void testDelete()
+        -:  136:{
+        1:  137:    MyList * Electronics = createEmpty();
+        1:  137-block  0
+call    0 returned 1
+        1:  138:    Electronic elem1 = createElectronic(1, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:  139:    Electronic elem2 = createElectronic(2, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:  140:    add(Electronics, elem1);
+call    0 returned 1
+        1:  141:    add(Electronics, elem2);
+call    0 returned 1
+       1*:  142:    assert(Electronics->lg == 2);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  142-block  0
+call    2 never executed
+        1:  142-block  1
+        1:  143:    delete(Electronics, 0);
+        1:  143-block  0
+call    0 returned 1
+       1*:  144:    assert(Electronics->lg == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  144-block  0
+call    2 never executed
+        1:  144-block  1
+       1*:  145:    assert(Electronics->elems[0].ID == elem2.ID);
+        1:  145-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  145-block  1
+call    2 never executed
+        1:  145-block  2
+       1*:  146:    assert(strcmp(Electronics->elems[0].type, elem2.type) == 0);
+        1:  146-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  146-block  1
+call    2 never executed
+        1:  146-block  2
+       1*:  147:    assert(strcmp(Electronics->elems[0].producer, elem2.producer) == 0);
+        1:  147-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  147-block  1
+call    2 never executed
+        1:  147-block  2
+       1*:  148:    assert(strcmp(Electronics->elems[0].model, elem2.model) == 0);
+        1:  148-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  148-block  1
+call    2 never executed
+        1:  148-block  2
+       1*:  149:    assert(Electronics->elems[0].price == elem2.price);
+        1:  149-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  149-block  1
+call    2 never executed
+        1:  149-block  2
+       1*:  150:    assert(Electronics->elems[0].quantity == elem2.quantity);
+        1:  150-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  150-block  1
+call    2 never executed
+        1:  150-block  2
+        1:  151:}
+        -:  152:
+        -:  153:/*
+        -:  154: * functie de test pentru service adaugare electrocasnic
+        -:  155: */
+function testAddElectronicService called 1 returned 100% blocks executed 80%
+        1:  156:void testAddElectronicService()
+        -:  157:{
+        1:  158:    MyList *Electronics = createEmpty();
+        1:  158-block  0
+call    0 returned 1
+       1*:  159:    assert(addElectronicService(Electronics, 1, "masina", "renault", "clio", 4500, 15) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  159-block  0
+call    3 never executed
+        1:  159-block  1
+       1*:  160:    assert(addElectronicService(Electronics, 1, "masina", "renault", "", 4500, 15) == 1);
+        1:  160-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  160-block  1
+call    3 never executed
+        1:  160-block  2
+        1:  161:}
+        -:  162:
+        -:  163:/*
+        -:  164: * functie de test service pentru actualizarea unui element din lista
+        -:  165: */
+function testUpdateElectronicService called 1 returned 100% blocks executed 78%
+        1:  166:void testUpdateElectronicService()
+        -:  167:{
+        1:  168:    MyList *Electronics = createEmpty();
+        1:  168-block  0
+call    0 returned 1
+        1:  169:    Electronic elem1 = createElectronic(1, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:  170:    add(Electronics, elem1);
+call    0 returned 1
+        1:  171:    updateElectronicService(Electronics, 1, 4600, 15);
+call    0 returned 1
+       1*:  172:    assert(Electronics->elems[0].price == 4600);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  172-block  0
+call    2 never executed
+        1:  172-block  1
+       1*:  173:    assert(Electronics->elems[0].quantity == 15);
+        1:  173-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  173-block  1
+call    2 never executed
+        1:  173-block  2
+        1:  174:    updateElectronicService(Electronics, 1, 4600, -1);
+        1:  174-block  0
+call    0 returned 1
+       1*:  175:    assert(Electronics->elems[0].quantity == 15);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  175-block  0
+call    2 never executed
+        1:  175-block  1
+        1:  176:    updateElectronicService(Electronics, 1, -1, 15);
+        1:  176-block  0
+call    0 returned 1
+       1*:  177:    assert(Electronics->elems[0].price == 4600);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  177-block  0
+call    2 never executed
+        1:  177-block  1
+        1:  178:    int error = updateElectronicService(Electronics, 1, 4600, 15);
+        1:  178-block  0
+call    0 returned 1
+       1*:  179:    assert(error == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  179-block  0
+call    2 never executed
+        1:  179-block  1
+        1:  180:}
+        -:  181:
+        -:  182:/*
+        -:  183: * functie de test service pentru stergerea unui electrocasnic din lista
+        -:  184: */
+function testDeleteElectronicService called 1 returned 100% blocks executed 82%
+        1:  185:void testDeleteElectronicService()
+        -:  186:{
+        1:  187:    MyList *Electronics = createEmpty();
+        1:  187-block  0
+call    0 returned 1
+        1:  188:    Electronic elem1 = createElectronic(1, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:  189:    add(Electronics, elem1);
+call    0 returned 1
+       1*:  190:    assert(Electronics->lg == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  190-block  0
+call    2 never executed
+        1:  190-block  1
+        1:  191:    deleteElectronicService(Electronics, 1);
+        1:  191-block  0
+call    0 returned 1
+       1*:  192:    assert(Electronics->lg == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  192-block  0
+call    2 never executed
+        1:  192-block  1
+        1:  193:}
+        -:  194:
+        -:  195:/*
+        -:  196: * functie de test pentru actualizarea cantitatii unui electrocasnic
+        -:  197: */
+function testUpdateQuantity called 1 returned 100% blocks executed 79%
+        1:  198:void testUpdateQuantity()
+        -:  199:{
+        1:  200:    MyList *Electronics = createEmpty();
+        1:  200-block  0
+call    0 returned 1
+        1:  201:    Electronic elem1 = createElectronic(1, "masina", "renault", "clio", 4500, 15);
+call    0 returned 1
+        1:  202:    add(Electronics, elem1);
+call    0 returned 1
+       1*:  203:    assert(Electronics->lg == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  203-block  0
+call    2 never executed
+        1:  203-block  1
+        1:  204:    updateQuantity(Electronics, 1, 4);
+        1:  204-block  0
+call    0 returned 1
+       1*:  205:    assert(Electronics->elems[0].quantity == 19);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  205-block  0
+call    2 never executed
+        1:  205-block  1
+        1:  206:    updateQuantity(Electronics, 1, 4);
+        1:  206-block  0
+call    0 returned 1
+       1*:  207:    assert(Electronics->elems[0].quantity == 23);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  207-block  0
+call    2 never executed
+        1:  207-block  1
+        1:  208:    updateQuantity(Electronics, 1, -4);
+        1:  208-block  0
+call    0 returned 1
+       1*:  209:    assert(Electronics->elems[0].quantity == 19);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  209-block  0
+call    2 never executed
+        1:  209-block  1
+        1:  210:}
+        -:  211:
+        -:  212:/*
+        -:  213: * functie de test pentru destroy
+        -:  214: */
+function testDestroy called 1 returned 100% blocks executed 83%
+        1:  215:void testDestroy()
+        -:  216:{
+        1:  217:    MyList *Electronics = createEmpty();
+        1:  217-block  0
+call    0 returned 1
+        1:  218:    destroy(Electronics);
+call    0 returned 1
+       1*:  219:    assert(Electronics);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  219-block  0
+call    2 never executed
+        1:  219-block  1
+        1:  220:}
+        -:  221:
+        -:  222:/*
+        -:  223: * functie de rularea a tuturor testelor
+        -:  224: */
+function runAllTests called 1 returned 100% blocks executed 100%
+        1:  225:void runAllTests()
+        -:  226:{
+        1:  227:    printf("Rularea testelor a inceput.......\n");
+        1:  227-block  0
+call    0 returned 1
+        1:  228:    testCreateElectronic();
+call    0 returned 1
+        1:  229:    testValidateElectronic();
+call    0 returned 1
+        1:  230:    testAdd();
+call    0 returned 1
+        1:  231:    testResize();
+call    0 returned 1
+        1:  232:    testCreateEmpty();
+call    0 returned 1
+        1:  233:    testDelete();
+call    0 returned 1
+        1:  234:    testAddElectronicService();
+call    0 returned 1
+        1:  235:    testUpdateElectronicService();
+call    0 returned 1
+        1:  236:    testDeleteElectronicService();
+call    0 returned 1
+        1:  237:    testUpdateQuantity();
+call    0 returned 1
+        1:  238:    testDestroy();
+call    0 returned 1
+        1:  239:    printf("......Testele au rulat cu succes\n");
+call    0 returned 1
+        1:  240:}

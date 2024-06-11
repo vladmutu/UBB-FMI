@@ -1,0 +1,82 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab02/electronic.c
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\electronic.c.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\electronic.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 3/12/2024.
+        -:    3://source file pentru domain unde se defineste TAD electrocasnice
+        -:    4:#include "electronic.h"
+        -:    5:#include <string.h>
+        -:    6:#include <stdlib.h>
+        -:    7:
+        -:    8:/*
+        -:    9: * functie de creare a unui electrocasnic
+        -:   10: */
+function createElectronic called 28 returned 100% blocks executed 100%
+       28:   11:Electronic createElectronic(int ID, char* type, char* producer, char* model, int price, int quantity)
+        -:   12:{
+        -:   13:    Electronic elem;
+       28:   14:    elem.ID = ID;
+       28:   15:    int nr_caracters = (int)strlen(type) + 1;
+       28:   16:    elem.type = (char*)malloc(nr_caracters * sizeof(char));
+       28:   17:    strcpy_s(elem.type, nr_caracters, type);
+       28:   17-block  0
+call    0 returned 28
+       28:   18:    nr_caracters = (int) strlen(producer) + 1;
+       28:   19:    elem.producer = (char*)malloc(nr_caracters * sizeof(char));
+       28:   20:    strcpy_s(elem.producer, nr_caracters, producer);
+call    0 returned 28
+       28:   21:    nr_caracters = (int) strlen(model) + 1;
+       28:   22:    elem.model = (char*)malloc(nr_caracters * sizeof(char));
+       28:   23:    strcpy_s(elem.model, nr_caracters, model);
+call    0 returned 28
+       28:   24:    elem.price = price;
+       28:   25:    elem.quantity = quantity;
+       28:   26:    return elem;
+        -:   27:}
+        -:   28:
+        -:   29:/*
+        -:   30: * functie de validare a unui electrocasnic
+        -:   31: */
+function validateElectronic called 9 returned 100% blocks executed 100%
+        9:   32:int validateElectronic(Electronic elem)
+        -:   33:{
+        9:   34:    if(elem.ID < 0)
+        9:   34-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 8
+        1:   35:        return 1;
+        1:   35-block  0
+        8:   36:    if(strlen(elem.type) == 0)
+        8:   36-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 7
+        1:   37:        return 1;
+        1:   37-block  0
+        7:   38:    if(strlen(elem.producer) == 0)
+        7:   38-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 6
+        1:   39:        return 1;
+        1:   39-block  0
+        6:   40:    if(strlen(elem.model) == 0)
+        6:   40-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 4
+        2:   41:        return 1;
+        2:   41-block  0
+        4:   42:    if(elem.price < 0)
+        4:   42-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:   43:        return 1;
+        1:   43-block  0
+        3:   44:    if(elem.quantity < 0)
+        3:   44-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   45:        return 1;
+        1:   45-block  0
+        2:   46:    return 0;
+        2:   46-block  0
+        -:   47:}
