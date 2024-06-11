@@ -1,0 +1,23 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; our data is declared here (the variables needed by our program)
+     4                                  segment data use32 class=data
+     5                                      ; ...
+     6                                  
+     7                                  ; our code starts here
+     8                                  segment code use32 class=code
+     9                                      global verificare_cifra
+    10                                      verificare_cifra:
+    11                                          ; ...
+    12 00000000 8B442404                        mov eax, [esp+4]
+    13 00000004 2D33300000                      sub eax, '30'
+    14 00000009 83F80A                          cmp eax, 10
+    15 0000000C 7D07                            jnl nu_e
+    16 0000000E 83F800                          cmp eax, 0
+    17 00000011 7E02                            jng nu_e
+    18 00000013 EB02                            jmp e
+    19                                          nu_e:
+    20 00000015 6A00                            push 0
+    21                                          e:
+    22 00000017 6A01                            push 1
+    23 00000019 C20400                          ret 4

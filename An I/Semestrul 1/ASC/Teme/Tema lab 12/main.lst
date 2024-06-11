@@ -1,0 +1,70 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf              ; tell nasm that exit exists even if we won't be defining it
+     8                                  extern concatenare
+     9                                  extern afisare
+    10                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    11                                  import printf msvcrt.dll
+    12                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    13                                  
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16                                      ; ...
+    17 00000000 616263316432                a db 'a', 'b', 'c', '1', 'd', '2'
+    18 00000006 06000000                    lena dd $-a
+    19 0000000A 65663334673568              b db 'e', 'f', '3', '4', 'g', '5', 'h'
+    20 00000011 07000000                    lenb dd $-b
+    21 00000015 00<rept>                    rez times 100 db 0
+    22 00000079 2564000000000000            format dd "%d", 0
+    23 00000081 0A0000000D00000000-         format_endl dd 10, 13, 0
+    23 0000008A 000000             
+    24                                  ; our code starts here
+    25                                  segment code use32 class=code
+    26                                      start:
+    27                                          ; ...
+    28                                          ;esi -> offset-ul sirului la care se va concatena cel de-al doilea sir
+    29                                          ;edi -> offset-ul sirului care va fi concatenat
+    30 00000000 BE[00000000]                    mov esi, a
+    31 00000005 BF[0A000000]                    mov edi, b
+    32 0000000A FF35[06000000]                  push dword [lena]
+    33 00000010 FF35[11000000]                  push dword [lenb]   
+    34 00000016 57                              push edi
+    35 00000017 56                              push esi
+    36 00000018 68[15000000]                    push dword rez
+    37 0000001D E8(00000000)                    call concatenare
+    38                                          
+    39 00000022 A1[06000000]                    mov eax, [lena]
+    40 00000027 0305[11000000]                  add eax, [lenb]
+    41                                          
+    42 0000002D 68[15000000]                    push dword rez
+    43 00000032 50                              push eax
+    44 00000033 E8(00000000)                    call afisare
+    45                                          
+    46 00000038 68[81000000]                    push dword format_endl
+    47 0000003D FF15[00000000]                  call [printf]
+    48 00000043 83C404                          add esp, 4
+    49                                          
+    50 00000046 BF[00000000]                    mov edi, a
+    51 0000004B BE[0A000000]                    mov esi, b
+    52                                          
+    53 00000050 FF35[11000000]                  push dword [lenb]
+    54 00000056 FF35[06000000]                  push dword [lena]   
+    55 0000005C 57                              push edi
+    56 0000005D 56                              push esi
+    57 0000005E 68[15000000]                    push dword rez
+    58 00000063 E8(00000000)                    call concatenare
+    59                                          
+    60 00000068 A1[06000000]                    mov eax, [lena]
+    61 0000006D 0305[11000000]                  add eax, [lenb]
+    62                                          
+    63 00000073 68[15000000]                    push dword rez
+    64 00000078 50                              push eax
+    65 00000079 E8(00000000)                    call afisare
+    66                                          
+    67                                          ; exit(0)
+    68 0000007E 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    69 00000080 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

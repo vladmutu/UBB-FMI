@@ -1,0 +1,45 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 70                          a db 112
+    15 00000001 70                          b db 112
+    16 00000002 70                          c db 112
+    17 00000003 70                          d db 112
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ; ...
+    22                                          ;Dandu-se 4 octeti, sa se obtina in AX suma numerelor intregi reprezentate de bitii 4-6 ai celor 4 octeti.
+    23 00000000 6683E000                        and ax,0000h;zeroizam registrii
+    24 00000004 6683E300                        and bx,0000h;zeroizam registrii
+    25 00000008 6683E100                        and cx,0000h;zeroizam registrii
+    26 0000000C 6683E200                        and dx,0000h;zeroizam registrii
+    27 00000010 A0[00000000]                    mov al,[a];al=a
+    28 00000015 8A1D[01000000]                  mov bl,[b];bl=b
+    29 0000001B 8A0D[02000000]                  mov cl,[c];cl=c
+    30 00000021 8A15[03000000]                  mov dl,[d];dl=d
+    31 00000027 2470                            and al, 01110000b ;utilizam masca pentru a ramane doar cu bitii 4-6 al=01110000b
+    32 00000029 80E370                          and bl, 01110000b ;utilizam masca pentru a ramane doar cu bitii 4-6 bl=01110000b
+    33 0000002C 80E170                          and cl, 01110000b ;utilizam masca pentru a ramane doar cu bitii 4-6 cl=01110000b
+    34 0000002F 80E270                          and dl, 01110000b ;utilizam masca pentru a ramane doar cu bitii 4-6 dl=01110000b
+    35 00000032 C0E804                          shr al,4 ;rotim bitii spre dreapta pentru a obtine numarul intreg format din bitii 4-6 aflati pe primele pozitii al=00000111b
+    36 00000035 C0EB04                          shr bl,4 ;rotim bitii spre dreapta pentru a obtine numarul intreg format din bitii 4-6 aflati pe primele pozitii bl=00000111b
+    37 00000038 C0E904                          shr cl,4 ;rotim bitii spre dreapta pentru a obtine numarul intreg format din bitii 4-6 aflati pe primele pozitii cl=00000111b
+    38 0000003B C0EA04                          shr dl,4 ;rotim bitii spre dreapta pentru a obtine numarul intreg format din bitii 4-6 aflati pe primele pozitii dl=00000111b
+    39 0000003E 6601D8                          add ax,bx ;adaugam numerele intregi in ax
+    40 00000041 6601C8                          add ax,cx ;adaugam numerele intregi in ax
+    41 00000044 6601D0                          add ax,dx ;adaugam numerele intregi in ax
+    42                                          ;rezultatul se afla in ax = 001Ch
+    43                                          ; exit(0)
+    44 00000047 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    45 00000049 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

@@ -1,0 +1,36 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14                                      ;Se da un sir de octeti S de lungime l. Sa se construiasca sirul D de lungime l-1 astfel incat elementele din D sa reprezinte diferenta dintre fiecare 2 elemente consecutive din S
+    15 00000000 010204060A1419              s db 1, 2, 4, 6, 10, 20, 25
+    16                                      L equ $-s
+    17 00000007 00<rept>                    d times L-1 db 0
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ; ...
+    22 00000000 B906000000                      mov ecx,L-1 ;bucla se va repeta doar de L-1 ori pentru ca doar atatea diferente se executa si aceasta va fi lungimea sirului d
+    23 00000005 BE00000000                      mov esi,0
+    24 0000000A E317                            jecxz final
+    25                                          repeta:
+    26 0000000C 8A86[01000000]                      mov al,[s+esi+1] 
+    27 00000012 8A9E[00000000]                      mov bl,[s+esi];punem in al valoarea din s din care se va scadea valoarea anterioara din s
+    28 00000018 28D8                                sub al,bl;punem in al diferenta celor doua valori consecutive
+    29 0000001A 8886[07000000]                      mov [d+esi],al ;punem in sirul d rezultatul
+    30 00000020 46                                  inc esi 
+    31 00000021 E2E9                            loop repeta 
+    32                                          final:
+    33                                          ;d[i]=s[i+1]-s[i]
+    34                                          ; exit(0)
+    35 00000023 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    36 00000025 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
