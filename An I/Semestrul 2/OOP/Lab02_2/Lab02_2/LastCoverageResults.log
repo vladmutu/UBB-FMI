@@ -1,0 +1,21 @@
+[2024-03-25 22:20:29] [info] Start Program:
+Path:"D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\x64\Debug\Lab02_2.exe"
+Arguments:
+Working directory: "D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2\"
+Modules: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\x64\Debug\Lab02_2.exe Excluded: 
+Sources: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\vladm\AppData\Local\Temp\vflvid32.0wk 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2024-03-25 22:20:29] [info] Module: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\x64\Debug\Lab02_2.exe is selected because it matches selected pattern: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\x64\Debug\Lab02_2.exe
+[2024-03-25 22:20:29] [info] ----------------------------------------------------
+[2024-03-25 22:20:29] [info] Coverage binary generated in file: C:\Users\vladm\AppData\Local\Temp\vflvid32.0wk
+[2024-03-25 22:20:29] [info] ----------------------------------------------------
