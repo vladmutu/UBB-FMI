@@ -1,0 +1,21 @@
+[2024-03-30 17:43:16] [info] Start Program:
+Path:"D:\UBB-FMI\An I\Sem II\OOP\Lab\OOP_lab_2-4_Clementina_Moisa\x64\Debug\OOP_lab_2-4_Clementina_Moisa.exe"
+Arguments:
+Working directory: "D:\UBB-FMI\An I\Sem II\OOP\Lab\OOP_lab_2-4_Clementina_Moisa\OOP_lab_2-4_Clementina_Moisa\"
+Modules: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\OOP_lab_2-4_Clementina_Moisa\x64\Debug\OOP_lab_2-4_Clementina_Moisa.exe Excluded: 
+Sources: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\OOP_lab_2-4_Clementina_Moisa\OOP_lab_2-4_Clementina_Moisa Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\vladm\AppData\Local\Temp\5px3lite.mxc 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2024-03-30 17:43:16] [info] Module: D:\UBB-FMI\An I\Sem II\OOP\Lab\OOP_lab_2-4_Clementina_Moisa\x64\Debug\OOP_lab_2-4_Clementina_Moisa.exe is selected because it matches selected pattern: D:\UBB-FMI\An I\Sem II\OOP\Lab\OOP_lab_2-4_Clementina_Moisa\x64\Debug\OOP_lab_2-4_Clementina_Moisa.exe
+[2024-03-30 17:43:30] [info] ----------------------------------------------------
+[2024-03-30 17:43:30] [info] Coverage binary generated in file: C:\Users\vladm\AppData\Local\Temp\ibtpj032.ez1
+[2024-03-30 17:43:30] [info] ----------------------------------------------------
