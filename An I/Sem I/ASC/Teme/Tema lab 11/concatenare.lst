@@ -1,0 +1,54 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture     
+     2                                  
+     3                                  extern verificare_cifra
+     4                                  
+     5                                  segment code use32 class=code
+     6                                      global concatenare
+     7                                      concatenare:
+     8                                          ; ...
+     9 00000000 8B7C2404                        mov edi, [esp + 4] ;rez
+    10 00000004 8B742408                        mov esi, [esp + 8] ;offset-ul primului sir
+    11 00000008 8B54240C                        mov edx, [esp + 12] ;offset-ul celui de-al doilea sir
+    12 0000000C 8B5C2410                        mov ebx, [esp + 16] ;lungimea celui de-al doilea sir
+    13 00000010 8B4C2414                        mov ecx, [esp + 20] ;lungimea primului sir
+    14                                          
+    15 00000014 E334                            jecxz final
+    16                                          
+    17 00000016 FC                              cld
+    18                                          ;adaugam primul sir
+    19 00000017 E214                        loop repeta_1
+    20                                          
+    21 00000019 51                              push ecx
+    22 0000001A B800000000                      mov eax, 0
+    23 0000001F AC                              lodsb ; al caracterul
+    24 00000020 E8(00000000)                    call verificare_cifra ;verificam daca e cifra zecimala
+    25 00000025 59                              pop ecx
+    26 00000026 83F900                          cmp ecx, 0
+    27 00000029 7401                            je next_1
+    28 0000002B AA                              stosb ;punem in rez octetul din al daca e cifra zecimala
+    29                                          next_1:
+    30 0000002C 59                              pop ecx
+    31                                          repeta_1:
+    32                                          
+    33                                          ;adaugam al doilea sir
+    34 0000002D 89D6                            mov esi, edx
+    35 0000002F 89D9                            mov ecx, ebx
+    36 00000031 E317                            jecxz final
+    37                                          
+    38 00000033 FC                              cld
+    39 00000034 E214                        loop repeta_2
+    40                                          
+    41 00000036 51                              push ecx
+    42 00000037 B800000000                      mov eax, 0
+    43 0000003C AC                              lodsb ; al caracterul
+    44 0000003D E8(00000000)                    call verificare_cifra ;verificam daca e cifra zecimala
+    45 00000042 59                              pop ecx
+    46 00000043 83F900                          cmp ecx, 0
+    47 00000046 7401                            je next_2
+    48 00000048 AA                              stosb ;punem in rez octetul din al daca e cifra zecimala
+    49                                          next_2:
+    50 00000049 59                              pop ecx
+    51                                          repeta_2:
+    52                                          
+    53                                          final:
+    54 0000004A C21000                          ret 4*4

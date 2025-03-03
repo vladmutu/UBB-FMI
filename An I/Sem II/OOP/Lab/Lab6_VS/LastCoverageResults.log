@@ -1,0 +1,21 @@
+[2024-04-17 10:47:56] [info] Start Program:
+Path:"D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6_VS\x64\Debug\Lab6_VS.exe"
+Arguments:
+Working directory: "D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6_VS\"
+Modules: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6_VS\x64\Debug\Lab6_VS.exe Excluded: 
+Sources: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6_VS Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\vladm\AppData\Local\Temp\gvczwuf2.heo 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2024-04-17 10:47:56] [info] Module: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6_VS\x64\Debug\Lab6_VS.exe is selected because it matches selected pattern: D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6_VS\x64\Debug\Lab6_VS.exe
+[2024-04-17 10:47:56] [info] ----------------------------------------------------
+[2024-04-17 10:47:56] [info] Coverage binary generated in file: C:\Users\vladm\AppData\Local\Temp\gvczwuf2.heo
+[2024-04-17 10:47:56] [info] ----------------------------------------------------

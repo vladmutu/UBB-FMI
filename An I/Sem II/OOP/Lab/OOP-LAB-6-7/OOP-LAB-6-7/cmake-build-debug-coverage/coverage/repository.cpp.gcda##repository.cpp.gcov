@@ -1,0 +1,1141 @@
+        -:    0:Source:C:/Users/munte/CLionProjects/OOP-LAB-6-7/repository.cpp
+        -:    0:Graph:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\repository.cpp.gcno
+        -:    0:Data:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repository.h"
+        -:    2:#include <assert.h>
+        -:    3:/**
+        -:    4: * Adauga o masina in lista de masini
+        -:    5: * @param m
+        -:    6: */
+function _ZN10MasinaRepo5storeERK6Masina called 17 returned 88% blocks executed 66%
+       17:    7:void MasinaRepo::store(const Masina& m){
+       32:    8:    for (const Masina& M: masini) {
+       17:    8-block  0
+call    0 returned 17
+call    1 returned 17
+       17:    8-block  1
+call    2 returned 17
+       15:    8-block  2
+call    3 returned 15
+       32:    8-block  3
+call    4 returned 32
+branch  5 taken 17
+branch  6 taken 15 (fallthrough)
+       17:    9:        if (M.get_numar_inmatriculare() == m.get_numar_inmatriculare()) {
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:    9-block  0
+call    3 returned 17
+branch  4 taken 17 (fallthrough)
+branch  5 taken 0 (throw)
+       17:    9-block  1
+call    6 returned 17
+call    7 returned 17
+call    8 returned 17
+branch  9 taken 2 (fallthrough)
+branch 10 taken 15
+    $$$$$:    9-block  2
+    $$$$$:    9-block  3
+call   11 never executed
+    $$$$$:    9-block  4
+        6:   10:            throw RepoException("Masina exista deja!\n");
+        2:   10-block  0
+call    0 returned 2
+        2:   10-block  1
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   10-block  2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   10-block  3
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   10-block  4
+call    9 never executed
+    $$$$$:   10-block  5
+    $$$$$:   10-block  6
+    $$$$$:   10-block  7
+call   10 never executed
+        -:   11:        }
+        -:   12:    }
+       15:   13:    masini.push_back(m);
+       15:   13-block  0
+call    0 returned 15
+       15:   14:}
+        -:   15:/**
+        -:   16: * Actualizeaza o masina din lista de masini
+        -:   17: * @param m
+        -:   18: */
+function _ZN10MasinaRepo11actualizareERK6Masina called 4 returned 50% blocks executed 67%
+        4:   19:void MasinaRepo::actualizare(const Masina& m){
+        9:   20:    for (auto& M: masini) {
+        4:   20-block  0
+call    0 returned 4
+call    1 returned 4
+        7:   20-block  1
+call    2 returned 7
+        5:   20-block  2
+call    3 returned 5
+        9:   20-block  3
+call    4 returned 9
+branch  5 taken 7
+branch  6 taken 2 (fallthrough)
+        7:   21:        if (M.get_numar_inmatriculare() == m.get_numar_inmatriculare()) {
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   21-block  0
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+        7:   21-block  1
+call    6 returned 7
+call    7 returned 7
+call    8 returned 7
+branch  9 taken 2 (fallthrough)
+branch 10 taken 5
+    $$$$$:   21-block  2
+    $$$$$:   21-block  3
+call   11 never executed
+    $$$$$:   21-block  4
+        2:   22:            M = m;
+        2:   22-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   23:            return;
+        2:   23-block  0
+        2:   23-block  1
+        -:   24:        }
+        -:   25:    }
+        6:   26:    throw RepoException("Masina nu exista!\n");
+        2:   26-block  0
+call    0 returned 2
+        2:   26-block  1
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   26-block  2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   26-block  3
+call    7 returned 2
+call    8 returned 0
+    $$$$$:   26-block  4
+call    9 never executed
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+call   10 never executed
+        -:   27:}
+        -:   28:/**
+        -:   29: * Sterge o masina din lista de masini
+        -:   30: * @param numar_inmatriculare
+        -:   31: */
+function _ZN10MasinaRepo8stergereERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 50% blocks executed 66%
+        4:   32:void MasinaRepo::stergere(const string& numar_inmatriculare){
+       4*:   33:    for (int i=0;i<masini.size();i++){
+        4:   33-block  0
+    %%%%%:   33-block  1
+        4:   33-block  2
+call    0 returned 4
+branch  1 taken 2
+branch  2 taken 2 (fallthrough)
+        2:   34:        if (masini[i].get_numar_inmatriculare() == numar_inmatriculare){
+        2:   34-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   34-block  1
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0
+    $$$$$:   34-block  2
+call    8 never executed
+        2:   35:            masini.erase(masini.begin()+i);
+        2:   35-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   35-block  1
+    $$$$$:   35-block  2
+    $$$$$:   35-block  3
+call    6 never executed
+        2:   36:            return;
+        2:   36-block  0
+        2:   36-block  1
+        -:   37:        }
+        -:   38:    }
+        6:   39:    throw RepoException("Masina nu exista!\n");
+        2:   39-block  0
+call    0 returned 2
+        2:   39-block  1
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   39-block  2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   39-block  3
+call    7 returned 2
+call    8 returned 0
+    $$$$$:   39-block  4
+call    9 never executed
+    $$$$$:   39-block  5
+    $$$$$:   39-block  6
+    $$$$$:   39-block  7
+call   10 never executed
+        -:   40:}
+        -:   41:
+function _Z8testRepov called 1 returned 100% blocks executed 51%
+        1:   42:void testRepo(){
+        1:   43:    MasinaRepo repo;
+        1:   43-block  0
+call    0 returned 1
+        5:   44:    Masina m1("B123ABC", "Dacia", "mini");
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   44-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   44-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   44-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   44-block  5
+call   15 never executed
+    $$$$$:   44-block  6
+    $$$$$:   44-block  7
+    $$$$$:   44-block  8
+call   16 never executed
+    $$$$$:   44-block  9
+    $$$$$:   44-block 10
+    $$$$$:   44-block 11
+call   17 never executed
+    $$$$$:   44-block 12
+    $$$$$:   44-block 13
+        1:   45:    repo.store(m1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46:    const auto& masini = repo.get_all();
+        1:   46-block  0
+call    0 returned 1
+       1*:   47:    assert(masini.size() == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   47-block  0
+call    3 never executed
+        1:   47-block  1
+       1*:   48:    assert(masini[0].get_numar_inmatriculare() == "B123ABC");
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   48-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   48-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   48-block  3
+call    9 never executed
+        1:   48-block  4
+        1:   48-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   48-block  6
+call   12 returned 1
+    $$$$$:   48-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:   48-block  8
+call   15 never executed
+    $$$$$:   48-block  9
+       1*:   49:    assert(masini[0].get_model() == "Dacia");
+        1:   49-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   49-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   49-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   49-block  3
+call    9 never executed
+        1:   49-block  4
+        1:   49-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   49-block  6
+call   12 returned 1
+    $$$$$:   49-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:   49-block  8
+call   15 never executed
+    $$$$$:   49-block  9
+       1*:   50:    assert(masini[0].get_categorie() == "mini");
+        1:   50-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   50-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   50-block  3
+call    9 never executed
+        1:   50-block  4
+        1:   50-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   50-block  6
+call   12 returned 1
+    $$$$$:   50-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:   50-block  8
+call   15 never executed
+    $$$$$:   50-block  9
+        -:   51:
+        -:   52:    try {
+        1:   53:        repo.store(m1);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   54:        assert(true);
+        1:   55:    } catch (RepoException& e) {
+        1:   55-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   55-block  1
+call    2 returned 1
+        1:   56:        assert(e.getMessage() == "Masina exista deja!\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   56-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   56-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   56-block  2
+call    8 never executed
+        1:   56-block  3
+        1:   56-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   56-block  5
+call   11 returned 1
+    $$$$$:   56-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   56-block  7
+call   14 never executed
+    $$$$$:   56-block  8
+        1:   57:    }
+        1:   57-block  0
+call    0 returned 1
+    $$$$$:   57-block  1
+call    1 never executed
+        6:   58:    repo.store({"CJ12ABC", "Dacia", "mini" });
+        1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   58-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   58-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   58-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   58-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:   58-block  6
+call   19 never executed
+    $$$$$:   58-block  7
+call   20 never executed
+    $$$$$:   58-block  8
+    $$$$$:   58-block  9
+    $$$$$:   58-block 10
+call   21 never executed
+    $$$$$:   58-block 11
+    $$$$$:   58-block 12
+    $$$$$:   58-block 13
+call   22 never executed
+    $$$$$:   58-block 14
+    $$$$$:   58-block 15
+    $$$$$:   58-block 16
+        6:   59:    repo.store({"BN12ABC", "Dacia", "mini" });
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   59-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   59-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   59-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   59-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   59-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:   59-block  6
+call   19 never executed
+    $$$$$:   59-block  7
+call   20 never executed
+    $$$$$:   59-block  8
+    $$$$$:   59-block  9
+    $$$$$:   59-block 10
+call   21 never executed
+    $$$$$:   59-block 11
+    $$$$$:   59-block 12
+    $$$$$:   59-block 13
+call   22 never executed
+    $$$$$:   59-block 14
+    $$$$$:   59-block 15
+    $$$$$:   59-block 16
+        5:   60:    repo.store({"AB12ABC", "Dacia", "mini" });
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   60-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   60-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   60-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   60-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:   60-block  6
+call   19 never executed
+    $$$$$:   60-block  7
+call   20 never executed
+    $$$$$:   60-block  8
+    $$$$$:   60-block  9
+    $$$$$:   60-block 10
+call   21 never executed
+    $$$$$:   60-block 11
+    $$$$$:   60-block 12
+    $$$$$:   60-block 13
+call   22 never executed
+    $$$$$:   60-block 14
+    $$$$$:   60-block 15
+    $$$$$:   60-block 16
+        -:   61:
+       1*:   62:    assert(masini.size() == 4);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   62-block  0
+call    3 never executed
+        1:   62-block  1
+        1:   63:}
+        1:   63-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   63-block  1
+call    2 never executed
+    $$$$$:   63-block  2
+call    3 never executed
+        -:   64:
+function _Z19testRepoActualizarev called 1 returned 100% blocks executed 55%
+        1:   65:void testRepoActualizare(){
+        1:   66:    MasinaRepo repo;
+        1:   66-block  0
+call    0 returned 1
+        5:   67:    Masina m1("B123ABC", "Dacia", "mini");
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   67-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   67-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   67-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   67-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   67-block  5
+call   15 never executed
+    $$$$$:   67-block  6
+    $$$$$:   67-block  7
+    $$$$$:   67-block  8
+call   16 never executed
+    $$$$$:   67-block  9
+    $$$$$:   67-block 10
+    $$$$$:   67-block 11
+call   17 never executed
+    $$$$$:   67-block 12
+    $$$$$:   67-block 13
+        1:   68:    repo.store(m1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69:    repo.actualizare(m1);
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70:    const auto& masini = repo.get_all();
+        1:   70-block  0
+call    0 returned 1
+       1*:   71:    assert(masini.size() == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   71-block  0
+call    3 never executed
+        1:   71-block  1
+       1*:   72:    assert(masini[0].get_numar_inmatriculare() == "B123ABC");
+        1:   72-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   72-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   72-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   72-block  3
+call    9 never executed
+        1:   72-block  4
+        1:   72-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   72-block  6
+call   12 returned 1
+    $$$$$:   72-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:   72-block  8
+call   15 never executed
+    $$$$$:   72-block  9
+       1*:   73:    assert(masini[0].get_model() == "Dacia");
+        1:   73-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   73-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   73-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   73-block  3
+call    9 never executed
+        1:   73-block  4
+        1:   73-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   73-block  6
+call   12 returned 1
+    $$$$$:   73-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:   73-block  8
+call   15 never executed
+    $$$$$:   73-block  9
+       1*:   74:    assert(masini[0].get_categorie() == "mini");
+        1:   74-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   74-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   74-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   74-block  3
+call    9 never executed
+        1:   74-block  4
+        1:   74-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   74-block  6
+call   12 returned 1
+        1:   74-block  7
+    $$$$$:   74-block  8
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:   74-block  9
+call   15 never executed
+    $$$$$:   74-block 10
+        6:   75:    repo.store({"CJ12ABC", "Dacia", "mini" });
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   75-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   75-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   75-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   75-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   75-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:   75-block  6
+call   19 never executed
+    $$$$$:   75-block  7
+call   20 never executed
+    $$$$$:   75-block  8
+    $$$$$:   75-block  9
+    $$$$$:   75-block 10
+call   21 never executed
+    $$$$$:   75-block 11
+    $$$$$:   75-block 12
+    $$$$$:   75-block 13
+call   22 never executed
+    $$$$$:   75-block 14
+    $$$$$:   75-block 15
+    $$$$$:   75-block 16
+        6:   76:    repo.store({"BN23ABC", "Dacia", "mini" });
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   76-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   76-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   76-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   76-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:   76-block  6
+call   19 never executed
+    $$$$$:   76-block  7
+call   20 never executed
+    $$$$$:   76-block  8
+    $$$$$:   76-block  9
+    $$$$$:   76-block 10
+call   21 never executed
+    $$$$$:   76-block 11
+    $$$$$:   76-block 12
+    $$$$$:   76-block 13
+call   22 never executed
+    $$$$$:   76-block 14
+    $$$$$:   76-block 15
+    $$$$$:   76-block 16
+        5:   77:    repo.store({"AB23ABC", "Dacia", "mini" });
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   77-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   77-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   77-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   77-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:   77-block  6
+call   19 never executed
+    $$$$$:   77-block  7
+call   20 never executed
+    $$$$$:   77-block  8
+    $$$$$:   77-block  9
+    $$$$$:   77-block 10
+call   21 never executed
+    $$$$$:   77-block 11
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+call   22 never executed
+    $$$$$:   77-block 14
+    $$$$$:   77-block 15
+    $$$$$:   77-block 16
+       1*:   78:    assert(masini.size() == 4);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   78-block  0
+call    3 never executed
+        1:   78-block  1
+        -:   79:    try {
+       7*:   80:        repo.actualizare({"CJ123ABC", "Dacia", "mini" });
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   80-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   80-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   80-block  4
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    %%%%%:   80-block  5
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+        1:   80-block  6
+call   19 returned 1
+        1:   80-block  7
+call   20 returned 1
+        1:   80-block  8
+        1:   80-block  9
+        1:   80-block 10
+call   21 returned 1
+        1:   80-block 11
+        1:   80-block 12
+        1:   80-block 13
+call   22 returned 1
+        1:   80-block 14
+        1:   80-block 15
+        1:   80-block 16
+    #####:   81:        assert(false);
+call    0 never executed
+        1:   82:    } catch (RepoException& e) {
+        1:   82-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   82-block  1
+call    2 returned 1
+        1:   83:        assert(e.getMessage() == "Masina nu exista!\n");}
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   83-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   83-block  2
+call    8 never executed
+        1:   83-block  3
+        1:   83-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   83-block  5
+call   11 returned 1
+        1:   83-block  6
+call   12 returned 1
+    $$$$$:   83-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:   83-block  8
+call   15 never executed
+    $$$$$:   83-block  9
+    $$$$$:   83-block 10
+call   16 never executed
+        1:   84:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   84-block  0
+call    2 never executed
+    $$$$$:   84-block  1
+call    3 never executed
+        -:   85:
+function _Z16testRepoStergerev called 1 returned 100% blocks executed 51%
+        1:   86:void testRepoStergere(){
+        1:   87:    MasinaRepo repo;
+        1:   87-block  0
+call    0 returned 1
+        5:   88:    Masina m1("B123ABC", "Dacia", "mini");
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   88-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   88-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   88-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   88-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   88-block  5
+call   15 never executed
+    $$$$$:   88-block  6
+    $$$$$:   88-block  7
+    $$$$$:   88-block  8
+call   16 never executed
+    $$$$$:   88-block  9
+    $$$$$:   88-block 10
+    $$$$$:   88-block 11
+call   17 never executed
+    $$$$$:   88-block 12
+    $$$$$:   88-block 13
+        1:   89:    repo.store(m1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90:    repo.stergere("B123ABC");
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   90-block  2
+call    6 returned 1
+    $$$$$:   90-block  3
+call    7 never executed
+    $$$$$:   90-block  4
+    $$$$$:   90-block  5
+        1:   91:    const auto& masini = repo.get_all();
+call    0 returned 1
+       1*:   92:    assert(masini.size() == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   92-block  0
+call    3 never executed
+        1:   92-block  1
+        -:   93:    try {
+       2*:   94:        repo.stergere("B123ABC");
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   94-block  2
+call    6 never executed
+        1:   94-block  3
+call    7 returned 1
+        1:   94-block  4
+        1:   94-block  5
+        -:   95:        assert(true);
+        1:   96:    } catch (RepoException& e) {
+        1:   96-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   96-block  1
+call    2 returned 1
+        1:   97:        assert(e.getMessage() == "Masina nu exista!\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   97-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   97-block  2
+call    8 never executed
+        1:   97-block  3
+        1:   97-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   97-block  5
+call   11 returned 1
+    $$$$$:   97-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   97-block  7
+call   14 never executed
+    $$$$$:   97-block  8
+        1:   98:    }
+        1:   98-block  0
+call    0 returned 1
+    $$$$$:   98-block  1
+call    1 never executed
+        6:   99:    repo.store({"CJ12ABC", "Dacia", "mini" });
+        1:   99-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   99-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   99-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   99-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   99-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   99-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:   99-block  6
+call   19 never executed
+    $$$$$:   99-block  7
+call   20 never executed
+    $$$$$:   99-block  8
+    $$$$$:   99-block  9
+    $$$$$:   99-block 10
+call   21 never executed
+    $$$$$:   99-block 11
+    $$$$$:   99-block 12
+    $$$$$:   99-block 13
+call   22 never executed
+    $$$$$:   99-block 14
+    $$$$$:   99-block 15
+    $$$$$:   99-block 16
+        6:  100:    repo.store({"BN23ABC", "Dacia", "mini" });
+        1:  100-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  100-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  100-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  100-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  100-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  100-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  100-block  6
+call   19 never executed
+    $$$$$:  100-block  7
+call   20 never executed
+    $$$$$:  100-block  8
+    $$$$$:  100-block  9
+    $$$$$:  100-block 10
+call   21 never executed
+    $$$$$:  100-block 11
+    $$$$$:  100-block 12
+    $$$$$:  100-block 13
+call   22 never executed
+    $$$$$:  100-block 14
+    $$$$$:  100-block 15
+    $$$$$:  100-block 16
+        5:  101:    repo.store({"AB23ABC", "Dacia", "mini" });
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  101-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  101-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  101-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  101-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  101-block  6
+call   19 never executed
+    $$$$$:  101-block  7
+call   20 never executed
+    $$$$$:  101-block  8
+    $$$$$:  101-block  9
+    $$$$$:  101-block 10
+call   21 never executed
+    $$$$$:  101-block 11
+    $$$$$:  101-block 12
+    $$$$$:  101-block 13
+call   22 never executed
+    $$$$$:  101-block 14
+    $$$$$:  101-block 15
+    $$$$$:  101-block 16
+        -:  102:
+       1*:  103:    assert(masini.size() == 3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  103-block  0
+call    3 never executed
+        1:  103-block  1
+        1:  104:}
+        1:  104-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  104-block  1
+call    2 never executed
+    $$$$$:  104-block  2
+call    3 never executed
+function _Z11RepoTestAllv called 1 returned 100% blocks executed 100%
+        1:  105:void RepoTestAll(){
+        1:  106:    testRepo();
+        1:  106-block  0
+call    0 returned 1
+        1:  107:    testRepoActualizare();
+call    0 returned 1
+        1:  108:    testRepoStergere();
+call    0 returned 1
+        1:  109:}

@@ -1,0 +1,32 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab6/main.cpp
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "teste.h"
+        -:    2:#include "ui.h"
+        -:    3:#include "service.h"
+        -:    4:#include "repository.h"
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+function main called 1 returned 100% blocks executed 100%
+        1:    8:int main() {
+        1:    9:    allTests();
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    MasinaRepo repo;
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:    ServiceMasina service(repo);
+        1:   11-block  0
+call    0 returned 1
+        1:   12:    UI ui(service);
+call    0 returned 1
+        -:   13:    //ui.run();
+        1:   14:    return 0;
+        1:   15:}
+call    0 returned 1

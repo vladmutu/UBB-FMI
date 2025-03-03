@@ -1,0 +1,14 @@
+﻿  electronicrepository.c
+  electronicservice.c
+  main.c
+  sorting.c
+  tests.c
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2\electronicservice.c(111,15): warning C4133: 'function': incompatible types - from 'bool (__cdecl *)(Electronic *,Electronic *)' to 'CompareFunction'
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2\electronicservice.c(123,15): warning C4133: 'function': incompatible types - from 'bool (__cdecl *)(Electronic *,Electronic *)' to 'CompareFunction'
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2\electronicservice.c(135,15): warning C4133: 'function': incompatible types - from 'bool (__cdecl *)(Electronic *,Electronic *)' to 'CompareFunction'
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2\electronicservice.c(147,15): warning C4133: 'function': incompatible types - from 'bool (__cdecl *)(Electronic *,Electronic *)' to 'CompareFunction'
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2\electronicservice.c(158,6): warning C4013: 'strcmp' undefined; assuming extern returning int
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\Lab02_2\tests.c(326,5): warning C4013: 'sort' undefined; assuming extern returning int
+  ui.c
+  Generating Code...
+  Lab02_2.vcxproj -> D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02_2\x64\Debug\Lab02_2.exe

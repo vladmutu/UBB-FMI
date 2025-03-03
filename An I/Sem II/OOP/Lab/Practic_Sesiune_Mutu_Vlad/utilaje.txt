@@ -1,0 +1,9 @@
+2,Tractor Simplu,mare,8
+6,Tractor1,mare,8
+8,Tractor11,mare,1
+3,Tractor3,mare,4
+1,Tractor4,mare,8
+5,Tractor5,mare,4
+7,Tractor7,mare,6
+9,Tractor19,mediu,2
+10,Tractor10,mic,1

@@ -1,0 +1,59 @@
+# ninja log v6
+354	2251	7392238879550125	CMakeFiles/Lab13_14.dir/teste.cpp.obj	61ac529e3fce2b50
+12	91	7392267958012785	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+12	91	7392267958012785	Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+12	91	7392267958012785	Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+307	511	7392238879079596	CMakeFiles/Lab13_14.dir/Lab13_14_autogen/mocs_compilation.cpp.obj	70c585218f8faa80
+12	91	7392267958012785	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+323	981	7392238879244190	CMakeFiles/Lab13_14.dir/domain.cpp.obj	52458f44620fe4e3
+317	1905	7392238879183241	CMakeFiles/Lab13_14.dir/repository.cpp.obj	6512184a9ca0cbcb
+328	2288	7392238879293668	CMakeFiles/Lab13_14.dir/service.cpp.obj	a184eae0f0771e71
+91	4508	7392267958802857	CMakeFiles/Lab13_14.dir/main.cpp.obj	75f70caacbc6a6ab
+362	6183	7392238879632394	CMakeFiles/Lab13_14.dir/SpalatorieGUI.cpp.obj	fdd0e71b79d174c3
+339	6329	7392238879398541	CMakeFiles/Lab13_14.dir/ui.cpp.obj	ea9b1402ee582574
+96	4846	7392267958852858	CMakeFiles/Lab13_14.dir/gui.cpp.obj	37399f8b963ae3c6
+4846	5485	7392268006354011	Lab13_14.exe	b3318dcb116270be
+13	90	7392271443009376	Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+13	90	7392271443009376	Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+13	90	7392271443009376	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+13	90	7392271443009376	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+90	4605	7392271443780854	CMakeFiles/Lab13_14.dir/main.cpp.obj	75f70caacbc6a6ab
+95	4966	7392271443830864	CMakeFiles/Lab13_14.dir/gui.cpp.obj	37399f8b963ae3c6
+4966	5544	7392271492538820	Lab13_14.exe	b3318dcb116270be
+29	180	7392774200298437	Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+29	180	7392774200298437	Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+29	180	7392774200298437	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+29	180	7392774200298437	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+180	11315	7392774201810967	CMakeFiles/Lab13_14.dir/gui.cpp.obj	37399f8b963ae3c6
+11315	13302	7392774313160455	Lab13_14.exe	b3318dcb116270be
+26	188	7392778707898960	Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+26	188	7392778707898960	Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+26	188	7392778707898960	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+26	188	7392778707898960	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+188	7039	7392778709525742	CMakeFiles/Lab13_14.dir/main.cpp.obj	75f70caacbc6a6ab
+200	7758	7392778709640864	CMakeFiles/Lab13_14.dir/gui.cpp.obj	37399f8b963ae3c6
+7758	9109	7392778785217808	Lab13_14.exe	b3318dcb116270be
+34	190	7406284577154345	Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+34	190	7406284577154345	Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+34	190	7406284577154345	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+34	190	7406284577154345	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+190	7791	7406284578718931	CMakeFiles/Lab13_14.dir/main.cpp.obj	75f70caacbc6a6ab
+7792	9469	7406284654733452	Lab13_14.exe	b3318dcb116270be
+18	105	7406630001872972	Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+18	105	7406630001872972	Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+18	105	7406630001872972	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+18	105	7406630001872972	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+18	104	7406695102203134	Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+18	104	7406695102203134	Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+18	104	7406695102203134	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/timestamp	2fd3c0f2ca6c3a5d
+18	104	7406695102203134	D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/Lab13_14_autogen/mocs_compilation.cpp	2fd3c0f2ca6c3a5d
+104	4923	7406695103062882	CMakeFiles/Lab13_14.dir/main.cpp.obj	75f70caacbc6a6ab
+107	5383	7406695103093114	CMakeFiles/Lab13_14.dir/gui.cpp.obj	37399f8b963ae3c6
+5383	6112	7406695155852712	Lab13_14.exe	b3318dcb116270be
+102	3124	7414599680247293	CMakeFiles/Lab13_14.dir/service.cpp.obj	a184eae0f0771e71
+116	3130	7414599680387294	CMakeFiles/Lab13_14.dir/teste.cpp.obj	61ac529e3fce2b50
+67	13487	7414599679887324	CMakeFiles/Lab13_14.dir/main.cpp.obj	75f70caacbc6a6ab
+121	13763	7414599680432409	CMakeFiles/Lab13_14.dir/SpalatorieGUI.cpp.obj	fdd0e71b79d174c3
+108	13935	7414599680307315	CMakeFiles/Lab13_14.dir/ui.cpp.obj	ea9b1402ee582574
+113	14298	7414599680347802	CMakeFiles/Lab13_14.dir/gui.cpp.obj	37399f8b963ae3c6
+14298	15498	7414599822202602	Lab13_14.exe	b3318dcb116270be

@@ -1,0 +1,4 @@
+﻿1;Houston Rockets
+2;Atlanta Hawks
+3;Washington Wizards
+4;New York Knicks

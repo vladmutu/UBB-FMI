@@ -1,0 +1,9 @@
+﻿  teste.cpp
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9_VS\repository.h(66,26): warning C4244: 'argument': conversion from '_Rep' to 'unsigned int', possible loss of data
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9_VS\repository.h(66,26): warning C4244:         with
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9_VS\repository.h(66,26): warning C4244:         [
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9_VS\repository.h(66,26): warning C4244:             _Rep=std::chrono::system_clock::rep
+D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9_VS\repository.h(66,26): warning C4244:         ]
+  (compiling source file 'teste.cpp')
+  
+  Lab8-9_VS.vcxproj -> D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9_VS\x64\Debug\Lab8-9_VS.exe

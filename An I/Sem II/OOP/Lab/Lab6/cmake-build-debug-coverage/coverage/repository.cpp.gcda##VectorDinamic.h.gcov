@@ -1,0 +1,248 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab6/VectorDinamic.h
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repository.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:template<typename ElemType>
+        -:    4:class Iterator;
+        -:    5:
+        -:    6:
+        -:    7:template<typename ElemType>
+        -:    8:class VectorDinamic {
+        -:    9:public:
+        -:   10:    /*
+        -:   11:     * Constructor pentru VectorDinamic
+        -:   12:     */
+        -:   13:    VectorDinamic();
+        -:   14:
+        -:   15:    /*
+        -:   16:     * Constructor copiator pentru VectorDinamic
+        -:   17:     */
+        -:   18:    VectorDinamic(const VectorDinamic& ot);
+        -:   19:
+        -:   20:    /*
+        -:   21:     * Destructor pentru VectorDinamic
+        -:   22:     */
+        -:   23:    ~VectorDinamic();
+        -:   24:
+        -:   25:    /*
+        -:   26:     * Operator de atribuire pentru VectorDinamic
+        -:   27:     */
+        -:   28:    VectorDinamic& operator=(const VectorDinamic& ot);
+        -:   29:
+        -:   30:    void add(const ElemType& el);
+        -:   31:
+        -:   32:    ElemType& get(int poz) const noexcept;
+        -:   33:
+        -:   34:    VectorDinamic& operator!=(const VectorDinamic& ot);
+        -:   35:
+        -:   36:    [[nodiscard]] int size() const noexcept;
+        -:   37:
+        -:   38:    void erase(int poz);
+        -:   39:
+        -:   40:    friend class Iterator<ElemType>;
+        -:   41:    Iterator<ElemType> begin() const;
+        -:   42:    Iterator<ElemType> end() const;
+        -:   43:
+        -:   44:private:
+        -:   45:    void ensureCapacity();
+        -:   46:    int lungime{0};
+        -:   47:    int capacitate{2};
+        -:   48:    ElemType* elems;
+        -:   49:};
+        -:   50:
+        -:   51:template<typename ElemType>
+        -:   52:VectorDinamic<ElemType>::VectorDinamic() : elems{new ElemType[capacitate]}{
+        -:   53:
+        -:   54:}
+        -:   55:
+        -:   56:template<typename ElemType>
+        -:   57:VectorDinamic<ElemType>::VectorDinamic(const VectorDinamic& ot){
+        -:   58:    elems = new ElemType[ot.capacitate];
+        -:   59:    for (int i = 0; i < ot.lungime; i++) {
+        -:   60:        elems[i] = ot.elems[i];
+        -:   61:    }
+        -:   62:    lungime = ot.lungime;
+        -:   63:    capacitate = ot.capacitate;
+        -:   64:}
+        -:   65:
+        -:   66:template<typename ElemType>
+        -:   67:VectorDinamic<ElemType>::~VectorDinamic() {
+        -:   68:    delete[] elems;
+        -:   69:}
+        -:   70:
+        -:   71:template<typename ElemType>
+        -:   72:VectorDinamic<ElemType>& VectorDinamic<ElemType>::operator=(const VectorDinamic& ot) {
+        -:   73:    if (this == &ot)
+        -:   74:        return *this;
+        -:   75:    delete[] elems;
+        -:   76:    elems = new ElemType[ot.capacitate];
+        -:   77:    for (int i = 0; i < ot.lungime; i++) {
+        -:   78:        elems[i] = ot.elems[i];
+        -:   79:    }
+        -:   80:    lungime = ot.lungime;
+        -:   81:    capacitate = ot.capacitate;
+        -:   82:    return *this;
+        -:   83:}
+        -:   84:
+        -:   85:template<typename ElemType>
+        -:   86:VectorDinamic<ElemType>& VectorDinamic<ElemType>::operator!=(const VectorDinamic<ElemType> &ot) {
+        -:   87:    return *this != ot;
+        -:   88:}
+        -:   89:
+        -:   90:template<typename ElemType>
+function _ZN13VectorDinamicI6MasinaE3addERKS0_ called 0 returned 0% blocks executed 0%
+    #####:   91:void VectorDinamic<ElemType>::add(const ElemType& el) {
+    #####:   92:    if (lungime == capacitate)
+    %%%%%:   92-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   93:        ensureCapacity();
+    %%%%%:   93-block  0
+call    0 never executed
+    #####:   94:    elems[lungime++] = el;
+    %%%%%:   94-block  0
+call    0 never executed
+    #####:   95:}
+        -:   96:
+        -:   97:template<typename ElemType>
+function _ZNK13VectorDinamicI6MasinaE3getEi called 0 returned 0% blocks executed 0%
+    #####:   98:ElemType& VectorDinamic<ElemType>::get(int poz) const noexcept {
+    #####:   99:    return elems[poz];
+    %%%%%:   99-block  0
+        -:  100:}
+        -:  101:
+        -:  102:template<typename ElemType>
+function _ZNK13VectorDinamicI6MasinaE4sizeEv called 0 returned 0% blocks executed 0%
+    #####:  103:int VectorDinamic<ElemType>::size() const noexcept {
+    #####:  104:    return lungime;
+    %%%%%:  104-block  0
+        -:  105:}
+        -:  106:
+        -:  107:template<typename ElemType>
+function _ZN13VectorDinamicI6MasinaE5eraseEi called 2 returned 100% blocks executed 100%
+        2:  108:void VectorDinamic<ElemType>::erase(int poz) {
+        4:  109:    for (int i = poz; i < lungime - 1; i++) {
+        2:  109-block  0
+        4:  109-block  1
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        2:  110:        elems[i] = elems[i + 1];
+        2:  110-block  0
+call    0 returned 2
+        -:  111:    }
+        2:  112:    lungime--;
+        2:  113:}
+        -:  114:
+        -:  115:template<typename ElemType>
+function _ZN13VectorDinamicI6MasinaE14ensureCapacityEv called 0 returned 0% blocks executed 0%
+    #####:  116:void VectorDinamic<ElemType>::ensureCapacity() {
+    #####:  117:    capacitate *= 2;
+    #####:  118:    ElemType* aux = new ElemType[capacitate];
+    %%%%%:  118-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  118-block  1
+    %%%%%:  118-block  2
+    %%%%%:  118-block  3
+call    2 never executed
+    %%%%%:  118-block  4
+call    3 never executed
+    %%%%%:  118-block  5
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  119:    for (int i = 0; i < lungime; i++) {
+    %%%%%:  119-block  0
+    %%%%%:  119-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  120:        aux[i] = elems[i];
+    %%%%%:  120-block  0
+call    0 never executed
+        -:  121:    }
+    #####:  122:    delete[] elems;
+    %%%%%:  122-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  122-block  1
+    %%%%%:  122-block  2
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    %%%%%:  122-block  3
+call    4 never executed
+    %%%%%:  122-block  4
+call    5 never executed
+    #####:  123:    elems = aux;
+    #####:  124:}
+        -:  125:
+        -:  126:template<typename ElemType>
+        -:  127:class Iterator {
+        -:  128:    private:
+        -:  129:        const VectorDinamic<ElemType>& vector;
+        -:  130:        int pozitie{};
+        -:  131:    public:
+        -:  132:        explicit Iterator(const VectorDinamic<ElemType>& vector) noexcept;
+        -:  133:        Iterator(const VectorDinamic<ElemType>& vector, int pozitie) noexcept;
+        -:  134:        ElemType& element()const;
+        -:  135:        void urmator();
+        -:  136:        ElemType& operator*();
+        -:  137:        Iterator& operator++();
+        -:  138:        bool operator==(const Iterator& obiect)noexcept;
+        -:  139:        bool operator!=(const Iterator& obiect)noexcept;
+        -:  140:    };
+        -:  141:
+        -:  142:
+        -:  143:template<typename ElemType>
+        -:  144:Iterator<ElemType>::Iterator(const VectorDinamic<ElemType>& vector) noexcept : vector{vector} {}
+        -:  145:
+        -:  146:template<typename ElemType>
+        -:  147:Iterator<ElemType>::Iterator(const VectorDinamic<ElemType>& vector, int pozitie) noexcept : vector{vector}, pozitie{pozitie} {}
+        -:  148:
+        -:  149:template<typename ElemType>
+        -:  150:ElemType& Iterator<ElemType>::element() const {
+        -:  151:    return vector.get(pozitie);
+        -:  152:}
+        -:  153:
+        -:  154:template<typename ElemType>
+        -:  155:void Iterator<ElemType>::urmator() {
+        -:  156:    pozitie++;
+        -:  157:}
+        -:  158:
+        -:  159:template<typename ElemType>
+        -:  160:ElemType& Iterator<ElemType>::operator*() {
+        -:  161:    return element();
+        -:  162:}
+        -:  163:
+        -:  164:template<typename ElemType>
+        -:  165:Iterator<ElemType>& Iterator<ElemType>::operator++() {
+        -:  166:    urmator();
+        -:  167:    return *this;
+        -:  168:}
+        -:  169:
+        -:  170:template<typename ElemType>
+        -:  171:bool Iterator<ElemType>::operator==(const Iterator& obiect) noexcept {
+        -:  172:    return pozitie == obiect.pozitie;
+        -:  173:}
+        -:  174:
+        -:  175:template<typename ElemType>
+        -:  176:bool Iterator<ElemType>::operator!=(const Iterator& obiect) noexcept {
+        -:  177:    return *this!=obiect;
+        -:  178:}
+        -:  179:
+        -:  180:template<typename ElemType>
+        -:  181:Iterator<ElemType> VectorDinamic<ElemType>::begin() const {
+        -:  182:    return Iterator<ElemType>(*this);
+        -:  183:}
+        -:  184:
+        -:  185:template<typename ElemType>
+        -:  186:Iterator<ElemType> VectorDinamic<ElemType>::end() const {
+        -:  187:    return Iterator<ElemType>(*this, lungime);
+        -:  188:}
+        -:  189:
+        -:  190:
+        -:  191:
+        -:  192:
+        -:  193:
+        -:  194:
+        -:  195:

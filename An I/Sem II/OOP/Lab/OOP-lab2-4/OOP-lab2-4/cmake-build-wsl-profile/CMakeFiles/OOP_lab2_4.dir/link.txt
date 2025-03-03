@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/OOP_lab2_4.dir/ui.c.o CMakeFiles/OOP_lab2_4.dir/medicament.c.o CMakeFiles/OOP_lab2_4.dir/myList.c.o CMakeFiles/OOP_lab2_4.dir/service.c.o CMakeFiles/OOP_lab2_4.dir/teste.c.o -o OOP_lab2_4 

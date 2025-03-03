@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 20; -fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.labjavafx.Controllers.SignUpWindow">
+    <!-- Label -->
+    <Label style="-fx-font-size: 20px;" text="Sign Up" textFill="WHITE" />
+
+    <!-- TextFields -->
+    <TextField fx:id="firstNameField" focusTraversable="false" maxWidth="150.0" promptText="Enter first name" style="-fx-background-radius: 8; -fx-border-radius: 8" />
+    <TextField fx:id="lastNameField" focusTraversable="false" maxWidth="150.0" promptText="Enter last name" style="-fx-background-radius: 8; -fx-border-radius: 8" />
+    <TextField fx:id="emailField" focusTraversable="false" maxWidth="150.0" promptText="Enter email" style="-fx-background-radius: 8; -fx-border-radius: 8" />
+    <HBox>
+        <StackPane>
+            <TextField fx:id="passwordFieldVisible" focusTraversable="false" maxWidth="150.0" promptText="Enter password" style="-fx-background-radius: 8; -fx-border-radius: 8" />
+            <PasswordField fx:id="passwordField" focusTraversable="false" maxWidth="150.0" promptText="Enter password" style="-fx-background-radius: 8; -fx-border-radius: 8" />
+        </StackPane>
+        <CheckBox fx:id="showPassword" onAction="#showHidePassword" style="-fx-text-fill: white; -fx-font-size: 12;" text="Show Password">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets left="20.0" />
+         </padding></CheckBox>
+      <padding>
+         <Insets left="124.0" />
+      </padding>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+    </HBox>
+
+
+
+    <!-- Buttons -->
+    <Button onAction="#registerAction" text="Register" />
+    <Button onAction="#backToLogin" text="Back to Login" />
+</VBox>

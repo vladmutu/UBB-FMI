@@ -1,0 +1,53 @@
+# ninja log v5
+337	431	7379957024499706	CMakeFiles/untitled2.dir/gui.cpp.obj	d93381804d56e1bf
+23	143	7380226858297304	untitled2_autogen/timestamp	9fef2f235eed56f0
+146	4128	7380226898105471	CMakeFiles/untitled2.dir/main.cpp.obj	d0c39120695fa375
+23	143	7380226858297304	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+23	143	7380226858297304	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+4133	5266	7380226903005924	untitled2.exe	3715ae04f5060722
+246	1016	7380226384881178	CMakeFiles/untitled2.dir/repository.cpp.obj	f36cad132f2f7e13
+23	143	7380226858297304	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+318	436	7379957024548941	CMakeFiles/untitled2.dir/untitled2_autogen/mocs_compilation.cpp.obj	536725fe7b554dfe
+150	448	7380226861366884	CMakeFiles/untitled2.dir/service.cpp.obj	60cfc4a6890dc8ee
+252	801	7380226382739180	CMakeFiles/untitled2.dir/domain.cpp.obj	c17886fefffc1c21
+39	143	7380227898508165	untitled2_autogen/timestamp	9fef2f235eed56f0
+39	143	7380227898508165	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+39	143	7380227898508165	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+39	143	7380227898508165	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+146	4289	7380227939958570	CMakeFiles/untitled2.dir/main.cpp.obj	d0c39120695fa375
+4290	4627	7380227941604632	untitled2.exe	3715ae04f5060722
+33	120	7380229064100648	untitled2_autogen/timestamp	9fef2f235eed56f0
+33	120	7380229064100648	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+33	120	7380229064100648	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+33	120	7380229064100648	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+21	115	7380229501404923	untitled2_autogen/timestamp	9fef2f235eed56f0
+21	115	7380229501404923	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+21	115	7380229501404923	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+21	115	7380229501404923	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+118	626	7380229506520575	CMakeFiles/untitled2.dir/repository.cpp.obj	f36cad132f2f7e13
+626	946	7380229508046587	untitled2.exe	3715ae04f5060722
+30	162	7380230333902158	untitled2_autogen/timestamp	9fef2f235eed56f0
+30	162	7380230333902158	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+30	162	7380230333902158	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+30	162	7380230333902158	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+173	768	7380230340047507	CMakeFiles/untitled2.dir/repository.cpp.obj	f36cad132f2f7e13
+165	4925	7380230381554802	CMakeFiles/untitled2.dir/main.cpp.obj	d0c39120695fa375
+4925	5331	7380230383451879	untitled2.exe	3715ae04f5060722
+33	139	7380230947695007	untitled2_autogen/timestamp	9fef2f235eed56f0
+33	139	7380230947695007	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+33	139	7380230947695007	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+33	139	7380230947695007	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+142	663	7380230952940142	CMakeFiles/untitled2.dir/repository.cpp.obj	f36cad132f2f7e13
+663	1012	7380230954693273	untitled2.exe	3715ae04f5060722
+37	141	7380232978503179	untitled2_autogen/timestamp	9fef2f235eed56f0
+37	141	7380232978503179	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+37	141	7380232978503179	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+37	141	7380232978503179	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+144	615	7380232983244933	CMakeFiles/untitled2.dir/repository.cpp.obj	f36cad132f2f7e13
+615	925	7380232984770153	untitled2.exe	3715ae04f5060722
+14	118	7380234088213197	untitled2_autogen/timestamp	9fef2f235eed56f0
+14	118	7380234088213197	untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+14	118	7380234088213197	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/timestamp	9fef2f235eed56f0
+14	118	7380234088213197	D:/UBB-FMI/An I/Sem II/OOP/Practice/untitled2/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp	9fef2f235eed56f0
+121	630	7380234093321733	CMakeFiles/untitled2.dir/repository.cpp.obj	f36cad132f2f7e13
+630	953	7380234094796596	untitled2.exe	3715ae04f5060722

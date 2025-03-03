@@ -1,0 +1,15 @@
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\bin\Debug\net9.0\Lab10.exe
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\bin\Debug\net9.0\Lab10.deps.json
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\bin\Debug\net9.0\Lab10.runtimeconfig.json
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\bin\Debug\net9.0\Lab10.dll
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\bin\Debug\net9.0\Lab10.pdb
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.GeneratedMSBuildEditorConfig.editorconfig
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.AssemblyInfoInputs.cache
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.AssemblyInfo.cs
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.csproj.CoreCompileInputs.cache
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.sourcelink.json
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.dll
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\refint\Lab10.dll
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.pdb
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\Lab10.genruntimeconfig.cache
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab10\obj\Debug\net9.0\ref\Lab10.dll

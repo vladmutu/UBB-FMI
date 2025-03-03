@@ -1,0 +1,14 @@
+# ninja log v5
+1	62	7325550543101406	CMakeFiles/Lab02.dir/main.c.obj	29d27e2d9fa45047
+1	74	7325547530380548	CMakeFiles/Lab02.dir/ui.c.obj	efaab990a2569ee1
+5	124	7325546212712673	CMakeFiles/Lab02.dir/electronicservice.c.obj	e74fdd01df81d072
+1	63	7325566238203133	CMakeFiles/Lab02.dir/main_.c.obj	d720e0e4179442d
+1	72	7325546928391066	CMakeFiles/Lab02.dir/electronicrepository.c.obj	914bebd519c44555
+1	288	7325567045469951	build.ninja	43cab9063c26df60
+20	94	7325546212413525	CMakeFiles/Lab02.dir/electronic.c.obj	7fd7b59ac1657740
+2	203	7325549008096915	CMakeFiles/Lab02.dir/tests.c.obj	7cdb60481b07215f
+63	144	7325566238971423	Lab02.exe	efe916c48b6c2cb1
+1	58	7325585156688215	CMakeFiles/Lab02.dir/main_.c.obj	d720e0e4179442d
+5	67	7325585156762694	CMakeFiles/Lab02.dir/electronicrepository.c.obj	914bebd519c44555
+8	97	7325585157076715	CMakeFiles/Lab02.dir/tests.c.obj	7cdb60481b07215f
+98	170	7325585157762027	Lab02.exe	efe916c48b6c2cb1

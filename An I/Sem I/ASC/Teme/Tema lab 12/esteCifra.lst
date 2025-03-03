@@ -1,0 +1,38 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global _esteCifra       
+     5                                  
+     6                                  ; our data is declared here (the variables needed by our program)
+     7                                  segment data use32 class=data
+     8                                      ; ...
+     9                                  ; our code starts here
+    10                                  segment code use32 class=code
+    11                                      _esteCifra:
+    12                                          ; ...
+    13                                          
+    14 00000000 55                              push ebp 
+    15 00000001 89E5                            mov ebp, esp
+    16 00000003 83EC04                          sub esp, 4
+    17 00000006 60                              pushad
+    18 00000007 8B4508                          mov eax, [ebp+8]
+    19 0000000A 83F839                          cmp eax, '9'
+    20 0000000D 770C                            ja gresit
+    21 0000000F 83F830                          cmp eax, '0'
+    22 00000012 7207                            jb gresit
+    23                                          
+    24 00000014 B801000000                      mov eax, 1
+    25 00000019 EB05                            jmp gata
+    26                                          
+    27                                          gresit:
+    28 0000001B B800000000                      mov eax, 0
+    29                                          
+    30                                          gata:
+    31                                          
+    32 00000020 890424                          mov dword [esp], eax
+    33 00000023 61                              popad
+    34 00000024 83C404                          add esp, 4
+    35 00000027 8B4424FC                        mov eax, [esp-4]
+    36 0000002B 89EC                            mov esp ,ebp
+    37 0000002D 5D                              pop ebp
+    38 0000002E C3                              ret 

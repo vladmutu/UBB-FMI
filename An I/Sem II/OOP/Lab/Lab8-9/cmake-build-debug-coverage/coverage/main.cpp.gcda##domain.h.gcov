@@ -1,0 +1,97 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab8-9/domain.h
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 4/2/2024.
+        -:    3://
+        -:    4:#pragma once
+        -:    5:#include <string>
+        -:    6:#include <iostream>
+        -:    7:#include <utility>
+        -:    8:using std::string;
+        -:    9:
+        -:   10:class MasinaException : public std::exception{
+        -:   11:    string msg;
+        -:   12:public:
+        -:   13:    explicit MasinaException(string msg) : msg{std::move(msg)} {
+        -:   14:
+        -:   15:    }
+        -:   16:
+        -:   17:    [[nodiscard]] string get_msg() const {
+        -:   18:        return msg;
+        -:   19:    }
+        -:   20:
+        -:   21:};
+        -:   22:
+        -:   23:class Masina {
+        -:   24:private:
+        -:   25:    string nr_inmatriculare;
+        -:   26:    string producator;
+        -:   27:    string model;
+        -:   28:    string tip;
+        -:   29:public:
+        -:   30:    /*
+        -:   31:     * functie getter pentru nr_inmatriculare
+        -:   32:     * returneaza nr_inmatriculare
+        -:   33:     */
+        -:   34:    [[nodiscard]] string get_nr_inmatriculare() const;
+        -:   35:
+        -:   36:    /*
+        -:   37:     * functie getter pentru producator
+        -:   38:     * returneaza producator
+        -:   39:     */
+        -:   40:    [[nodiscard]] string get_producator() const;
+        -:   41:
+        -:   42:    /*
+        -:   43:     * functie getter pentru model
+        -:   44:     * returneaza model
+        -:   45:     */
+        -:   46:    [[nodiscard]] string get_model() const;
+        -:   47:
+        -:   48:    /*
+        -:   49:     * functie getter pentru tip
+        -:   50:     * returneaza tip
+        -:   51:     */
+        -:   52:    [[nodiscard]] string get_tip() const;
+        -:   53:
+        -:   54:    /*
+        -:   55:     * functie de creare a obiectului Masina
+        -:   56:     * Date de intrare: nr_inmatriculare - string, producator - string, model - string, tip - string
+        -:   57:     * Date de iesire: -
+        -:   58:     * pre: nr_inmatriculare are 9 caractere, producator, model si tip nu sunt siruri vide
+        -:   59:     * post: obiectul Masina este creat
+        -:   60:     * post: nr_inmatriculare, producator, model si tip sunt setate
+        -:   61:     */
+        -:   62:    Masina() = default;
+        -:   63:
+        -:   64:    Masina(string  nr_inmatriculare, string  producator, string  model, string  tip) : nr_inmatriculare{std::move(nr_inmatriculare)}, producator{std::move(producator)}, model{std::move(model)}, tip{std::move(tip)} {
+        -:   65:        std::cout<<"Masina constructor\n";
+        -:   66:    }
+        -:   67:
+        -:   68:    Masina(const Masina& masina) : nr_inmatriculare{masina.nr_inmatriculare}, producator{masina.producator}, model{masina.model}, tip{masina.tip} {
+        -:   69:        std::cout<<"Masina contructor copiata\n";
+        -:   70:    }
+        -:   71:
+function _ZN6MasinaD1Ev called 164 returned 100% blocks executed 100%
+      164:   72:    ~Masina() {
+      164:   73:        std::cout<<"Masina destructor\n";
+      164:   73-block  0
+call    0 returned 164
+      164:   74:    }
+call    0 returned 164
+call    1 returned 164
+call    2 returned 164
+call    3 returned 164
+        -:   75:
+        -:   76:    Masina& operator=(const Masina& masina) = default;
+        -:   77:
+        -:   78:
+        -:   79:    /*
+        -:   80:     * functie de validare a obiectului Masina
+        -:   81:     * Date de intrare: masina - Masina
+        -:   82:     * Date de iesire: 0 - daca masina este valida, 1 - daca nr_inmatriculare nu are 9 caractere,
+        -:   83:     * 2 - daca producator este gol, 3 - daca model este gol, 4 - daca tip este gol
+        -:   84:     */
+        -:   85:    static int validateMasina(const Masina& masina);
+        -:   86:};

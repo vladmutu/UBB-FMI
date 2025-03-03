@@ -1,0 +1,45 @@
+        -:    0:Source:C:/Users/munte/CLionProjects/OOP-LAB-6-7/MasinaService.h
+        -:    0:Graph:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\MasinaService.cpp.gcno
+        -:    0:Data:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\MasinaService.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "repository.h"
+        -:    3:#include "Masina.h"
+        -:    4:#include <string>
+        -:    5:using std::string;
+        -:    6:class MasinaService {
+        -:    7:private:
+        -:    8:    MasinaRepo& repo;
+        -:    9:    //vector<vector<Masina>> undo;
+        -:   10:public:
+function _ZN13MasinaServiceC1ER10MasinaRepo called 0 returned 0% blocks executed 0%
+    #####:   11:    MasinaService(MasinaRepo& r): repo{r}{
+    #####:   12:    }
+        -:   13:    MasinaService(const MasinaService& ot) = delete;
+        -:   14:
+        -:   15:    MasinaService()=default;
+        -:   16:
+        -:   17:    void add_masina(string numar_inmatriculare,string model, string categorie);
+        -:   18:
+        -:   19:    void actualizare_masina(string numar_inmatriculare, string model, string categorie);
+        -:   20:
+        -:   21:    void stergere_masina(string numar_inmatriculare);
+        -:   22:
+        -:   23:    /**
+        -:   24:     * Functie care returneaza toate masinile din lista de masini.
+        -:   25:     * @return
+        -:   26:     */
+function _ZN13MasinaService7get_allEv called 3 returned 100% blocks executed 100%
+        3:   27:    vector<Masina> get_all(){
+        3:   28:        return repo.get_all();
+        3:   28-block  0
+call    0 returned 3
+call    1 returned 3
+        -:   29:    }
+        -:   30:};
+        -:   31:
+        -:   32:void testAdd();
+        -:   33:
+        -:   34:void testActualizare();
+        -:   35:
+        -:   36:void testAll();

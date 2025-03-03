@@ -1,0 +1,10 @@
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\bin\Debug\Lab01.exe.config
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\bin\Debug\Lab01.exe
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\bin\Debug\Lab01.pdb
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\obj\Debug\Lab01.csproj.AssemblyReference.cache
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\obj\Debug\Lab01.Form1.resources
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\obj\Debug\Lab01.Properties.Resources.resources
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\obj\Debug\Lab01.csproj.GenerateResource.cache
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\obj\Debug\Lab01.csproj.CoreCompileInputs.cache
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\obj\Debug\Lab01.exe
+D:\UBB-FMI\An II\Sem II\SGBD\Laborator\Lab01\obj\Debug\Lab01.pdb

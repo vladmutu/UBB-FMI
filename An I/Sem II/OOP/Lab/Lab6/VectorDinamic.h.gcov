@@ -1,0 +1,119 @@
+        -:    0:Source:VectorDinamic.h
+        -:    0:Graph:service.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    1:#pragma once
+        -:    2:
+        -:    3:template<typename ElemType>
+        -:    4:class Iterator;
+        -:    5:
+        -:    6:
+        -:    7:template<typename ElemType>
+        -:    8:class VectorDinamic {
+        -:    9:public:
+        -:   10:    /*
+        -:   11:     * Constructor pentru VectorDinamic
+        -:   12:     */
+        -:   13:    VectorDinamic();
+        -:   14:
+        -:   15:    /*
+        -:   16:     * Constructor copiator pentru VectorDinamic
+        -:   17:     */
+        -:   18:    VectorDinamic(const VectorDinamic& ot);
+        -:   19:
+        -:   20:    /*
+        -:   21:     * Destructor pentru VectorDinamic
+        -:   22:     */
+        -:   23:    ~VectorDinamic();
+        -:   24:
+        -:   25:    /*
+        -:   26:     * Operator de atribuire pentru VectorDinamic
+        -:   27:     */
+        -:   28:    VectorDinamic& operator=(const VectorDinamic& ot);
+        -:   29:
+        -:   30:    void push_back(const ElemType& el);
+        -:   31:
+        -:   32:    ElemType& get_elem(int poz) const noexcept;
+        -:   33:
+        -:   34:    int size() const noexcept;
+        -:   35:
+        -:   36:    void del(int poz);
+        -:   37:
+        -:   38:private:
+        -:   39:    void resize();
+        -:   40:    int lungime;
+        -:   41:    int capacitate;
+        -:   42:    ElemType* elems;
+        -:   43:};
+        -:   44:
+        -:   45:template<typename ElemType>
+    #####:   46:VectorDinamic<ElemType>::VectorDinamic() : elems{new ElemType[capacitate]}, lungime{0}, capacitate{2} {
+        -:   47:
+    #####:   48:}
+        -:   49:
+        -:   50:template<typename ElemType>
+    #####:   51:VectorDinamic<ElemType>::VectorDinamic(const VectorDinamic& ot){
+    #####:   52:    elems = new ElemType[ot.capacitate];
+    #####:   53:    for (int i = 0; i < ot.lungime; i++) {
+    #####:   54:        elems[i] = ot.elems[i];
+        -:   55:    }
+    #####:   56:    lungime = ot.lungime;
+    #####:   57:    capacitate = ot.capacitate;
+    #####:   58:}
+        -:   59:
+        -:   60:template<typename ElemType>
+    #####:   61:VectorDinamic<ElemType>::~VectorDinamic() {
+    #####:   62:    delete[] elems;
+    #####:   63:}
+        -:   64:
+        -:   65:template<typename ElemType>
+        -:   66:VectorDinamic<ElemType>& VectorDinamic<ElemType>::operator=(const VectorDinamic& ot) {
+        -:   67:    if (this == &ot)
+        -:   68:        return *this;
+        -:   69:    delete[] elems;
+        -:   70:    elems = new ElemType[ot.capacitate];
+        -:   71:    for (int i = 0; i < ot.lungime; i++) {
+        -:   72:        elems[i] = ot.elems[i];
+        -:   73:    }
+        -:   74:    lungime = ot.lungime;
+        -:   75:    capacitate = ot.capacitate;
+        -:   76:    return *this;
+        -:   77:}
+        -:   78:
+        -:   79:template<typename ElemType>
+    #####:   80:void VectorDinamic<ElemType>::add(const ElemType& el) {
+    #####:   81:    if (lungime == capacitate)
+    #####:   82:        resize();
+    #####:   83:    elems[lungime++] = el;
+    #####:   84:}
+        -:   85:
+        -:   86:template<typename ElemType>
+    #####:   87:ElemType& VectorDinamic<ElemType>::get(int poz) const noexcept {
+    #####:   88:    return elems[poz];
+        -:   89:}
+        -:   90:
+        -:   91:template<typename ElemType>
+    #####:   92:int VectorDinamic<ElemType>::size() const noexcept {
+    #####:   93:    return lungime;
+        -:   94:}
+        -:   95:
+        -:   96:template<typename ElemType>
+        -:   97:void VectorDinamic<ElemType>::erase(int poz) {
+        -:   98:    for (int i = poz; i < lungime - 1; i++) {
+        -:   99:        elems[i] = elems[i + 1];
+        -:  100:    }
+        -:  101:    lungime--;
+        -:  102:}
+        -:  103:
+        -:  104:template<typename ElemType>
+    #####:  105:void VectorDinamic<ElemType>::ensureCapacity() {
+    #####:  106:    capacitate *= 2;
+    #####:  107:    ElemType* aux = new ElemType[capacitate];
+    #####:  108:    for (int i = 0; i < lungime; i++) {
+    #####:  109:        aux[i] = elems[i];
+        -:  110:    }
+    #####:  111:    delete[] elems;
+    #####:  112:    elems = aux;
+    #####:  113:}
+        -:  114:
+        -:  115:

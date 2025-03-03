@@ -1,0 +1,36 @@
+﻿1; Alexandru State; Scoala Gimnaziala 'Iuliu Hatieganu'
+2; Gabriel Pislaru; Scoala Gimnaziala 'Iuliu Hatieganu'
+3; Adrian Doroftei; Scoala Gimnaziala 'Iuliu Hatieganu'
+4; Abdul Nasser; Scoala Gimnaziala 'Iuliu Hatieganu'
+5; Alex Butnaru; Scoala Gimnaziala 'Iuliu Hatieganu'
+6; Hanganu Matei; Scoala Gimnaziala 'Iuliu Hatieganu'
+7; Nicu Margine; Scoala Gimnaziala 'Iuliu Hatieganu'
+8; Flavian Tanasa; Scoala Gimnaziala 'Iuliu Hatieganu'
+9; Mara Boaca; Scoala Gimnaziala 'Iuliu Hatieganu'
+10; Nicu Pop; Liceul cu Program Sportiv Cluj-Napoca
+11; Stefan Nasptase; Liceul cu Program Sportiv Cluj-Napoca
+12; Rares Perta; Liceul cu Program Sportiv Cluj-Napoca
+13; Mihai Cane; Liceul cu Program Sportiv Cluj-Napoca
+14; Cosmin Popa; Liceul cu Program Sportiv Cluj-Napoca
+15; Matei Tanasa; Liceul cu Program Sportiv Cluj-Napoca
+16; Matei Tataru; Liceul cu Program Sportiv Cluj-Napoca
+17; Stefan Atomulesei; Liceul cu Program Sportiv Cluj-Napoca
+18; Mihail Ghidoarca; Liceul cu Program Sportiv Cluj-Napoca
+19; Larisa Cristina Teodorescu; Liceul de Informatica "Tiberiu Popoviciu"
+20; Catalin Teodorescu; Liceul de Informatica "Tiberiu Popoviciu"
+21; Maria Huzum; Liceul de Informatica "Tiberiu Popoviciu"
+22; Anastasia Georghiu; Liceul de Informatica "Tiberiu Popoviciu"
+23; Ana Maria Barbulei; Liceul de Informatica "Tiberiu Popoviciu"
+24; Ana Maria Alucai; Liceul de Informatica "Tiberiu Popoviciu"
+25; Matei Gheorghiu; Liceul de Informatica "Tiberiu Popoviciu"
+26; Murariu Emilia Cristina; Liceul de Informatica "Tiberiu Popoviciu"
+27; Elena Gabriela; Liceul de Informatica "Tiberiu Popoviciu"
+28; Irina Ioana Avasalcai; Liceul de Informatica "Tiberiu Popoviciu"
+29; Gabriel Dumea; Scoala Gimnaziala “Horea”
+30; Daniel Ilioi; Scoala Gimnaziala “Horea”
+31; Matei Baciu; Scoala Gimnaziala “Horea”
+32; Emil Cosma; Scoala Gimnaziala “Horea”
+33; Octavian Cosofret; Scoala Gimnaziala “Horea”
+34; Elena Huzum; Scoala Gimnaziala “Horea”
+35; Irina Mihalachi; Scoala Gimnaziala “Horea”
+36; Cristian Soare; Scoala Gimnaziala “Horea”

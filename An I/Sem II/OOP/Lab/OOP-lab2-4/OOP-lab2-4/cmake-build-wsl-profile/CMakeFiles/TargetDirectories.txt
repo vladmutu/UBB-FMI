@@ -1,0 +1,3 @@
+/mnt/c/Users/Omen/CLionProjects/OOP-lab2-4/cmake-build-wsl-profile/CMakeFiles/OOP_lab2_4.dir
+/mnt/c/Users/Omen/CLionProjects/OOP-lab2-4/cmake-build-wsl-profile/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Omen/CLionProjects/OOP-lab2-4/cmake-build-wsl-profile/CMakeFiles/rebuild_cache.dir

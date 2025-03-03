@@ -1,0 +1,10 @@
+1111,Connected to server,1312,info
+2222,Connected to server,23123,warning
+3333,Connected to server,3414,error
+4444,Connected to server,4421,critical
+5555,Disconnected from server,4124,info
+6666,Connected to server,41242,warning
+7777,Connected to server,41241,error
+8888,Connected to server,4324,warning
+9999,Disconnected from server,5435,info
+1000,Connected to server,53544,info

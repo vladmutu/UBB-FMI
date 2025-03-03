@@ -1,0 +1,16 @@
+# ninja log v6
+15	97	7406712642723921	MelodiiQt_autogen/timestamp	e57d0616fdd04ac8
+98	5222	7406712643541874	CMakeFiles/MelodiiQt.dir/main.cpp.obj	195c3a50c240b86b
+150	230	7406693205017753	CMakeFiles/MelodiiQt.dir/MelodiiQt_autogen/mocs_compilation.cpp.obj	358edbb63d58a8f5
+171	809	7406693205222987	CMakeFiles/MelodiiQt.dir/service.cpp.obj	e24e4c8bfbf24268
+15	97	7406712642723921	MelodiiQt_autogen/mocs_compilation.cpp	e57d0616fdd04ac8
+15	97	7406712642723921	D:/UBB-FMI/An I/Sem II/OOP/Exercitii/MelodiiQt/cmake-build-debug/MelodiiQt_autogen/timestamp	e57d0616fdd04ac8
+157	576	7406693205077796	CMakeFiles/MelodiiQt.dir/domain.cpp.obj	e7174d644694053f
+15	97	7406712642723921	D:/UBB-FMI/An I/Sem II/OOP/Exercitii/MelodiiQt/cmake-build-debug/MelodiiQt_autogen/mocs_compilation.cpp	e57d0616fdd04ac8
+166	257	7406693205172990	CMakeFiles/MelodiiQt.dir/teste.cpp.obj	719650846d62ad53
+162	877	7406693205137806	CMakeFiles/MelodiiQt.dir/repository.cpp.obj	fb14ecdf6ceab724
+105	5074	7406712643620889	CMakeFiles/MelodiiQt.dir/GUI.cpp.obj	7d05c60e9cbc4661
+16	109	7406715967353793	MelodiiQt_autogen/timestamp	e57d0616fdd04ac8
+16	109	7406715967353793	MelodiiQt_autogen/mocs_compilation.cpp	e57d0616fdd04ac8
+16	109	7406715967353793	D:/UBB-FMI/An I/Sem II/OOP/Exercitii/MelodiiQt/cmake-build-debug/MelodiiQt_autogen/timestamp	e57d0616fdd04ac8
+16	109	7406715967353793	D:/UBB-FMI/An I/Sem II/OOP/Exercitii/MelodiiQt/cmake-build-debug/MelodiiQt_autogen/mocs_compilation.cpp	e57d0616fdd04ac8

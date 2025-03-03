@@ -1,0 +1,417 @@
+        -:    0:Source:C:/Users/munte/CLionProjects/OOP-LAB-6-7/ui.cpp
+        -:    0:Graph:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:#include <iostream>
+        -:    3:using std::cin;
+        -:    4:using std::cout;
+function _ZN2ui3runEv called 1 returned 100% blocks executed 3%
+        1:    5:void ui::run(){
+        -:    6:    while(true)
+        -:    7:    {
+        1:    8:        cout<<"1. Adauga masina\n2. Actualizare\n3. Sterge\n4. Print\n0. Exit\nComand:";
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:        int cmd=0;
+        1:   10:        cin>>cmd;
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:        if (cmd==0){
+        1:   11-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   12:            break;
+        -:   13:        }
+    #####:   14:        if (cmd==1){
+    %%%%%:   14-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   15:            string numar_inmatriculare;
+    %%%%%:   15-block  0
+call    0 never executed
+    #####:   16:            string model;
+call    0 never executed
+    #####:   17:            string categorie;
+call    0 never executed
+    #####:   18:            cout<<"Numar inmatriculare: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   19:            cin>>numar_inmatriculare;
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   20:            cout<<"\nModel: ";
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   21:            cin>>model;
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   22:            cout<<"\nCategorie: ";
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   23:            cin>>categorie;
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   24:            try{
+    #####:   25:                serv.add_masina(numar_inmatriculare,model,categorie);
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   25-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   25-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   25-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   25-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+    $$$$$:   25-block  5
+call   15 never executed
+    $$$$$:   25-block  6
+    $$$$$:   25-block  7
+call   16 never executed
+    $$$$$:   25-block  8
+    $$$$$:   25-block  9
+call   17 never executed
+    $$$$$:   25-block 10
+    #####:   26:                cout<<"Masina adaugata cu succes\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   27:            }
+    =====:   28:            catch (RepoException& ex){
+    $$$$$:   28-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   28-block  1
+call    2 never executed
+    =====:   29:                cout<<ex.getMessage();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   29-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   29-block  1
+call    6 never executed
+    $$$$$:   29-block  2
+call    7 never executed
+    $$$$$:   29-block  3
+    =====:   30:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   30-block  0
+call    3 never executed
+        -:   31:
+    #####:   32:        }
+    %%%%%:   32-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   32-block  1
+call    3 never executed
+    $$$$$:   32-block  2
+call    4 never executed
+    $$$$$:   32-block  3
+call    5 never executed
+    #####:   33:        if (cmd==2)
+    %%%%%:   33-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   34:        {
+    #####:   35:            string numar_inmatriculare;
+    %%%%%:   35-block  0
+call    0 never executed
+    #####:   36:            string new_model;
+call    0 never executed
+    #####:   37:            string new_categorie;
+call    0 never executed
+    #####:   38:            cout<<"Numar inmatriculare: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   39:            cin>>numar_inmatriculare;
+    %%%%%:   39-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   40:            cout<<"\nModel: ";
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   41:            cin>>new_model;
+    %%%%%:   41-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   42:            cout<<"\nCategorie: ";
+    %%%%%:   42-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   43:            cin>>new_categorie;
+    %%%%%:   43-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   44:            try{
+    #####:   45:                serv.actualizare_masina(numar_inmatriculare,new_model,new_categorie);
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   45-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   45-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   45-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   45-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+    $$$$$:   45-block  5
+call   15 never executed
+    $$$$$:   45-block  6
+    $$$$$:   45-block  7
+call   16 never executed
+    $$$$$:   45-block  8
+    $$$$$:   45-block  9
+call   17 never executed
+    $$$$$:   45-block 10
+    #####:   46:                cout<<"Masina actualizata cu succes\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   47:            }
+    =====:   48:            catch (RepoException& ex){
+    $$$$$:   48-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   48-block  1
+call    2 never executed
+    =====:   49:                cout<<ex.getMessage();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   49-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   49-block  1
+call    6 never executed
+    $$$$$:   49-block  2
+call    7 never executed
+    $$$$$:   49-block  3
+    =====:   50:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   50-block  0
+call    3 never executed
+    #####:   51:        }
+    %%%%%:   51-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   51-block  1
+call    3 never executed
+    $$$$$:   51-block  2
+call    4 never executed
+    $$$$$:   51-block  3
+call    5 never executed
+    #####:   52:        if (cmd==3){
+    %%%%%:   52-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   53:            string numar_inmatriculare;
+    %%%%%:   53-block  0
+call    0 never executed
+    #####:   54:            cout<<"Numar inmatriculare: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   55:            cin>>numar_inmatriculare;
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   56:            try{
+    #####:   57:                serv.stergere_masina(numar_inmatriculare);
+    %%%%%:   57-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   57-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   57-block  2
+call    6 never executed
+    $$$$$:   57-block  3
+call    7 never executed
+    $$$$$:   57-block  4
+    #####:   58:                cout<<"Masina stearsa cu succes\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   59:            }
+    =====:   60:            catch (RepoException& ex){
+    $$$$$:   60-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   60-block  1
+call    2 never executed
+    =====:   61:                cout<<ex.getMessage();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   61-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   61-block  1
+call    6 never executed
+    $$$$$:   61-block  2
+call    7 never executed
+    $$$$$:   61-block  3
+    =====:   62:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   62-block  0
+call    3 never executed
+    #####:   63:        }
+    %%%%%:   63-block  0
+call    0 never executed
+    $$$$$:   63-block  1
+call    1 never executed
+    #####:   64:        if (cmd==4)
+    %%%%%:   64-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   65:        {
+    #####:   66:            auto masini = serv.get_all();
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   67:            if(masini.empty())
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+        -:   68:            {
+    #####:   69:                cout<<"Nu exista masini!\n";
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   70:            }
+        -:   71:            else{
+    #####:   72:                for (const auto& masina: masini)
+    %%%%%:   72-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   72-block  1
+call    2 never executed
+    %%%%%:   72-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+        -:   73:                {
+    #####:   74:                    cout<<masina.get_numar_inmatriculare()<<" "<<masina.get_model()<<" "<<masina.get_categorie()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   74-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   74-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   74-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   74-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   74-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   74-block  5
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   74-block  6
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:   74-block  7
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:   74-block  8
+call   27 never executed
+call   28 never executed
+call   29 never executed
+call   30 never executed
+    $$$$$:   74-block  9
+call   31 never executed
+    $$$$$:   74-block 10
+    $$$$$:   74-block 11
+call   32 never executed
+    $$$$$:   74-block 12
+    $$$$$:   74-block 13
+call   33 never executed
+    $$$$$:   74-block 14
+        -:   75:                }
+        -:   76:            }
+        -:   77:
+    #####:   78:        }
+    %%%%%:   78-block  0
+call    0 never executed
+    $$$$$:   78-block  1
+call    1 never executed
+    #####:   79:    }
+    %%%%%:   79-block  0
+        1:   80:}
+        1:   80-block  0

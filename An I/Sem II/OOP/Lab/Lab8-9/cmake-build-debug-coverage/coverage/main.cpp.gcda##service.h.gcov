@@ -1,0 +1,95 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab8-9/service.h
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 4/2/2024.
+        -:    3://
+        -:    4:#pragma once
+        -:    5:#include "repository.h"
+        -:    6:#include "domain.h"
+        -:    7:#include "VectorDinamic.h"
+        -:    8:#include <string>
+        -:    9:#include <utility>
+        -:   10:using std::string;
+        -:   11:
+        -:   12:
+        -:   13:typedef int(*Sort)(const Masina&, const Masina&);
+        -:   14:
+        -:   15:/*
+        -:   16: * Clasa de service pentru masini
+        -:   17: */
+        -:   18:class ServiceMasina {
+        -:   19:private:
+        -:   20:    MasinaRepo& repo;
+        -:   21:public:
+        -:   22:    /*
+        -:   23:     * initializeaza un service pentru masini
+        -:   24:     */
+function _ZN13ServiceMasinaC1ER10MasinaRepo called 9 returned 100% blocks executed 100%
+        9:   25:    explicit ServiceMasina(MasinaRepo& repo) : repo{repo} { }
+        -:   26:
+        -:   27:    /*
+        -:   28:     * Adauga o masina in lista de masini
+        -:   29:     */
+        -:   30:    void adaugaMasinaService(string& nr_inmatriculare, string& producator, string& model, string& tip);
+        -:   31:
+        -:   32:    /*
+        -:   33:     * Sterge o masina din lista de masini
+        -:   34:     */
+        -:   35:    void stergeMasinaService(const string& nr_inmatriculare);
+        -:   36:
+        -:   37:    /*
+        -:   38:     * Modifica o masina din lista de masini
+        -:   39:     */
+        -:   40:    void modificaMasinaService(string& nr_inmatriculare, string& producator, string& model, string& tip);
+        -:   41:
+        -:   42:    /*
+        -:   43:     * Returneaza toate masinile din lista de masini
+        -:   44:     */
+        -:   45:    vector<Masina> getAllMasiniService();
+        -:   46:
+        -:   47:    /*
+        -:   48:     * returneaza o lista filtrata dupa producator
+        -:   49:     */
+        -:   50:    vector<Masina> filterMasiniProducer(string& producator);
+        -:   51:
+        -:   52:    /*
+        -:   53:     * returneaza o lista filtrata dupa tip
+        -:   54:     */
+        -:   55:    vector<Masina> filterMasiniType(string& tip);
+        -:   56:
+        -:   57:    /*
+        -:   58:     * returneaza o lista sortate dupa o functie de sortare
+        -:   59:     */
+        -:   60:    vector<Masina> sortMasini(Sort functieSortare);
+        -:   61:
+        -:   62:};
+        -:   63:
+        -:   64:/*
+        -:   65: * Functii de sortare
+        -:   66: */
+        -:   67:/*
+        -:   68: * dupa nr_inmatriculare
+        -:   69: */
+        -:   70:int sortNrInmatriculare(const Masina& m1, const Masina& m2);
+        -:   71:
+        -:   72:/*
+        -:   73: * dupa tip
+        -:   74: */
+        -:   75:int sortTip(const Masina& m1, const Masina& m2);
+        -:   76:
+        -:   77:/*
+        -:   78: * dupa producator si model
+        -:   79: */
+        -:   80:int sortProducatorModel(const Masina& m1, const Masina& m2);
+        -:   81:
+        -:   82:/*
+        -:   83: * dupa producator
+        -:   84: */
+        -:   85:int sortProducator(const Masina& m1, const Masina& m2);
+        -:   86:
+        -:   87:/*
+        -:   88: * dupa model
+        -:   89: */
+        -:   90:int sortModel(const Masina& m1, const Masina& m2);

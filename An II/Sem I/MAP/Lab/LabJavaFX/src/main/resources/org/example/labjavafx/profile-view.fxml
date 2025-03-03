@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="350" prefWidth="600" style="-fx-background-color: black; -fx-border-color: purple; -fx-border-4" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.labjavafx.Controllers.ProfileView">
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER" translateY="175.0">
+                <VBox>
+                    <Button fx:id="buttonFriends" onAction="#handleGoToFriends" style="-fx-background-color: black">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../Imgs/friends.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Label textFill="white" translateY="9.0">Friends</Label>
+                </VBox>
+                <VBox prefWidth="50">
+
+                </VBox>
+                <VBox>
+                    <Button fx:id="buttonMessages" onAction="#handleGoToMessages" style="-fx-background-color: black">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../Imgs/Message-PNG-Download-Image.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Label textFill="white" translateY="10.0">Messages</Label>
+                </VBox>
+                <VBox prefWidth="50">
+
+                </VBox>
+                <VBox>
+                    <Button fx:id="editProfile" onAction="#handleEditProfile" style="-fx-background-color: black">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../Imgs/edit.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Label textFill="white" translateY="11.0">Edit Profile</Label>
+                </VBox>
+                <VBox prefWidth="50">
+
+                </VBox>
+                <VBox>
+                    <Button fx:id="deleteProfile" onAction="#handleDeleteProfile" style="-fx-background-color: black">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../Imgs/delete.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+
+                    <Label textFill="white" translateY="10.0">Delete Profile</Label>
+                </VBox>
+                <VBox prefWidth="50">
+
+                </VBox>
+                <VBox>
+                    <Button fx:id="buttonLogOut" onAction="#handleLogOut" style="-fx-background-color: black" translateY="2.0">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../Imgs/log_out.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Label textFill="white" translateY="10.0">Log Out</Label>
+                </VBox>
+
+            </HBox>
+            <Label fx:id="greetingLabel" style="-fx-font-size: 24; -fx-text-fill: white;" translateY="-100.0">Welcome back</Label>
+            <HBox alignment="CENTER">
+                <ImageView fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true" translateY="-50.0">
+                    <image>
+                        <Image url="@../Imgs/user.png" />
+                    </image>
+                </ImageView>
+            </HBox>
+            <HBox translateX="59.0" translateY="-33.0">
+            </HBox>
+
+        </VBox>
+    <ImageView fx:id="friendRequestNotification" fitHeight="10" fitWidth="10" pickOnBounds="true" preserveRatio="true" translateX="-193.0" translateY="107.0">
+        <image>
+            <Image url="@../Imgs/reddot.png" />
+        </image>
+    </ImageView>
+</StackPane>

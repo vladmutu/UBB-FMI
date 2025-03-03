@@ -1,0 +1,8 @@
+8,Tractor0,mic,6
+1,Tractor1,mic,4
+2,Tractor2,mic,6
+3,Tractor3,mic,4
+4,Tractor4,mare,2
+5,Tractor5,mare,4
+6,Tractor6,mare,0
+7,Tractor7,mare,2

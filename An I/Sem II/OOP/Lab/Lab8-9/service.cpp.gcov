@@ -1,0 +1,110 @@
+        -:    0:Source:service.cpp
+        -:    0:Graph:service.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    1://
+        -:    2:// Created by vladm on 4/2/2024.
+        -:    3://
+        -:    4:#include "service.h"
+        -:    5:
+        -:    6:#include <utility>
+        -:    7:
+    #####:    8:void ServiceMasina::adaugaMasinaService(string& nr_inmatriculare, string& producator, string& model, string& tip) {
+    #####:    9:    Masina m(nr_inmatriculare, producator, model, tip);
+    #####:   10:    switch (Masina::validateMasina(m)) {
+    #####:   11:        case 1:
+    #####:   12:            throw MasinaException("Numar de inmatriculare invalid!");
+    #####:   13:        case 2:
+    #####:   14:            throw MasinaException("Producator invalid!");
+    #####:   15:        case 3:
+    #####:   16:            throw MasinaException("Model invalid!");
+    #####:   17:        case 4:
+    #####:   18:            throw MasinaException("Tip invalid!");
+    #####:   19:        default:
+        -:   20:            try{
+    #####:   21:                repo.adaugaMasina(m);
+    =====:   22:            } catch (RepoException& e) {
+    =====:   23:                throw MasinaException(e.get_msg());
+    =====:   24:            }
+    #####:   25:            break;
+        -:   26:    }
+    #####:   27:}
+        -:   28:
+    #####:   29:void ServiceMasina::stergeMasinaService(const string &nr_inmatriculare) {
+        -:   30:    try {
+    #####:   31:        repo.stergeMasina(nr_inmatriculare);
+    =====:   32:    } catch (RepoException& e) {
+    =====:   33:        throw MasinaException(e.get_msg());
+    =====:   34:    }
+    #####:   35:}
+        -:   36:
+    #####:   37:void ServiceMasina::modificaMasinaService(string& nr_inmatriculare, string& producator, string& model, string& tip) {
+    #####:   38:    Masina m(nr_inmatriculare, producator, model, tip);
+    #####:   39:    switch (Masina::validateMasina(m)) {
+    #####:   40:        case 1:
+    #####:   41:            throw MasinaException("Numar de inmatriculare invalid!");
+    #####:   42:        case 2:
+    #####:   43:            throw MasinaException("Producator invalid!");
+    #####:   44:        case 3:
+    #####:   45:            throw MasinaException("Model invalid!");
+    #####:   46:        case 4:
+    #####:   47:            throw MasinaException("Tip invalid!");
+    #####:   48:        default:
+        -:   49:            try{
+    #####:   50:                repo.modificaMasina(m);
+    =====:   51:            } catch (RepoException& e) {
+    =====:   52:                throw MasinaException(e.get_msg());
+    =====:   53:            }
+    #####:   54:            break;
+        -:   55:    }
+    #####:   56:}
+        -:   57:
+    #####:   58:VectorDinamic<Masina> ServiceMasina::getAllMasiniService() {
+    #####:   59:    return repo.getAllMasini();
+        -:   60:}
+        -:   61:
+    #####:   62:VectorDinamic<Masina> ServiceMasina::filterMasiniProducer(string& producator) {
+    #####:   63:    VectorDinamic<Masina> masini = repo.getAllMasini();
+    #####:   64:    VectorDinamic<Masina> rez;
+    #####:   65:    for(int i = 0; i < masini.size(); i++)
+    #####:   66:        if(masini.get_elem(i).get_producator() == producator)
+    #####:   67:            rez.push_back(masini.get_elem(i));
+    #####:   68:    return rez;
+    #####:   69:}
+        -:   70:
+    #####:   71:VectorDinamic<Masina> ServiceMasina::filterMasiniType(string& tip) {
+    #####:   72:    VectorDinamic<Masina> masini = repo.getAllMasini();
+    #####:   73:    VectorDinamic<Masina> rez;
+    #####:   74:    for(int i = 0; i < masini.size(); i++)
+    #####:   75:        if(masini.get_elem(i).get_tip() == tip)
+    #####:   76:            rez.add(masini.get_elem(i));
+    #####:   77:    return rez;
+    #####:   78:}
+        -:   79:
+    #####:   80:VectorDinamic<Masina> ServiceMasina::sortMasini(Sort functieSortare) {
+    #####:   81:    VectorDinamic<Masina> masini = repo.getAllMasini();
+    #####:   82:    for(int i = 0; i < masini.size() - 1; i++)
+    #####:   83:        for(int j = i + 1; j < masini.size(); j++)
+    #####:   84:            if(functieSortare(masini.get_elem(i), masini.get_elem(j)) > 0) {
+    #####:   85:                Masina aux = masini.get_elem(i);
+    #####:   86:                masini.get_elem(i) = masini.get(j);
+    #####:   87:                masini.get_elem(j) = aux;
+    #####:   88:            }
+    #####:   89:    return masini;
+    =====:   90:}
+        -:   91:
+    #####:   92:int sortNrInmatriculare(const Masina& m1, const Masina& m2) {
+    #####:   93:    return m1.get_nr_inmatriculare().compare(m2.get_nr_inmatriculare());
+        -:   94:}
+        -:   95:
+    #####:   96:int sortTip(const Masina& m1, const Masina& m2) {
+    #####:   97:    return m1.get_tip().compare(m2.get_tip());
+        -:   98:}
+        -:   99:
+    #####:  100:int sortProducatorModel(const Masina& m1, const Masina& m2) {
+    #####:  101:    if (m1.get_producator().compare(m2.get_producator())) {
+    #####:  102:        return (m1.get_producator().compare(m2.get_producator()));
+        -:  103:    } else
+    #####:  104:        return m1.get_model().compare(m2.get_model());
+        -:  105:
+        -:  106:}

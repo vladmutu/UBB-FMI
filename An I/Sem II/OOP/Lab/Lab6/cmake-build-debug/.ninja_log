@@ -1,0 +1,8 @@
+# ninja log v5
+21	569	7337785476158693	CMakeFiles/Lab6.dir/service.cpp.obj	2fc977067705beab
+15	658	7337785477180614	CMakeFiles/Lab6.dir/teste.cpp.obj	4a524215b262cc
+18	684	7337785477432912	CMakeFiles/Lab6.dir/repository.cpp.obj	88f6c51ce5ba999a
+7	596	7337785476550854	CMakeFiles/Lab6.dir/ui.cpp.obj	ca9e770e89a60c1d
+10	570	7337785475818606	CMakeFiles/Lab6.dir/domain.cpp.obj	869524a38145d62b
+2	589	7337785476475112	CMakeFiles/Lab6.dir/main.cpp.obj	3c80c3debb6c735c
+684	804	7337785478573339	Lab6.exe	2e47132e4f952512

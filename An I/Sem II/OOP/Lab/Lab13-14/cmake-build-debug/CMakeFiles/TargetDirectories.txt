@@ -1,0 +1,5 @@
+D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/CMakeFiles/Lab13_14.dir
+D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/CMakeFiles/Lab13_14_autogen_timestamp_deps.dir
+D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab13-14/cmake-build-debug/CMakeFiles/Lab13_14_autogen.dir

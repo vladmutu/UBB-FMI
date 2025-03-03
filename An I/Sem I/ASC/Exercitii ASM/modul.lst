@@ -1,0 +1,13 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  extern a   
+     5                                  
+     6                                  
+     7                                  
+     8                                  ; our code starts here
+     9                                  segment code use32 class=code
+    10                                      global modul
+    11                                      modul:
+    12                                          ; ...
+    13 00000000 A1[00000000]                    mov eax, [a]

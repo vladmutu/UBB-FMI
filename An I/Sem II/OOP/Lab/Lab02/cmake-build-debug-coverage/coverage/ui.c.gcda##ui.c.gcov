@@ -1,0 +1,307 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab02/ui.c
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\ui.c.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab02\cmake-build-debug-coverage\CMakeFiles\Lab02.dir\ui.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 3/12/2024.
+        -:    3://Source file pentru UI
+        -:    4:
+        -:    5:#include "electronic.h"
+        -:    6:#include "electronicservice.h"
+        -:    7:#include "ui.h"
+        -:    8:#include "electronicrepository.h"
+        -:    9:#include <stdio.h>
+        -:   10:#include <stdbool.h>
+        -:   11:
+        -:   12:
+        -:   13:/*
+        -:   14: * functie de citire a parametrilor unui electronic
+        -:   15: * pre Electronics = lista dinamica
+        -:   16: * post s-au citit parametrii unui posibil electrocasnic
+        -:   17: */
+function readElectronic called 0 returned 0% blocks executed 0%
+    #####:   18:void readElectronic(MyList* Electronics)
+        -:   19:{
+        -:   20:    int ID;
+    #####:   21:    printf("Introduceti ID-ul:");
+    %%%%%:   21-block  0
+call    0 never executed
+    #####:   22:    scanf_s("%d", &ID);
+call    0 never executed
+    #####:   23:    bool exista = false;
+        -:   24:    int i;
+    #####:   25:    for(i = 0; i < Electronics->lg; i++)
+    %%%%%:   25-block  0
+    %%%%%:   25-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   26:        if(Electronics->elems[i].ID == ID)
+    %%%%%:   26-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   27:            exista = true;
+    %%%%%:   27-block  0
+    #####:   28:    if(exista)
+    %%%%%:   28-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   29:    {
+        -:   30:        int quantity;
+    #####:   31:        printf("\nID existent! Actualizati cantitatea produsului!");
+    %%%%%:   31-block  0
+call    0 never executed
+    #####:   32:        scanf_s("%d", &quantity);
+call    0 never executed
+    #####:   33:        int error = updateQuantity(Electronics, ID, quantity);
+call    0 never executed
+    #####:   34:        if(error == 0)
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   35:            printf("\nCantitate actualizata!\n");
+    %%%%%:   35-block  0
+call    0 never executed
+        -:   36:        else
+    #####:   37:            printf("\nEroare!\n");
+    %%%%%:   37-block  0
+call    0 never executed
+        -:   38:    }
+        -:   39:    else
+        -:   40:    {
+        -:   41:        char type[30];
+        -:   42:        char producer[30];
+        -:   43:        char model[30];
+        -:   44:        int price;
+        -:   45:        int quantity;
+    #####:   46:        printf("\nIntroduceti tipul:");
+    %%%%%:   46-block  0
+call    0 never executed
+    #####:   47:        scanf_s("%s", &type);
+call    0 never executed
+    #####:   48:        printf("\nIntroduceti producatorul:");
+call    0 never executed
+    #####:   49:        scanf_s("%s", &producer);
+call    0 never executed
+    #####:   50:        printf("\nIntroduceti modelul:");
+call    0 never executed
+    #####:   51:        scanf_s("%s", &model);
+call    0 never executed
+    #####:   52:        printf("\nIntroduceti pretul:");
+call    0 never executed
+    #####:   53:        scanf_s("%d", &price);
+call    0 never executed
+    #####:   54:        printf("\nIntroduceti cantitatea:");
+call    0 never executed
+    #####:   55:        scanf_s("%d", &quantity);
+call    0 never executed
+    #####:   56:        int error = addElectronicService(Electronics, ID, type, producer, model, price, quantity);
+call    0 never executed
+    #####:   57:        if (error != 0)
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   58:            printf("\nElectrocasnic invalid!\n");
+    %%%%%:   58-block  0
+call    0 never executed
+        -:   59:        else
+    #####:   60:            printf("\nElectrocasnic adaugat\n");
+    %%%%%:   60-block  0
+call    0 never executed
+        -:   61:    }
+    #####:   62:}
+        -:   63:
+        -:   64:/*
+        -:   65: * functi de citire a parametrilor pret si cantitate ai unui electronic pentru update
+        -:   66: * pre Electronics = lista dinamica
+        -:   67: * post s-au citit parametrii unui electrocasnic
+        -:   68: */
+function readElectronicForUpdate called 0 returned 0% blocks executed 0%
+    #####:   69:void readElectronicForUpdate(MyList* Electronics)
+        -:   70:{
+        -:   71:    int ID;
+    #####:   72:    printf("\nIntroduceti ID-ul:");
+    %%%%%:   72-block  0
+call    0 never executed
+    #####:   73:    scanf_s("%d", &ID);
+call    0 never executed
+    #####:   74:    bool exista = false;
+    #####:   75:    for(int i=0; i < Electronics->lg; i++)
+    %%%%%:   75-block  0
+    %%%%%:   75-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   76:        if(Electronics->elems[i].ID==ID)
+    %%%%%:   76-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   77:            exista = true;
+    %%%%%:   77-block  0
+    #####:   78:    if(exista)
+    %%%%%:   78-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   79:    {
+        -:   80:        int price, quantity;
+    #####:   81:        printf("\nIntroduceti pretul (Introduceti -1 daca vreti sa ramana neactualizat):");
+    %%%%%:   81-block  0
+call    0 never executed
+    #####:   82:        scanf_s("%d", &price);
+call    0 never executed
+    #####:   83:        printf("\nIntroduceti cantitatea (Introduceti -1 daca vreti sa ramana neactualizata):");
+call    0 never executed
+    #####:   84:        scanf_s("%d", &quantity);
+call    0 never executed
+    #####:   85:        int error = updateElectronicService(Electronics, ID, price, quantity);
+call    0 never executed
+    #####:   86:        if(error == 0)
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   87:            printf("\nDate actualizate!\n");
+    %%%%%:   87-block  0
+call    0 never executed
+    #####:   88:    } else printf("\nProdus inexistent!\n");
+    %%%%%:   88-block  0
+call    0 never executed
+    #####:   89:}
+        -:   90:
+        -:   91:/*
+        -:   92: * functie de citire a parametrilor unui electronic pentru stergere
+        -:   93: * pre Electronics = lista dinamica
+        -:   94: * post s-a citit ID-ul unui electrocasnic destinat stergerii
+        -:   95: */
+function readElectronicForDeletion called 0 returned 0% blocks executed 0%
+    #####:   96:void readElectronicForDeletion(MyList* Electronics)
+        -:   97:{
+        -:   98:    int ID;
+    #####:   99:    printf("\nIntroduceti ID-ul:\n");
+    %%%%%:   99-block  0
+call    0 never executed
+    #####:  100:    scanf_s("%d", &ID);
+call    0 never executed
+    #####:  101:    bool exista = false;
+    #####:  102:    for(int i=0; i < Electronics->lg; i++)
+    %%%%%:  102-block  0
+    %%%%%:  102-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  103:        if(Electronics->elems[i].ID==ID)
+    %%%%%:  103-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  104:            exista = true;
+    %%%%%:  104-block  0
+    #####:  105:    if(!exista)
+    %%%%%:  105-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  106:        printf("\nProdus inexistent!\n");
+    %%%%%:  106-block  0
+call    0 never executed
+        -:  107:    else
+        -:  108:    {
+    #####:  109:        int error = deleteElectronicService(Electronics, ID);
+    %%%%%:  109-block  0
+call    0 never executed
+    #####:  110:        if(!error)
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  111:            printf("\nProdus sters cu succes!\n");
+    %%%%%:  111-block  0
+call    0 never executed
+        -:  112:        else
+    #####:  113:            printf("\nEroare!\n");
+    %%%%%:  113-block  0
+call    0 never executed
+        -:  114:    }
+    #####:  115:}
+        -:  116:
+        -:  117:/*
+        -:  118: * functie de afisare a tuturor electronicelor
+        -:  119: * post s-au afisat toate electrocasnicele din lista dinamica
+        -:  120: */
+function printAllElectronics called 0 returned 0% blocks executed 0%
+    #####:  121:void printAllElectronics(MyList* Electronics)
+        -:  122:{
+    #####:  123:    for(int i = 0; i < Electronics->lg; i++)
+    %%%%%:  123-block  0
+    %%%%%:  123-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+        -:  124:    {
+    #####:  125:        printf("%d.  ", Electronics->elems[i].ID);
+    %%%%%:  125-block  0
+call    0 never executed
+    #####:  126:        printf("Tip: %s  ", Electronics->elems[i].type);
+call    0 never executed
+    #####:  127:        printf("Producator: %s  ", Electronics->elems[i].producer);
+call    0 never executed
+    #####:  128:        printf("Model: %s  ", Electronics->elems[i].model);
+call    0 never executed
+    #####:  129:        printf("Pret: %d  ", Electronics->elems[i].price);
+call    0 never executed
+    #####:  130:        printf("Cantitate: %d\n", Electronics->elems[i].quantity);
+call    0 never executed
+        -:  131:    }
+    #####:  132:}
+        -:  133:
+        -:  134:/*
+        -:  135: * functie de pornire a programului
+        -:  136: */
+function run called 0 returned 0% blocks executed 0%
+    #####:  137:void run()
+        -:  138:{
+    #####:  139:    MyList* Electronics = createEmpty();
+    %%%%%:  139-block  0
+call    0 never executed
+    #####:  140:    int ruleaza = 1;
+    #####:  141:    while(ruleaza)
+    %%%%%:  141-block  0
+branch  0 never executed
+branch  1 never executed (fallthrough)
+        -:  142:    {
+    #####:  143:        printf("\n1.Adauga electrocasnic\n2.Actualizeaza electrocasnic\n3.Sterge electrocasnic\n4.Afiseaza electrocasnice\n0.Iesire\n");
+    %%%%%:  143-block  0
+call    0 never executed
+    #####:  144:        int cmd = 0;
+    #####:  145:        scanf_s("%d", &cmd);
+call    0 never executed
+    #####:  146:        switch (cmd)
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  147:        {
+    #####:  148:            case 1:
+    #####:  149:                readElectronic(Electronics);
+    %%%%%:  149-block  0
+call    0 never executed
+    #####:  150:                break;
+    #####:  151:            case 2:
+    #####:  152:                readElectronicForUpdate(Electronics);
+    %%%%%:  152-block  0
+call    0 never executed
+    #####:  153:                break;
+    #####:  154:            case 3:
+    #####:  155:                readElectronicForDeletion(Electronics);
+    %%%%%:  155-block  0
+call    0 never executed
+    #####:  156:                break;
+    #####:  157:            case 4:
+    #####:  158:                printAllElectronics(Electronics);
+    %%%%%:  158-block  0
+call    0 never executed
+    #####:  159:                break;
+    #####:  160:            case 0:
+    #####:  161:                ruleaza = 0;
+    #####:  162:                break;
+    %%%%%:  162-block  0
+    #####:  163:            default:
+    #####:  164:                printf("Comanda inexistenta!\n");
+    %%%%%:  164-block  0
+call    0 never executed
+        -:  165:        }
+        -:  166:    }
+    #####:  167:    destroy(Electronics);
+    %%%%%:  167-block  0
+call    0 never executed
+    #####:  168:}

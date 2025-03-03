@@ -1,0 +1,101 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab8-9/domain.cpp
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domain.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domain.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 4/2/2024.
+        -:    3://
+        -:    4:#include "domain.h"
+        -:    5:
+        -:    6:const int val=9;
+        -:    7:
+function _ZNK6Masina20get_nr_inmatriculareB5cxx11Ev called 144 returned 100% blocks executed 100%
+      144:    8:string Masina::get_nr_inmatriculare() const {
+      144:    9:    return nr_inmatriculare;
+      144:    9-block  0
+call    0 returned 144
+        -:   10:}
+        -:   11:
+function _ZNK6Masina14get_producatorB5cxx11Ev called 69 returned 100% blocks executed 100%
+       69:   12:string Masina::get_producator() const {
+       69:   13:    return producator;
+       69:   13-block  0
+call    0 returned 69
+        -:   14:}
+        -:   15:
+function _ZNK6Masina9get_modelB5cxx11Ev called 43 returned 100% blocks executed 100%
+       43:   16:string Masina::get_model() const {
+       43:   17:    return model;
+       43:   17-block  0
+call    0 returned 43
+        -:   18:}
+        -:   19:
+function _ZNK6Masina7get_tipB5cxx11Ev called 47 returned 100% blocks executed 100%
+       47:   20:string Masina::get_tip() const {
+       47:   21:    return tip;
+       47:   21-block  0
+call    0 returned 47
+        -:   22:}
+        -:   23:
+function _ZN6Masina14validateMasinaERKS_ called 35 returned 100% blocks executed 88%
+       35:   24:int Masina::validateMasina(const Masina &masina){
+       35:   25:    if(masina.get_nr_inmatriculare().size() != val)
+       35:   25-block  0
+call    0 returned 35
+branch  1 taken 35 (fallthrough)
+branch  2 taken 0 (throw)
+       35:   25-block  1
+call    3 returned 35
+call    4 returned 35
+branch  5 taken 3 (fallthrough)
+branch  6 taken 32
+    $$$$$:   25-block  2
+call    7 never executed
+        3:   26:        return 1;
+        3:   26-block  0
+       32:   27:    if(masina.get_producator().empty())
+       32:   27-block  0
+call    0 returned 32
+branch  1 taken 32 (fallthrough)
+branch  2 taken 0 (throw)
+       32:   27-block  1
+call    3 returned 32
+call    4 returned 32
+branch  5 taken 3 (fallthrough)
+branch  6 taken 29
+    $$$$$:   27-block  2
+call    7 never executed
+        3:   28:        return 2;
+        3:   28-block  0
+       29:   29:    if(masina.get_model().empty())
+       29:   29-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   29-block  1
+call    3 returned 29
+call    4 returned 29
+branch  5 taken 3 (fallthrough)
+branch  6 taken 26
+    $$$$$:   29-block  2
+call    7 never executed
+        3:   30:        return 3;
+        3:   30-block  0
+       26:   31:    if(masina.get_tip().empty())
+       26:   31-block  0
+call    0 returned 26
+branch  1 taken 26 (fallthrough)
+branch  2 taken 0 (throw)
+       26:   31-block  1
+call    3 returned 26
+call    4 returned 26
+branch  5 taken 3 (fallthrough)
+branch  6 taken 23
+        3:   32:        return 4;
+        3:   32-block  0
+       23:   33:    return 0;
+       23:   33-block  0
+        -:   34:}
+        -:   35:
+        -:   36:
+        -:   37:

@@ -1,0 +1,40 @@
+aparitii_aux([l1,l2,l3,...,ln],e,Nr)=>| Nr, daca l e vida
+				      |
+				      | aparitii_aux([l2,l3,...,ln],e,Nr+1), daca l1 = e
+				      |
+				      |
+				      | aparitii_aux([l2,l3,...,ln],e,Nr), altfel
+
+aparitii([l1,l2,...,ln],l1) = aparitii_aux([l2,...,ln],l1,0)
+
+
+eliminaRep([l1,l2,l3,...,ln])=          |Vida, daca l este vida
+					|
+					|eliminaRep([l2,l3,...,ln]) daca aparitii([l1,l2,...,ln], l1, Nr)>0
+				  	|
+				  	|
+				  	|l1 U eliminaRep([l2,l3,...,ln]) altfel
+
+eliminaRep([l1,l2,...,ln])
+
+
+cmmdc_aux(X,Y) =>    	 | Y, daca X = 0
+		 	 |
+		 	 | X,  daca Y = 0
+		 	 |
+		 	 | cmmdc_aux(Y,X mod Y), daca X>=Y 
+		 	 |
+		 	 | cmmdc_aux(X,Y mod X), daca Y>X
+
+cmmdc(X,Y) = cmmdc_aux(X,Y,Rez)
+
+cmmdcLista_aux([l1,l2,l3,...,ln],CMMDC) =     | CMMDC=l1, daca lungimea lui l este 1
+				              |
+				    	      |
+				    	      |
+				    	      |
+				    	      |cmmdcLista_aux([l2,...,ln]) 
+						cmmdc(l1,cmmdcLista([l2,...,ln]) , altfel
+				   	      |
+cmmdcLista([l1,l2,...,ln]) = cmmdcLista_aux([l1,l2,...,ln], 0) 
+

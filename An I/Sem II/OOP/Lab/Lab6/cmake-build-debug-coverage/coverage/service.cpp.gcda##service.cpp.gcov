@@ -1,0 +1,721 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab6/service.cpp
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 4/2/2024.
+        -:    3://
+        -:    4:#include "service.h"
+        -:    5:
+function _ZN13ServiceMasina19adaugaMasinaServiceERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_S6_S6_ called 23 returned 78% blocks executed 60%
+       23:    6:void ServiceMasina::adaugaMasinaService(string& nr_inmatriculare, string& producator, string& model, string& tip) {
+       23:    7:    Masina m(nr_inmatriculare, producator, model, tip);
+       23:    7-block  0
+call    0 returned 23
+branch  1 taken 23 (fallthrough)
+branch  2 taken 0 (throw)
+       23:    7-block  1
+call    3 returned 23
+branch  4 taken 23 (fallthrough)
+branch  5 taken 0 (throw)
+       23:    7-block  2
+call    6 returned 23
+branch  7 taken 23 (fallthrough)
+branch  8 taken 0 (throw)
+       23:    7-block  3
+call    9 returned 23
+branch 10 taken 23 (fallthrough)
+branch 11 taken 0 (throw)
+       23:    7-block  4
+call   12 returned 23
+branch 13 taken 23 (fallthrough)
+branch 14 taken 0 (throw)
+       23:    7-block  5
+call   15 returned 23
+call   16 returned 23
+call   17 returned 23
+call   18 returned 23
+    $$$$$:    7-block  6
+call   19 never executed
+    $$$$$:    7-block  7
+    $$$$$:    7-block  8
+call   20 never executed
+    $$$$$:    7-block  9
+    $$$$$:    7-block 10
+call   21 never executed
+    $$$$$:    7-block 11
+    $$$$$:    7-block 12
+call   22 never executed
+    $$$$$:    7-block 13
+       23:    8:    switch (Masina::validateMasina(m)) {
+call    0 returned 23
+branch  1 taken 23 (fallthrough)
+branch  2 taken 0 (throw)
+       23:    8-block  0
+branch  3 taken 1
+branch  4 taken 1
+branch  5 taken 1
+branch  6 taken 1
+branch  7 taken 19
+        1:    9:        case 1:
+        3:   10:            throw MasinaException("Numar de inmatriculare invalid!");
+        1:   10-block  0
+call    0 returned 1
+        1:   10-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   10-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   10-block  3
+    $$$$$:   10-block  4
+    $$$$$:   10-block  5
+call    7 never executed
+        1:   11:        case 2:
+        3:   12:            throw MasinaException("Producator invalid!");
+        1:   12-block  0
+call    0 returned 1
+        1:   12-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   12-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   12-block  3
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+call    7 never executed
+        1:   13:        case 3:
+        3:   14:            throw MasinaException("Model invalid!");
+        1:   14-block  0
+call    0 returned 1
+        1:   14-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   14-block  3
+    $$$$$:   14-block  4
+    $$$$$:   14-block  5
+call    7 never executed
+        1:   15:        case 4:
+        3:   16:            throw MasinaException("Tip invalid!");
+        1:   16-block  0
+call    0 returned 1
+        1:   16-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   16-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+call    7 never executed
+       19:   17:        default:
+        -:   18:            try{
+       19:   19:                repo.adaugaMasina(m);
+       19:   19-block  0
+call    0 returned 19
+branch  1 taken 18 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   20:            } catch (RepoException& e) {
+        1:   20-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   20-block  1
+call    2 returned 1
+        1:   21:                throw MasinaException(e.get_msg());
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   21-block  0
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   21-block  1
+    $$$$$:   21-block  2
+call    7 never executed
+        1:   22:            }
+        1:   22-block  0
+call    0 returned 1
+       18:   23:            break;
+       18:   23-block  0
+        -:   24:    }
+       23:   25:}
+       18:   25-block  0
+call    0 returned 18
+        5:   25-block  1
+call    1 returned 5
+        -:   26:
+function _ZN13ServiceMasina19stergeMasinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 73%
+        2:   27:void ServiceMasina::stergeMasinaService(const string &nr_inmatriculare) {
+        -:   28:    try {
+        2:   29:        repo.stergeMasina(nr_inmatriculare);
+        2:   29-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   30:    } catch (RepoException& e) {
+        1:   30-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   30-block  1
+call    2 returned 1
+        1:   31:        throw MasinaException(e.get_msg());
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   31-block  0
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   31-block  1
+    $$$$$:   31-block  2
+call    7 never executed
+        1:   32:    }
+        1:   32-block  0
+call    0 returned 1
+        1:   33:}
+        1:   33-block  0
+        -:   34:
+function _ZN13ServiceMasina21modificaMasinaServiceERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_S6_S6_ called 7 returned 29% blocks executed 60%
+        7:   35:void ServiceMasina::modificaMasinaService(string& nr_inmatriculare, string& producator, string& model, string& tip) {
+        7:   36:    Masina m(nr_inmatriculare, producator, model, tip);
+        7:   36-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   36-block  1
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+        7:   36-block  2
+call    6 returned 7
+branch  7 taken 7 (fallthrough)
+branch  8 taken 0 (throw)
+        7:   36-block  3
+call    9 returned 7
+branch 10 taken 7 (fallthrough)
+branch 11 taken 0 (throw)
+        7:   36-block  4
+call   12 returned 7
+branch 13 taken 7 (fallthrough)
+branch 14 taken 0 (throw)
+        7:   36-block  5
+call   15 returned 7
+call   16 returned 7
+call   17 returned 7
+call   18 returned 7
+    $$$$$:   36-block  6
+call   19 never executed
+    $$$$$:   36-block  7
+    $$$$$:   36-block  8
+call   20 never executed
+    $$$$$:   36-block  9
+    $$$$$:   36-block 10
+call   21 never executed
+    $$$$$:   36-block 11
+    $$$$$:   36-block 12
+call   22 never executed
+    $$$$$:   36-block 13
+        7:   37:    switch (Masina::validateMasina(m)) {
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   37-block  0
+branch  3 taken 1
+branch  4 taken 1
+branch  5 taken 1
+branch  6 taken 1
+branch  7 taken 3
+        1:   38:        case 1:
+        3:   39:            throw MasinaException("Numar de inmatriculare invalid!");
+        1:   39-block  0
+call    0 returned 1
+        1:   39-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   39-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   39-block  3
+    $$$$$:   39-block  4
+    $$$$$:   39-block  5
+call    7 never executed
+        1:   40:        case 2:
+        3:   41:            throw MasinaException("Producator invalid!");
+        1:   41-block  0
+call    0 returned 1
+        1:   41-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   41-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   41-block  3
+    $$$$$:   41-block  4
+    $$$$$:   41-block  5
+call    7 never executed
+        1:   42:        case 3:
+        3:   43:            throw MasinaException("Model invalid!");
+        1:   43-block  0
+call    0 returned 1
+        1:   43-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   43-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+call    7 never executed
+        1:   44:        case 4:
+        3:   45:            throw MasinaException("Tip invalid!");
+        1:   45-block  0
+call    0 returned 1
+        1:   45-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   45-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+    $$$$$:   45-block  5
+call    7 never executed
+        3:   46:        default:
+        -:   47:            try{
+        3:   48:                repo.modificaMasina(m);
+        3:   48-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   49:            }catch (RepoException& e) {
+        1:   49-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   49-block  1
+call    2 returned 1
+        1:   50:                throw MasinaException(e.get_msg());
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50-block  0
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   50-block  1
+    $$$$$:   50-block  2
+call    7 never executed
+        1:   51:            }
+        1:   51-block  0
+call    0 returned 1
+        2:   52:            break;
+        2:   52-block  0
+        -:   53:    }
+        7:   54:}
+        2:   54-block  0
+call    0 returned 2
+        5:   54-block  1
+call    1 returned 5
+        -:   55:
+function _ZN13ServiceMasina19getAllMasiniServiceEv called 3 returned 100% blocks executed 100%
+        3:   56:VectorDinamic<Masina> ServiceMasina::getAllMasiniService() {
+        3:   57:    return repo.getAllMasini();
+        3:   57-block  0
+call    0 returned 3
+call    1 returned 3
+        -:   58:}
+        -:   59:
+function _ZN13ServiceMasina20filterMasiniProducerERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 80%
+        2:   60:VectorDinamic<Masina> ServiceMasina::filterMasiniProducer(string& producator) {
+        2:   61:    VectorDinamic<Masina> masini;
+        2:   61-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   62:    masini = repo.getAllMasini();
+        2:   62-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   63:    VectorDinamic<Masina> rez;
+        2:   63-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   64:    for(int i = 0; i < masini.size(); i++)
+        2:   64-block  0
+        6:   64-block  1
+        8:   64-block  2
+call    0 returned 8
+branch  1 taken 6
+branch  2 taken 2 (fallthrough)
+        6:   65:        if(masini.get(i).get_producator() == producator)
+        6:   65-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   65-block  1
+call    4 returned 6
+call    5 returned 6
+branch  6 taken 3 (fallthrough)
+branch  7 taken 3
+    $$$$$:   65-block  2
+        3:   66:            rez.add(masini.get(i));
+        3:   66-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   67:    return rez;
+        2:   67-block  0
+        2:   67-block  1
+        2:   68:}
+        2:   68-block  0
+call    0 returned 2
+    $$$$$:   68-block  1
+call    1 never executed
+    $$$$$:   68-block  2
+call    2 never executed
+        -:   69:
+function _ZN13ServiceMasina16filterMasiniTypeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 80%
+        2:   70:VectorDinamic<Masina> ServiceMasina::filterMasiniType(string& tip)
+        -:   71:{
+        2:   72:    VectorDinamic<Masina> masini;
+        2:   72-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   73:    masini = repo.getAllMasini();
+        2:   73-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   74:    VectorDinamic<Masina> rez;
+        2:   74-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   75:    for(int i = 0; i < masini.size(); i++)
+        2:   75-block  0
+        6:   75-block  1
+        8:   75-block  2
+call    0 returned 8
+branch  1 taken 6
+branch  2 taken 2 (fallthrough)
+        6:   76:        if(masini.get(i).get_tip() == tip)
+        6:   76-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   76-block  1
+call    4 returned 6
+call    5 returned 6
+branch  6 taken 3 (fallthrough)
+branch  7 taken 3
+    $$$$$:   76-block  2
+        3:   77:            rez.add(masini.get(i));
+        3:   77-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   78:    return rez;
+        2:   78-block  0
+        2:   78-block  1
+        2:   79:}
+        2:   79-block  0
+call    0 returned 2
+    $$$$$:   79-block  1
+call    1 never executed
+    $$$$$:   79-block  2
+call    2 never executed
+        -:   80:
+function _ZN13ServiceMasina10sortMasiniEPFiRK6MasinaS2_E called 6 returned 100% blocks executed 81%
+        6:   81:VectorDinamic<Masina> ServiceMasina::sortMasini(Sort functieSortare)
+        -:   82:{
+        6:   83:    VectorDinamic<Masina> masini = repo.getAllMasini();
+        6:   83-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+       13:   84:    for(int i = 0; i < masini.size() - 1; i++)
+        6:   84-block  0
+        7:   84-block  1
+       13:   84-block  2
+call    0 returned 13
+branch  1 taken 7
+branch  2 taken 6 (fallthrough)
+       15:   85:        for(int j = i + 1; j < masini.size(); j++)
+        7:   85-block  0
+        8:   85-block  1
+       15:   85-block  2
+call    0 returned 15
+branch  1 taken 8
+branch  2 taken 7 (fallthrough)
+        8:   86:            if(functieSortare(masini.get(i), masini.get(j)) > 0) {
+        8:   86-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 8 (fallthrough)
+branch  4 taken 0 (throw)
+        8:   86-block  1
+branch  5 taken 8 (fallthrough)
+branch  6 taken 0
+        8:   87:                Masina aux = masini.get(i);
+        8:   87-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:   88:                masini.get(i) = masini.get(j);
+        8:   88-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 8 (fallthrough)
+branch  4 taken 0 (throw)
+        8:   89:                masini.get(j) = aux;
+        8:   89-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:   90:            }
+        8:   90-block  0
+call    0 returned 8
+    $$$$$:   90-block  1
+call    1 never executed
+        6:   91:    VectorDinamic<Masina> aux;
+        6:   91-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   92:    aux = masini;
+        6:   92-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+       12:   93:    return aux;
+        6:   93-block  0
+        6:   93-block  1
+        6:   94:}
+        6:   94-block  0
+call    0 returned 6
+    $$$$$:   94-block  1
+call    1 never executed
+    $$$$$:   94-block  2
+call    2 never executed
+        -:   95:
+function _Z19sortNrInmatriculareRK6MasinaS1_ called 1 returned 100% blocks executed 64%
+        1:   96:int sortNrInmatriculare(const Masina& m1, const Masina& m2) {
+        1:   97:    return m1.get_nr_inmatriculare().compare(m2.get_nr_inmatriculare());
+        1:   97-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   97-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   97-block  3
+        1:   97-block  4
+call    9 returned 1
+call   10 returned 1
+        1:   97-block  5
+    $$$$$:   97-block  6
+call   11 never executed
+    $$$$$:   97-block  7
+    $$$$$:   97-block  8
+call   12 never executed
+        -:   98:}
+        -:   99:
+function _Z7sortTipRK6MasinaS1_ called 1 returned 100% blocks executed 64%
+        1:  100:int sortTip(const Masina& m1, const Masina& m2) {
+        1:  101:    return m1.get_tip().compare(m2.get_tip());
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  101-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  101-block  3
+        1:  101-block  4
+call    9 returned 1
+call   10 returned 1
+        1:  101-block  5
+    $$$$$:  101-block  6
+call   11 never executed
+    $$$$$:  101-block  7
+    $$$$$:  101-block  8
+call   12 never executed
+        -:  102:}
+        -:  103:
+function _Z19sortProducatorModelRK6MasinaS1_ called 4 returned 100% blocks executed 56%
+        4:  104:int sortProducatorModel(const Masina& m1, const Masina& m2) {
+        4:  105:    if (m1.get_producator().compare(m2.get_producator()) > 0){
+        4:  105-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  105-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  105-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:  105-block  3
+call    9 returned 4
+call   10 returned 4
+branch 11 taken 3 (fallthrough)
+branch 12 taken 1
+    $$$$$:  105-block  4
+call   13 never executed
+    $$$$$:  105-block  5
+    $$$$$:  105-block  6
+call   14 never executed
+    $$$$$:  105-block  7
+call   15 never executed
+        3:  106:        return (m1.get_producator().compare(m2.get_producator()));
+        3:  106-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  106-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  106-block  2
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:  106-block  3
+        3:  106-block  4
+call    9 returned 3
+call   10 returned 3
+    $$$$$:  106-block  5
+call   11 never executed
+    $$$$$:  106-block  6
+    $$$$$:  106-block  7
+call   12 never executed
+    $$$$$:  106-block  8
+call   13 never executed
+        -:  107:    } else
+        1:  108:        return m1.get_model().compare(m2.get_model());
+        1:  108-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  108-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  108-block  3
+        1:  108-block  4
+call    9 returned 1
+call   10 returned 1
+    $$$$$:  108-block  5
+call   11 never executed
+    $$$$$:  108-block  6
+    $$$$$:  108-block  7
+call   12 never executed
+        -:  109:}
+        -:  110:
+function _Z14sortProducatorRK6MasinaS1_ called 1 returned 100% blocks executed 64%
+        1:  111:int sortProducator(const Masina& m1, const Masina& m2) {
+        1:  112:    return m1.get_producator().compare(m2.get_producator());
+        1:  112-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  112-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  112-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  112-block  3
+        1:  112-block  4
+call    9 returned 1
+call   10 returned 1
+        1:  112-block  5
+    $$$$$:  112-block  6
+call   11 never executed
+    $$$$$:  112-block  7
+    $$$$$:  112-block  8
+call   12 never executed
+        -:  113:}
+        -:  114:
+function _Z9sortModelRK6MasinaS1_ called 1 returned 100% blocks executed 64%
+        1:  115:int sortModel(const Masina& m1, const Masina& m2) {
+        1:  116:    return m1.get_model().compare(m2.get_model());
+        1:  116-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  116-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  116-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  116-block  3
+        1:  116-block  4
+call    9 returned 1
+call   10 returned 1
+        1:  116-block  5
+    $$$$$:  116-block  6
+call   11 never executed
+    $$$$$:  116-block  7
+    $$$$$:  116-block  8
+call   12 never executed
+        -:  117:}

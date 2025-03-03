@@ -1,0 +1,55 @@
+        -:    0:Source:C:/Users/munte/CLionProjects/OOP-LAB-6-7/repository.h
+        -:    0:Graph:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\MasinaService.cpp.gcno
+        -:    0:Data:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\MasinaService.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <vector>
+        -:    3:#include <stdexcept>
+        -:    4:#include <cassert>
+        -:    5:#include "Masina.h"
+        -:    6:using std::vector;
+        -:    7:
+        -:    8:class RepoException{
+        -:    9:    string msg;
+        -:   10:public:
+        -:   11:    RepoException(string m): msg{m}{
+        -:   12:    }
+function _ZN13RepoException10getMessageB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   13:    string getMessage(){
+    #####:   14:        return msg;
+    %%%%%:   14-block  0
+call    0 never executed
+        -:   15:    }
+        -:   16:};
+        -:   17:
+        -:   18:class MasinaRepo {
+        -:   19:private:
+        -:   20:    vector<Masina> masini;
+        -:   21:public:
+        -:   22:    MasinaRepo(const MasinaRepo& ot) = delete;
+function _ZN10MasinaRepoC1Ev called 0 returned 0% blocks executed 0%
+    #####:   23:    MasinaRepo()=default;
+    %%%%%:   23-block  0
+call    0 never executed
+        -:   24:
+        -:   25:    void store(const Masina& m);
+        -:   26:
+        -:   27:    void actualizare(const Masina& m);
+        -:   28:
+        -:   29:    void stergere(const string& numar_inmatriculare);
+        -:   30:
+function _ZN10MasinaRepo7get_allEv called 0 returned 0% blocks executed 0%
+    #####:   31:    const vector<Masina>& get_all(){
+    #####:   32:        return masini;
+    %%%%%:   32-block  0
+        -:   33:    }
+        -:   34:};
+        -:   35:
+        -:   36:void testRepo();
+        -:   37:
+        -:   38:void testRepoActualizare();
+        -:   39:
+        -:   40:void testRepoStergere();
+        -:   41:
+        -:   42:void RepoTestAll();
+        -:   43:

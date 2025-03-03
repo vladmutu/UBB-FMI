@@ -1,0 +1,21 @@
+[2024-06-22 12:57:06] [info] Start Program:
+Path:"D:\UBB-FMI\An I\Sem II\OOP\Lab\Practic_Sesiune_Mutu_Vlad\x64\Debug\Practic_Sesiune_Mutu_Vlad.exe"
+Arguments:
+Working directory: "D:\UBB-FMI\An I\Sem II\OOP\Lab\Practic_Sesiune_Mutu_Vlad\"
+Modules: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\Practic_Sesiune_Mutu_Vlad\x64\Debug\Practic_Sesiune_Mutu_Vlad.exe Excluded: 
+Sources: Selected: D:\UBB-FMI\An I\Sem II\OOP\Lab\Practic_Sesiune_Mutu_Vlad Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\vladm\AppData\Local\Temp\0ntrtt3c.ntq 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2024-06-22 12:57:06] [info] Module: D:\UBB-FMI\An I\Sem II\OOP\Lab\Practic_Sesiune_Mutu_Vlad\x64\Debug\Practic_Sesiune_Mutu_Vlad.exe is selected because it matches selected pattern: D:\UBB-FMI\An I\Sem II\OOP\Lab\Practic_Sesiune_Mutu_Vlad\x64\Debug\Practic_Sesiune_Mutu_Vlad.exe
+[2024-06-22 12:57:08] [info] ----------------------------------------------------
+[2024-06-22 12:57:08] [info] Coverage binary generated in file: C:\Users\vladm\AppData\Local\Temp\0ntrtt3c.ntq
+[2024-06-22 12:57:08] [info] ----------------------------------------------------

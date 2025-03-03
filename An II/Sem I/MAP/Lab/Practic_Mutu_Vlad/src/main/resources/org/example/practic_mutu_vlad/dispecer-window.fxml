@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.practic_mutu_vlad.Controllers.DispecerWindow"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label translateY="10">Adauga Cursa</Label>
+    <Label translateY="30">Adresa de plecare</Label>
+    <TextField translateY="55" fx:id="adresaPlecare" />
+    <Label translateY="80">Adresa destinatie</Label>
+    <TextField translateY="105" fx:id="adresaDestinatie" />
+    <Label translateY="130">Nume Client</Label>
+    <TextField translateY="155" fx:id="numeClient" />
+    <Button translateY="180" fx:id="addOrderButton" onAction="#addOrder">Adauga Cursa</Button>
+
+
+</AnchorPane>

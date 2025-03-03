@@ -1,0 +1,36 @@
+﻿1;Alexandru State;Scoala Gimnaziala 'Iuliu Hatieganu';1
+2;Gabriel Pislaru;Scoala Gimnaziala 'Iuliu Hatieganu';1
+3;Adrian Doroftei;Scoala Gimnaziala 'Iuliu Hatieganu';1
+4;Abdul Nasser;Scoala Gimnaziala 'Iuliu Hatieganu';3
+5;Alex Butnaru;Scoala Gimnaziala 'Iuliu Hatieganu';3
+6;Hanganu Matei;Scoala Gimnaziala 'Iuliu Hatieganu';1
+7;Nicu Margine;Scoala Gimnaziala 'Iuliu Hatieganu';4
+8;Flavian Tanasa;Scoala Gimnaziala 'Iuliu Hatieganu';4
+9;Mara Boaca;Scoala Gimnaziala 'Iuliu Hatieganu';4
+10;Nicu Pop;Liceul cu Program Sportiv Cluj-Napoca;4
+11;Stefan Nasptase;Liceul cu Program Sportiv Cluj-Napoca;4
+12;Rares Perta;Liceul cu Program Sportiv Cluj-Napoca;2
+13;Mihai Cane;Liceul cu Program Sportiv Cluj-Napoca;2
+14;Cosmin Popa;Liceul cu Program Sportiv Cluj-Napoca;2
+15;Matei Tanasa;Liceul cu Program Sportiv Cluj-Napoca;2
+16;Matei Tataru;Liceul cu Program Sportiv Cluj-Napoca;2
+17;Stefan Atomulesei;Liceul cu Program Sportiv Cluj-Napoca;2
+18;Mihail Ghidoarca;Liceul cu Program Sportiv Cluj-Napoca;2
+19;Larisa Cristina Teodorescu;Liceul de Informatica "Tiberiu Popoviciu";2
+20;Catalin Teodorescu;Liceul de Informatica "Tiberiu Popoviciu";3
+21;Maria Huzum;Liceul de Informatica "Tiberiu Popoviciu";4
+22;Anastasia Georghiu;Liceul de Informatica "Tiberiu Popoviciu";4
+23;Ana Maria Barbulei;Liceul de Informatica "Tiberiu Popoviciu";1
+24;Ana Maria Alucai;Liceul de Informatica "Tiberiu Popoviciu";1
+25;Matei Gheorghiu;Liceul de Informatica "Tiberiu Popoviciu";1
+26;Murariu Emilia Cristina;Liceul de Informatica "Tiberiu Popoviciu";1
+27;Elena Gabriela;Liceul de Informatica "Tiberiu Popoviciu";1
+28;Irina Ioana Avasalcai;Liceul de Informatica "Tiberiu Popoviciu";1
+29;Gabriel Dumea;Scoala Gimnaziala “Horea”;3
+30;Daniel Ilioi;Scoala Gimnaziala “Horea”;3
+31;Matei Baciu;Scoala Gimnaziala “Horea”;3
+32;Emil Cosma;Scoala Gimnaziala “Horea”;3
+33;Octavian Cosofret;Scoala Gimnaziala “Horea”;4
+34;Elena Huzum;Scoala Gimnaziala “Horea”;4
+35;Irina Mihalachi;Scoala Gimnaziala “Horea”;4
+36;Cristian Soare;Scoala Gimnaziala “Horea”;4

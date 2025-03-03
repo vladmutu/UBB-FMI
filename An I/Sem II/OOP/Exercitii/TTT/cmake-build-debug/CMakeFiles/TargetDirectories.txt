@@ -1,0 +1,5 @@
+D:/UBB-FMI/An I/Sem II/OOP/Exercitii/TTT/cmake-build-debug/CMakeFiles/TTT.dir
+D:/UBB-FMI/An I/Sem II/OOP/Exercitii/TTT/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/UBB-FMI/An I/Sem II/OOP/Exercitii/TTT/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/UBB-FMI/An I/Sem II/OOP/Exercitii/TTT/cmake-build-debug/CMakeFiles/TTT_autogen_timestamp_deps.dir
+D:/UBB-FMI/An I/Sem II/OOP/Exercitii/TTT/cmake-build-debug/CMakeFiles/TTT_autogen.dir

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demodoi.Controllers.MainWindow"
+            prefHeight="400.0" prefWidth="800.0">
+    <VBox translateX="30" translateY="10" prefWidth="700">
+        <Label fx:id="numeuser"/>
+        <HBox prefWidth="700">
+            <TableView fx:id="tableViewTicketsBought" editable="true" layoutY="100" translateY="50" prefHeight="150" prefWidth="300">
+                <columns>
+                    <TableColumn fx:id="flightIdColumn" text="Flight ID" prefWidth="150"/>
+                    <TableColumn fx:id="purchaseTimeColumn" text="Purchase Time" prefWidth="150"/>
+                </columns>
+            </TableView>
+            <TableView fx:id="tableViewTicketsDate" editable="true" layoutY="100" translateY="50" prefHeight="150" prefWidth="300">
+                <columns>
+                    <TableColumn fx:id="flightIdDateColumn" text="Flight ID" prefWidth="150"/>
+                    <TableColumn fx:id="purchaseTimeDateColumn" text="Purchase Time" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </HBox>
+
+        <TableView fx:id="flightsView" prefHeight="100" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="flightFromColumn" text="From" prefWidth="100"/>
+                <TableColumn fx:id="flightToColumn" text="To" prefWidth="100"/>
+                <TableColumn fx:id="flightDepartureColumn" text="Departure" prefWidth="120"/>
+                <TableColumn fx:id="flightArrivalColumn" text="Arrival" prefWidth="120"/>
+                <TableColumn fx:id="flightSeatsColumn" text="Seats" prefWidth="50"/>
+                <TableColumn fx:id="actionColumn" prefWidth="100" text="Cumpara bilet"/>
+                <TableColumn fx:id="seatsLeftColumn" prefWidth="120" text="Seats left"/>
+            </columns>
+        </TableView>
+        <ComboBox fx:id="fromCombo" onAction="#fromAction"/>
+        <ComboBox fx:id="toCombo" onAction="#toAction"/>
+        <DatePicker fx:id="datePicker" onAction="#dateAction"/>
+    </VBox>
+
+</AnchorPane>

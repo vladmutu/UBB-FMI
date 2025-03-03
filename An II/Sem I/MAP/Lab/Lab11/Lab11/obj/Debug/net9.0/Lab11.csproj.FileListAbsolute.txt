@@ -1,0 +1,15 @@
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.GeneratedMSBuildEditorConfig.editorconfig
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.AssemblyInfoInputs.cache
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.AssemblyInfo.cs
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.csproj.CoreCompileInputs.cache
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.sourcelink.json
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\bin\Debug\net9.0\Lab11.exe
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\bin\Debug\net9.0\Lab11.deps.json
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\bin\Debug\net9.0\Lab11.runtimeconfig.json
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\bin\Debug\net9.0\Lab11.dll
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\bin\Debug\net9.0\Lab11.pdb
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.dll
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\refint\Lab11.dll
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.pdb
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\Lab11.genruntimeconfig.cache
+D:\UBB-FMI\An II\Sem I\MAP\Lab\Lab11\Lab11\obj\Debug\net9.0\ref\Lab11.dll

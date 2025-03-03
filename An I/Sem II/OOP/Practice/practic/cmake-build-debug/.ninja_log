@@ -1,0 +1,25 @@
+# ninja log v5
+25	118	7380705437713451	practic_autogen/mocs_compilation.cpp	282d6316c0ae4fe7
+424	624	7380676125386630	CMakeFiles/practic.dir/teste.cpp.obj	e3b5202b21fd862c
+25	118	7380705437713451	D:/UBB-FMI/An I/Sem II/OOP/Practice/practic/cmake-build-debug/practic_autogen/mocs_compilation.cpp	282d6316c0ae4fe7
+25	118	7380705437713451	practic_autogen/timestamp	282d6316c0ae4fe7
+25	118	7380705437713451	D:/UBB-FMI/An I/Sem II/OOP/Practice/practic/cmake-build-debug/practic_autogen/timestamp	282d6316c0ae4fe7
+120	4241	7380705478935906	CMakeFiles/practic.dir/main.cpp.obj	4e1b6dfd0f6d805a
+234	366	7380646998621067	CMakeFiles/practic.dir/practic_autogen/mocs_compilation.cpp.obj	b434fdad74079ff1
+4242	4593	7380705480837581	practic.exe	94c70a8195b9146e
+214	930	7380676366493762	CMakeFiles/practic.dir/domain.cpp.obj	f71f2db452afb363
+225	1285	7380676370061202	CMakeFiles/practic.dir/service.cpp.obj	845134eb5a9b3d5b
+227	1173	7380676784478605	CMakeFiles/practic.dir/repository.cpp.obj	d4f3ffc578b28ff2
+100	4220	7380704706467740	CMakeFiles/practic.dir/gui.cpp.obj	4ec9ac01d536fc1d
+25	126	7380705908274602	practic_autogen/timestamp	282d6316c0ae4fe7
+25	126	7380705908274602	practic_autogen/mocs_compilation.cpp	282d6316c0ae4fe7
+25	126	7380705908274602	D:/UBB-FMI/An I/Sem II/OOP/Practice/practic/cmake-build-debug/practic_autogen/timestamp	282d6316c0ae4fe7
+25	126	7380705908274602	D:/UBB-FMI/An I/Sem II/OOP/Practice/practic/cmake-build-debug/practic_autogen/mocs_compilation.cpp	282d6316c0ae4fe7
+129	4391	7380705950946321	CMakeFiles/practic.dir/main.cpp.obj	4e1b6dfd0f6d805a
+4391	4714	7380705952741366	practic.exe	94c70a8195b9146e
+28	116	7380716321742263	practic_autogen/timestamp	282d6316c0ae4fe7
+28	116	7380716321742263	practic_autogen/mocs_compilation.cpp	282d6316c0ae4fe7
+28	116	7380716321742263	D:/UBB-FMI/An I/Sem II/OOP/Practice/practic/cmake-build-debug/practic_autogen/timestamp	282d6316c0ae4fe7
+28	116	7380716321742263	D:/UBB-FMI/An I/Sem II/OOP/Practice/practic/cmake-build-debug/practic_autogen/mocs_compilation.cpp	282d6316c0ae4fe7
+118	4480	7380716365375709	CMakeFiles/practic.dir/main.cpp.obj	4e1b6dfd0f6d805a
+4480	4794	7380716367225208	practic.exe	94c70a8195b9146e

@@ -1,0 +1,36 @@
+        -:    0:Source:C:/Users/munte/CLionProjects/OOP-LAB-6-7/Masina.cpp
+        -:    0:Graph:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\Masina.cpp.gcno
+        -:    0:Data:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\Masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Masina.h"
+        -:    2:
+        -:    3:/**
+        -:    4: * Functie care returneaza numarul de inmatriculare al unei masini.
+        -:    5: * @return
+        -:    6: */
+function _ZNK6Masina23get_numar_inmatriculareB5cxx11Ev called 54 returned 100% blocks executed 100%
+       54:    7:string Masina::get_numar_inmatriculare() const{
+       54:    8:    return numar_inmatriculare;
+       54:    8-block  0
+call    0 returned 54
+        -:    9:}
+        -:   10:/**
+        -:   11: * Functie care returneaza modelul unei masini.
+        -:   12: * @return
+        -:   13: */
+function _ZNK6Masina9get_modelB5cxx11Ev called 4 returned 100% blocks executed 100%
+        4:   14:string Masina::get_model() const{
+        4:   15:    return model;
+        4:   15-block  0
+call    0 returned 4
+        -:   16:}
+        -:   17:/**
+        -:   18: * Functie care returneaza categoria unei masini.
+        -:   19: * @return
+        -:   20: */
+function _ZNK6Masina13get_categorieB5cxx11Ev called 4 returned 100% blocks executed 100%
+        4:   21:string Masina::get_categorie() const{
+        4:   22:    return categorie;
+        4:   22-block  0
+call    0 returned 4
+        -:   23:}

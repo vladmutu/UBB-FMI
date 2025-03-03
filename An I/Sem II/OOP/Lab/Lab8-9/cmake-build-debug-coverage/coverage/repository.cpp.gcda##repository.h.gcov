@@ -1,0 +1,88 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab8-9/repository.h
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repository.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab8-9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 4/2/2024.
+        -:    3://
+        -:    4:#pragma once
+        -:    5:
+        -:    6:#include <utility>
+        -:    7:#include <vector>
+        -:    8:using std::vector;
+        -:    9:#include <string>
+        -:   10:using std::string;
+        -:   11:
+        -:   12:#include "domain.h"
+        -:   13:#include "VectorDinamic.h"
+        -:   14:
+        -:   15:/*
+        -:   16:    Clasa de exceptii pentru repo
+        -:   17:*/
+        -:   18:class RepoException : public std::exception{
+        -:   19:    string msg;
+        -:   20:public:
+function _ZN13RepoExceptionC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:   21:    explicit RepoException(string m) : msg{std::move( m )} {
+        7:   21-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+        -:   22:
+        7:   23:    }
+        -:   24:
+        -:   25:    string get_msg() {
+        -:   26:        return msg;
+        -:   27:    }
+        -:   28:};
+        -:   29:
+        -:   30:/*
+        -:   31: * Clasa de repository pentru masini
+        -:   32: * vector dinamic
+        -:   33: */
+        -:   34:class MasinaRepo {
+        -:   35:private:
+        -:   36:    vector<Masina> masini;
+        -:   37:public:
+        -:   38:    MasinaRepo() = default;
+        -:   39:    ~MasinaRepo() = default;
+        -:   40:    /*
+        -:   41:     * Adauga o masina in lista de masini
+        -:   42:     * Date de intrare: masina - Masina
+        -:   43:     * Date de iesire: -
+        -:   44:     * pre: masina este valida si lista de masini nu contine masina cu acelasi nr_inmatriculare
+        -:   45:     * post: masina este adaugata in lista de masini
+        -:   46:     * post: lungimea listei de masini este cu 1 mai mare
+        -:   47:     * exceptie: daca masina cu nr_inmatriculare exista deja
+        -:   48:     */
+        -:   49:    void adaugaMasina(const Masina& masina);
+        -:   50:
+        -:   51:
+        -:   52:    /*
+        -:   53:     * Sterge o masina din lista de masini
+        -:   54:     * Date de intrare: nr_inmatriculare - string
+        -:   55:     * Date de iesire: -
+        -:   56:     * post: masina cu nr_inmatriculare este stearsa din lista de masini
+        -:   57:     * post: lungimea listei de masini este cu 1 mai mica
+        -:   58:     * exceptie: daca masina cu nr_inmatriculare nu exista
+        -:   59:     */
+        -:   60:    void stergeMasina(const string& nr_inmatriculare);
+        -:   61:
+        -:   62:    /*
+        -:   63:     * Modifica o masina din lista de masini
+        -:   64:     * Date de intrare: masina - Masina
+        -:   65:     * Date de iesire: -
+        -:   66:     * post: masina cu nr_inmatriculare este modificata
+        -:   67:     * exceptie: daca masina cu nr_inmatriculare nu exista
+        -:   68:     */
+        -:   69:    void modificaMasina(const Masina& masina);
+        -:   70:
+        -:   71:    /*
+        -:   72:     * Returneaza toate masinile din lista de masini
+        -:   73:     * Date de intrare: -
+        -:   74:     * Date de iesire: vector<Masina>
+        -:   75:     * post: se returneaza toate masinile din lista de masini
+        -:   76:     */
+        -:   77:    vector<Masina>& getAllMasini();
+        -:   78:
+        -:   79:};

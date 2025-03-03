@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.util.Callback?>
+<?import javafx.scene.control.skin.TabPaneSkin.TabControlButtons?>
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.UserWindow">
+    <VBox>
+        <Label fx:id="email" text="test" />
+        <HBox>
+            <VBox>
+                <TableView fx:id="tableViewShows" editable="true" layoutX="200" layoutY="100">
+                    <columns>
+                        <TableColumn fx:id="showNameColumn" text="Show name" prefWidth="100" />
+                        <TableColumn fx:id="durationMinutesColumn" text="Duration(in minutes)" prefWidth="150" />
+                        <TableColumn fx:id="startDateColumn" text="Start date and time" prefWidth="150" />
+                        <TableColumn fx:id="numberOfSeatsColumn" text="Number of seats" prefWidth="100" />
+                        <TableColumn fx:id="createdAtColumn" text="Created at" prefWidth="100" />
+                        <TableColumn fx:id="actionColumn"/>
+                    </columns>
+                </TableView>
+                <HBox>
+                    <Button fx:id="prevButton" onAction="#onPreviousPage">Prev</Button>
+                    <Button fx:id="nextButton" onAction="#onNextPage">Next</Button>
+                </HBox>
+            </VBox>
+
+        </HBox>
+
+    </VBox>
+</AnchorPane>

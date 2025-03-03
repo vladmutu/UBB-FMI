@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\repository.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:repository.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\teste.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:teste.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\teste.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:teste.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\repository.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:repository.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\VectorDinamic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:VectorDinamic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\domain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:domain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\ui.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:ui.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\domain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{97E2AC32-950F-4782-82AD-8D7746403B01}|Lab6_VS.vcxproj|solutionrelative:domain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "teste.cpp",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\teste.cpp",
+              "RelativeDocumentMoniker": "teste.cpp",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\teste.cpp",
+              "RelativeToolTip": "teste.cpp",
+              "ViewState": "AQIAAN4AAAAAAAAAAAAAAKsBAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-02T17:14:52.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VectorDinamic.h",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\VectorDinamic.h",
+              "RelativeDocumentMoniker": "VectorDinamic.h",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\VectorDinamic.h",
+              "RelativeToolTip": "VectorDinamic.h",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAALAAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-14T17:28:36.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "repository.h",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\repository.h",
+              "RelativeDocumentMoniker": "repository.h",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\repository.h",
+              "RelativeToolTip": "repository.h",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAACUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-02T17:17:01.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "service.h",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\service.h",
+              "RelativeDocumentMoniker": "service.h",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\service.h",
+              "RelativeToolTip": "service.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-02T17:16:52.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ui.h",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\ui.h",
+              "RelativeDocumentMoniker": "ui.h",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\ui.h",
+              "RelativeToolTip": "ui.h",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-02T17:16:06.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "domain.h",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\domain.h",
+              "RelativeDocumentMoniker": "domain.h",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\domain.h",
+              "RelativeToolTip": "domain.h",
+              "ViewState": "AQIAADUAAAAAAAAAAAAQwFUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-02T17:15:57.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "teste.h",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\teste.h",
+              "RelativeDocumentMoniker": "teste.h",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\teste.h",
+              "RelativeToolTip": "teste.h",
+              "ViewState": "AQIAADsAAAAAAAAAAAAQwFgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-02T17:15:48.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-02T17:15:24.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ui.cpp",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\ui.cpp",
+              "RelativeDocumentMoniker": "ui.cpp",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\ui.cpp",
+              "RelativeToolTip": "ui.cpp",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAQwMMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-02T17:15:20.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "repository.cpp",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\repository.cpp",
+              "RelativeDocumentMoniker": "repository.cpp",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\repository.cpp",
+              "RelativeToolTip": "repository.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-02T17:15:14.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "service.cpp",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\service.cpp",
+              "RelativeDocumentMoniker": "service.cpp",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\service.cpp",
+              "RelativeToolTip": "service.cpp",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAE0AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-02T17:15:06.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "domain.cpp",
+              "DocumentMoniker": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\domain.cpp",
+              "RelativeDocumentMoniker": "domain.cpp",
+              "ToolTip": "D:\\UBB-FMI\\An I\\Sem II\\OOP\\Lab\\Lab6_VS\\domain.cpp",
+              "RelativeToolTip": "domain.cpp",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-02T17:15:01.164Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

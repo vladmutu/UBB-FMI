@@ -1,0 +1,27 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  extern printf
+     4                                  import printf msvcrt.dll
+     5                                  
+     6                                  ; our data is declared here (the variables needed by our program)
+     7                                  segment data use32 class=data
+     8                                      ; ...
+     9                                  ; our code starts here
+    10                                  segment code use32 class=code
+    11                                      global afisare
+    12                                      afisare:
+    13 00000000 8B4C2404                        mov ecx, [esp+4]
+    14 00000004 8B742408                        mov esi, [esp+8]
+    15 00000008 E312                            jecxz final
+    16                                      repeta:
+    17                                          
+    18 0000000A B800000000                      mov eax, 0
+    19 0000000F AC                              lodsb
+    20                                          
+    21 00000010 50                              push eax
+    22 00000011 FF15[00000000]                  call [printf]
+    23 00000017 83C408                          add esp, 4*2
+    24                                          
+    25 0000001A E2EE                            loop repeta
+    26                                          final:
+    27 0000001C C20800                          ret 2*4

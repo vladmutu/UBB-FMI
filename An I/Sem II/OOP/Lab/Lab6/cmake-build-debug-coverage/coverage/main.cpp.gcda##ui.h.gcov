@@ -1,0 +1,68 @@
+        -:    0:Source:D:/UBB-FMI/An I/Sem II/OOP/Lab/Lab6/ui.h
+        -:    0:Graph:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
+        -:    0:Data:D:\UBB-FMI\An I\Sem II\OOP\Lab\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by vladm on 4/2/2024.
+        -:    3://
+        -:    4:#pragma once
+        -:    5:#include <utility>
+        -:    6:#include <iostream>
+        -:    7:#include "service.h"
+        -:    8:using namespace std;
+        -:    9:
+        -:   10:class UI {
+        -:   11:private:
+        -:   12:    ServiceMasina& service;
+        -:   13:public:
+function _ZN2UIC1ER13ServiceMasina called 1 returned 100% blocks executed 100%
+        1:   14:    explicit UI(ServiceMasina& service) : service{service} {
+        -:   15:
+        1:   16:    }
+        -:   17:
+        -:   18:    /*
+        -:   19:     * functie de citire si adaugare a unei masini
+        -:   20:     */
+        -:   21:    void citireAdaugareMasina();
+        -:   22:
+        -:   23:    /*
+        -:   24:     * functie de citire al unui nr de inmatriculare si stergere a unei masini cu acel nr de inmatriculare
+        -:   25:     */
+        -:   26:    void citireStergereMasina();
+        -:   27:
+        -:   28:    /*
+        -:   29:     * functie de citire si modificare a unei masini avand un nr de inmatriculare dat
+        -:   30:     */
+        -:   31:    void citireModificareMasina();
+        -:   32:
+        -:   33:    /*
+        -:   34:     * functie de afisare a tuturor masinilor
+        -:   35:     */
+        -:   36:    void afisareMasini();
+        -:   37:
+        -:   38:    /*
+        -:   39:     * functie de afisare a meniului
+        -:   40:     */
+        -:   41:    static void menu();
+        -:   42:
+        -:   43:    /*
+        -:   44:     * functie de start a programului
+        -:   45:     */
+        -:   46:    void run();
+        -:   47:
+        -:   48:    /*
+        -:   49:     * functie de citire pentru filtrarea dupa producator
+        -:   50:     */
+        -:   51:    void citireFiltrareProducator();
+        -:   52:
+        -:   53:    /*
+        -:   54:     * functie de citire pentru filtrarea dupa tip
+        -:   55:     */
+        -:   56:    void citireFiltrareTip();
+        -:   57:
+        -:   58:    /*
+        -:   59:     * functie de citire pentru sortare
+        -:   60:     */
+        -:   61:    void sortare();
+        -:   62:};
+        -:   63:

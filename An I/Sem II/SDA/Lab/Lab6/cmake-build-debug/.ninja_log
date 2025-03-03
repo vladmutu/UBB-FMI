@@ -1,0 +1,24 @@
+# ninja log v5
+0	137	7378647538031331	CMakeFiles/Lab6.dir/main.cpp.obj	434040ca04c8fa34
+3	345	7379297033106769	CMakeFiles/Lab6.dir/Dictionar.cpp.obj	343fb05a316c4d8a
+11	192	7379285412725570	CMakeFiles/Lab6.dir/TestScurt.cpp.obj	1cf90b1c8e55a3f5
+6	151	7379297031163680	CMakeFiles/Lab6.dir/IteratorDictionar.cpp.obj	e9b19f6e28af91d8
+2	309	7378647708039209	CMakeFiles/Lab6.dir/App.cpp.obj	4134890ca9745d51
+14	446	7379285415277121	CMakeFiles/Lab6.dir/TestExtins.cpp.obj	bbd50a4569202d7c
+345	432	7379297033928077	Lab6.exe	c17e5d39ce23e406
+36	370	7380724598486357	CMakeFiles/Lab6.dir/main.cpp.obj	434040ca04c8fa34
+67	732	7380724601915862	CMakeFiles/Lab6.dir/IteratorDictionar.cpp.obj	e9b19f6e28af91d8
+80	748	7380724602266564	CMakeFiles/Lab6.dir/TestScurt.cpp.obj	1cf90b1c8e55a3f5
+43	917	7380724603968028	CMakeFiles/Lab6.dir/App.cpp.obj	4134890ca9745d51
+49	1074	7380724605531442	CMakeFiles/Lab6.dir/Dictionar.cpp.obj	343fb05a316c4d8a
+143	1172	7380724606520804	CMakeFiles/Lab6.dir/TestExtins.cpp.obj	bbd50a4569202d7c
+1172	1383	7380724608533131	Lab6.exe	da0df9c89fd1451e
+29	370	7380725425155007	CMakeFiles/Lab6.dir/TestScurt.cpp.obj	1cf90b1c8e55a3f5
+371	504	7380725426375334	Lab6.exe	da0df9c89fd1451e
+42	749	7380735442193182	CMakeFiles/Lab6.dir/Dictionar.cpp.obj	343fb05a316c4d8a
+750	890	7380735443519920	Lab6.exe	da0df9c89fd1451e
+53	399	7380737290660650	CMakeFiles/Lab6.dir/IteratorDictionar.cpp.obj	e9b19f6e28af91d8
+59	438	7380737291060591	CMakeFiles/Lab6.dir/TestScurt.cpp.obj	1cf90b1c8e55a3f5
+65	837	7380737294948901	CMakeFiles/Lab6.dir/TestExtins.cpp.obj	bbd50a4569202d7c
+46	850	7380737295170754	CMakeFiles/Lab6.dir/Dictionar.cpp.obj	343fb05a316c4d8a
+850	997	7380737296512988	Lab6.exe	da0df9c89fd1451e

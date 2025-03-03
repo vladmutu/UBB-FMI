@@ -1,0 +1,192 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit,printf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll
+    10                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    11                                  
+    12                                  ; our data is declared here (the variables needed by our program)
+    13                                  segment data use32 class=data
+    14 00000000 170015010B00251025-         s dd 01150017h, 1025000bh, 00321025h, 000ba006h, 0014001ah
+    14 00000009 10320006A00B001A00-
+    14 00000012 1400               
+    15                                      len1 equ ($-s)/4
+    16 00000014 <res 00000028>              d1 resw 20
+    17 0000003C 00000000                    len2 dd 0
+    18 00000040 <res 00000028>              d2 resw 20
+    19 00000068 00000000                    len3 dd 0
+    20 0000006C 0000                        maxval dw 0
+    21 0000006E 256400                      format db "%d", 0
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ; ...
+    26 00000000 BE[00000000]                    mov esi, s
+    27 00000005 BF[14000000]                    mov edi, d1
+    28 0000000A B905000000                      mov ecx, len1
+    29 0000000F E33B                            jecxz final_1
+    30                                      ;loop pentru a determina cuvintele high din dublucuvintele din s care sunt prime
+    31                                      repeta_1:
+    32 00000011 FC                              cld
+    33 00000012 AD                              lodsd ;eax avem dublucuvantul
+    34 00000013 C1E810                          shr eax, 16; lasam in eax doar cuvantul high
+    35                                          
+    36 00000016 51                              push ecx
+    37 00000017 89C1                            mov ecx, eax
+    38 00000019 83F900                          cmp ecx, 0
+    39 0000001C 742A                            je not_ok
+    40 0000001E 83F901                          cmp ecx, 1
+    41 00000021 7425                            je not_ok
+    42 00000023 83E901                          sub ecx, 1
+    43                                          
+    44                                          
+    45                                      ;loop pentru a verifica daca sunt numere prime
+    46                                      repeta_2:
+    47 00000026 FC                              cld
+    48 00000027 50                              push eax
+    49 00000028 83F901                          cmp ecx, 1
+    50 0000002B 740F                            je ok
+    51 0000002D BA00000000                      mov edx, 0
+    52 00000032 F7F1                            div ecx
+    53 00000034 83FA00                          cmp edx, 0
+    54 00000037 740F                            je not_ok
+    55 00000039 58                              pop eax
+    56                                          
+    57 0000003A E2EA                            loop repeta_2
+    58                                          
+    59                                          ok:
+    60 0000003C 58                              pop eax
+    61 0000003D 66AB                            stosw
+    62 0000003F 8005[3C000000]01                add byte [len2], 1
+    63 00000046 EB01                            jmp salt
+    64                                          not_ok:
+    65 00000048 58                              pop eax
+    66                                          salt:
+    67 00000049 59                              pop ecx
+    68 0000004A E2C5                            loop repeta_1
+    69                                          
+    70                                          final_1:
+    71                                          
+    72                                          
+    73                                          ;cream sirul d2
+    74 0000004C BE[00000000]                    mov esi, s
+    75 00000051 BF[40000000]                    mov edi, d2
+    76 00000056 B905000000                      mov ecx, len1
+    77 0000005B E369                            jecxz final_2
+    78                                         
+    79                                      repeta_3:
+    80 0000005D FC                              cld
+    81 0000005E AD                              lodsd
+    82 0000005F BB00000000                      mov ebx,0
+    83 00000064 6689C3                          mov bx,ax; ebx cuvantul low
+    84 00000067 C1E810                          shr eax, 16; eax cuvantul high
+    85 0000006A 51                              push ecx
+    86 0000006B 50                              push eax
+    87 0000006C B905000000                      mov ecx, 5
+    88                                      repeta_4:
+    89 00000071 FC                              cld
+    90 00000072 83F800                          cmp eax, 0
+    91 00000075 7412                            je ok_2
+    92                                          
+    93 00000077 88C2                            mov dl, al
+    94 00000079 C0E204                          shl dl, 4
+    95 0000007C C0EA04                          shr dl, 4
+    96 0000007F 80FA0A                          cmp dl, 0ah
+    97 00000082 7D11                            jge not_ok_1
+    98 00000084 C1E804                          shr eax, 4
+    99                                          
+   100 00000087 E2E8                            loop repeta_4
+   101                                          
+   102                                          ok_2:
+   103 00000089 58                              pop eax
+   104 0000008A 66AB                            stosw
+   105 0000008C 8005[68000000]01                add byte [len3], 1
+   106 00000093 EB01                            jmp salt_2
+   107                                          not_ok_1:
+   108 00000095 58                              pop eax
+   109                                          salt_2:
+   110                                          
+   111 00000096 89D8                            mov eax, ebx
+   112 00000098 50                              push eax
+   113 00000099 B905000000                      mov ecx, 5
+   114                                          
+   115                                      repeta_5:
+   116 0000009E FC                              cld
+   117 0000009F 83F800                          cmp eax, 0
+   118 000000A2 7412                            je ok_3
+   119                                          
+   120 000000A4 88C2                            mov dl, al
+   121 000000A6 C0E204                          shl dl, 4
+   122 000000A9 C0EA04                          shr dl, 4
+   123 000000AC 80FA0A                          cmp dl, 0ah
+   124 000000AF 7D11                            jge not_ok_2
+   125 000000B1 C1E804                          shr eax, 4
+   126                                      
+   127 000000B4 E2E8                            loop repeta_5 
+   128                                          ok_3:
+   129 000000B6 58                              pop eax
+   130 000000B7 66AB                            stosw
+   131 000000B9 8005[68000000]01                add byte [len3], 1
+   132 000000C0 EB01                            jmp salt_3
+   133                                          not_ok_2:
+   134 000000C2 58                              pop eax
+   135                                          salt_3:
+   136                                          
+   137 000000C3 59                              pop ecx
+   138                                          
+   139 000000C4 E297                            loop repeta_3
+   140                                          
+   141                                          final_2:
+   142                                          
+   143                                          ;cautam val max din d1
+   144                                          
+   145 000000C6 BE[14000000]                    mov esi, d1
+   146 000000CB 8B0D[3C000000]                  mov ecx, [len2]
+   147 000000D1 E314                            jecxz final_3
+   148                                          
+   149                                      repeta_6:
+   150 000000D3 FC                              cld
+   151 000000D4 66AD                            lodsw
+   152 000000D6 663B05[6C000000]                cmp ax, [maxval]
+   153 000000DD 7206                            jb not_ok_3
+   154                                          
+   155 000000DF 66A3[6C000000]                  mov [maxval], ax
+   156                                          
+   157                                          not_ok_3:
+   158                                          
+   159 000000E5 E2EC                            loop repeta_6
+   160                                          
+   161                                          final_3:
+   162                                          
+   163                                          ;verificam frecventa maxval in d2
+   164                                          
+   165 000000E7 BB00000000                      mov ebx, 0
+   166 000000EC BE[40000000]                    mov esi, d2
+   167 000000F1 8B0D[68000000]                  mov ecx, [len3]
+   168 000000F7 E30F                            jecxz final_4
+   169                                          
+   170                                      repeta_7:
+   171 000000F9 FC                              cld
+   172 000000FA 66AD                            lodsw
+   173 000000FC 663B05[6C000000]                cmp ax, [maxval]
+   174 00000103 7501                            jne next
+   175 00000105 43                              inc ebx
+   176                                          next:
+   177 00000106 E2F1                            loop repeta_7
+   178                                          
+   179                                          final_4:
+   180                                          
+   181                                          
+   182                                          ; afisam frecventa lui maxval
+   183                                          
+   184 00000108 53                              push ebx
+   185 00000109 68[6E000000]                    push dword format
+   186 0000010E FF15[00000000]                  call [printf]
+   187 00000114 83C408                          add esp, 4*2
+   188                                          ; exit(0)
+   189 00000117 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   190 00000119 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

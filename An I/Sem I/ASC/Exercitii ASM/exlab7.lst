@@ -1,0 +1,66 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14                                      ;sortare
+    15 00000000 040000000700000001-         sir dd 4, 7, 1, 5, 2, 9, 2
+    15 00000009 000000050000000200-
+    15 00000012 000009000000020000-
+    15 0000001B 00                 
+    16                                      len equ ($-sir)/4
+    17 0000001C <res 0000001C>              dest resd len
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21 00000000 B907000000                      mov ecx, len
+    22 00000005 BF[1C000000]                    mov edi, dest
+    23                                          
+    24                                          repeta1:
+    25 0000000A B8FFFFFFFF                          mov eax, -1
+    26                                              
+    27 0000000F 57                                  push edi
+    28 00000010 51                                  push ecx
+    29 00000011 B907000000                          mov ecx, len
+    30 00000016 BF[00000000]                        mov edi, sir
+    31                                              
+    32                                              repeta2:
+    33 0000001B AF                                      scasd
+    34 0000001C 7208                                    jb continua
+    35 0000001E 8B47FC                                  mov eax, [edi - 4]
+    36 00000021 89FB                                    mov ebx, edi
+    37 00000023 83EB04                                  sub ebx, 4
+    38                                                  ;el min e in eax, iar pozitia in ebx
+    39                                                  continua:
+    40 00000026 E2F3                                loop repeta2
+    41                                          
+    42                                          
+    43 00000028 59                                  pop ecx
+    44 00000029 5F                                  pop edi
+    45                                              
+    46 0000002A AB                                  stosd
+    47 0000002B C703FFFFFFFF                        mov dword [ebx], -1
+    48                                              
+    49 00000031 E2D7                            loop repeta1
+    50                                          
+    51                                          
+    52                                          
+    53                                          
+    54 00000033 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    55 00000035 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
+    56                                  
+    57                                          
+    58                                          
+    59                                          
+    60                                          
+    61                                          
+    62                                          
+    63                                          

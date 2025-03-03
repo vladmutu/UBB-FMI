@@ -1,0 +1,119 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit,fopen,fread,fclose,printf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import fopen msvcrt.dll
+    10                                  import fread msvcrt.dll
+    11                                  import fclose msvcrt.dll
+    12                                  import printf msvcrt.dll
+    13                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    14                                  
+    15                                  ; our data is declared here (the variables needed by our program)
+    16                                  segment data use32 class=data
+    17                                      ; ...
+    18                                      ;pb4
+    19                                      ;Se da un fisier text. Sa se citeasca continutul fisierului, sa se contorizeze numarul de cifre impare si sa se afiseze aceasta valoare. Numele fisierului text este definit in segmentul de date.
+    20 00000000 696E7075742E747874-         nume_fisier db "input.txt", 0
+    20 00000009 00                 
+    21 0000000A 7200                        mod_acces db "r", 0
+    22 0000000C 00000000                    descriptor_fisier dd 0
+    23                                      
+    24 00000010 01000000                    dimensiune dd 1
+    25 00000014 64000000                    count dd 100
+    26                                      
+    27 00000018 <res 00000190>              sir resd 100
+    28 000001A8 00000000                    lungime_sir dd 0
+    29 000001AC FFFFFFFF                    cifra_max dd -1
+    30                                      
+    31 000001B0 25642000                    format db "%d ",0
+    32                                      
+    33 000001B4 <res 00000190>              dest resd 100
+    34                                      
+    35 00000344 0A000000                    zece dd 10
+    36                                      
+    37                                  ; our code starts here
+    38                                  segment code use32 class=code
+    39                                      start:
+    40                                          ;FILE * fopen(const char* nume_fisier,const char* mod_acces)
+    41 00000000 68[0A000000]                    push dword mod_acces
+    42 00000005 68[00000000]                    push dword nume_fisier
+    43 0000000A FF15[00000000]                  call [fopen]
+    44 00000010 83C408                          add esp, 4*2
+    45                                          
+    46 00000013 83F800                          cmp eax, 0
+    47 00000016 0F8482000000                    je final
+    48                                          
+    49 0000001C A3[0C000000]                    mov [descriptor_fisier], eax 
+    50                                          
+    51                                          ;int fread(void * str, int size, int count, FILE * stream)
+    52 00000021 FF35[0C000000]                  push dword [descriptor_fisier]
+    53 00000027 FF35[14000000]                  push dword [count]
+    54 0000002D FF35[10000000]                  push dword [dimensiune]
+    55 00000033 68[18000000]                    push dword sir
+    56 00000038 FF15[00000000]                  call [fread]
+    57 0000003E 83C410                          add esp, 4*4
+    58                                          
+    59 00000041 A3[A8010000]                    mov [lungime_sir], eax
+    60                                          
+    61 00000046 BE[18000000]                    mov esi, sir
+    62 0000004B 8B0D[A8010000]                  mov ecx, [lungime_sir]
+    63 00000051 FC                              cld
+    64 00000052 E33B                            jecxz iesireBucla
+    65                                          
+    66 00000054 B800000000                      mov eax, 0
+    67                                          
+    68                                          bucla:
+    69 00000059 50                                  push eax
+    70 0000005A AC                                  lodsb ;al
+    71 0000005B 88C3                                mov bl, al
+    72 0000005D 58                                  pop eax
+    73                                              
+    74 0000005E 80FB20                              cmp bl, ' '
+    75 00000061 7414                                je afisareNumar
+    76                                              
+    77 00000063 80FB00                              cmp bl, 0
+    78 00000066 740F                                je afisareNumar
+    79                                              
+    80 00000068 F725[44030000]                      mul dword [zece]
+    81 0000006E 80EB30                              sub bl, '0'
+    82 00000071 00D8                                add al, bl
+    83                                              
+    84                                              finalBucla:
+    85 00000073 E2E4                                loop bucla
+    86                                          
+    87 00000075 EB18                            jmp iesireBucla
+    88                                          
+    89                                          afisareNumar:
+    90                                          
+    91 00000077 51                              push ecx
+    92                                          
+    93 00000078 50                              push eax
+    94 00000079 68[B0010000]                    push dword format
+    95 0000007E FF15[00000000]                  call [printf]
+    96 00000084 83C408                          add esp, 4*2
+    97                                          
+    98 00000087 B800000000                      mov eax, 0
+    99 0000008C 59                              pop ecx
+   100 0000008D EBE4                            jmp finalBucla
+   101                                          
+   102                                          iesireBucla:
+   103                                          
+   104                                          ;int printf(const char * format, variabila_1, constanta_2, ...);
+   105                                          
+   106                                          
+   107                                          ;int fclose(FILE * descriptor)
+   108 0000008F FF35[0C000000]                  push dword [descriptor_fisier]
+   109 00000095 FF15[00000000]                  call [fclose]
+   110 0000009B 83C404                          add esp, 4
+   111                                          
+   112                                          
+   113                                          
+   114                                          
+   115                                          final:
+   116                                          ; exit(0)
+   117 0000009E 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   118 000000A0 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

@@ -1,0 +1,78 @@
+        -:    0:Source:C:/Users/munte/CLionProjects/OOP-LAB-6-7/Masina.h
+        -:    0:Graph:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\repository.cpp.gcno
+        -:    0:Data:C:\Users\munte\CLionProjects\OOP-LAB-6-7\cmake-build-debug-coverage\CMakeFiles\OOP_LAB_6_7.dir\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:
+        -:    4:using std::string;
+        -:    5:class  Masina {
+        -:    6:private:
+        -:    7:    string numar_inmatriculare;
+        -:    8:    string model;
+        -:    9:    string categorie;
+        -:   10:public:
+        -:   11:    string get_numar_inmatriculare() const;
+        -:   12:    string get_model() const;
+        -:   13:    string get_categorie() const;
+        -:   14:
+        -:   15:    /**
+        -:   16:     * Constructor pentru clasa Masina.
+        -:   17:     * @param numar_inmatriculare
+        -:   18:     * @param model
+        -:   19:     * @param categorie
+        -:   20:     */
+function _ZN6MasinaC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_ called 19 returned 100% blocks executed 62%
+       19:   21:    Masina(string numar_inmatriculare, string model, string categorie): numar_inmatriculare{numar_inmatriculare}, model{model}, categorie{categorie}{
+       19:   21-block  0
+call    0 returned 19
+call    1 returned 19
+branch  2 taken 19 (fallthrough)
+branch  3 taken 0 (throw)
+       19:   21-block  1
+call    4 returned 19
+branch  5 taken 19 (fallthrough)
+branch  6 taken 0 (throw)
+       19:   22:    }
+       19:   22-block  0
+    $$$$$:   22-block  1
+call    0 never executed
+    $$$$$:   22-block  2
+call    1 never executed
+        -:   23:
+        -:   24:    /**
+        -:   25:     * Constructor de copiere pentru clasa Masina.
+        -:   26:     * @param ot
+        -:   27:     */
+function _ZN6MasinaC1ERKS_ called 26 returned 100% blocks executed 62%
+       26:   28:    Masina(const Masina& ot):numar_inmatriculare{ot.numar_inmatriculare},model{ot.model},categorie{ot.categorie}{
+       26:   28-block  0
+call    0 returned 26
+call    1 returned 26
+branch  2 taken 26 (fallthrough)
+branch  3 taken 0 (throw)
+       26:   28-block  1
+call    4 returned 26
+branch  5 taken 26 (fallthrough)
+branch  6 taken 0 (throw)
+       26:   29:    }
+       26:   29-block  0
+    $$$$$:   29-block  1
+call    0 never executed
+    $$$$$:   29-block  2
+call    1 never executed
+        -:   30:
+function _ZN6MasinaaSERKS_ called 2 returned 100% blocks executed 100%
+        2:   31:    Masina& operator=(const Masina& ot){
+        2:   32:        numar_inmatriculare = ot.numar_inmatriculare;
+        2:   32-block  0
+call    0 returned 2
+        2:   33:        model = ot.model;
+call    0 returned 2
+        2:   34:        categorie = ot.categorie;
+call    0 returned 2
+        2:   35:        return *this;
+        -:   36:    }
+        -:   37:};
+        -:   38:
+        -:   39:
