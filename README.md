@@ -1,2 +1,2 @@
-Some of my projects from UBB-FMI
+Some of my projects from UBB-FMI\n
 Still ongoing...
