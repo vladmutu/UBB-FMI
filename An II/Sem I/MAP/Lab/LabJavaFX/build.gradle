@@ -24,9 +24,10 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+
 application {
-    mainModule = 'org.example.labjavafx'
-    mainClass = 'org.example.labjavafx.HelloApplication'
+    mainModule = 'org.example.socialnetwork'
+    mainClass = 'org.example.socialnetwork.SocialNetworkStart'
 }
 
 javafx {

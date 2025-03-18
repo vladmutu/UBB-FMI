@@ -32,12 +32,14 @@
             this.dataGridViewChild = new System.Windows.Forms.DataGridView();
             this.textBoxDescriereContact = new System.Windows.Forms.TextBox();
             this.labelDataContact = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labelTipContact = new System.Windows.Forms.Label();
             this.labelDescriereContact = new System.Windows.Forms.Label();
             this.radioButtonEmail = new System.Windows.Forms.RadioButton();
             this.radioButtonTelefon = new System.Windows.Forms.RadioButton();
             this.updateButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChild)).BeginInit();
             this.SuspendLayout();
@@ -77,13 +79,13 @@
             this.labelDataContact.TabIndex = 6;
             this.labelDataContact.Text = "Introduceti data contactului:";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(890, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(320, 29);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(890, 73);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(320, 29);
+            this.dateTimePicker.TabIndex = 7;
             // 
             // labelTipContact
             // 
@@ -108,6 +110,7 @@
             // radioButtonEmail
             // 
             this.radioButtonEmail.AutoSize = true;
+            this.radioButtonEmail.Checked = true;
             this.radioButtonEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonEmail.Location = new System.Drawing.Point(899, 165);
             this.radioButtonEmail.Name = "radioButtonEmail";
@@ -134,24 +137,49 @@
             // updateButton
             // 
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.Location = new System.Drawing.Point(937, 359);
+            this.updateButton.Location = new System.Drawing.Point(819, 357);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(204, 76);
             this.updateButton.TabIndex = 12;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // addButton
+            // 
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.Location = new System.Drawing.Point(1071, 357);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(204, 76);
+            this.addButton.TabIndex = 13;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.Location = new System.Drawing.Point(944, 472);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(204, 76);
+            this.deleteButton.TabIndex = 14;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1489, 769);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.radioButtonTelefon);
             this.Controls.Add(this.radioButtonEmail);
             this.Controls.Add(this.labelDescriereContact);
             this.Controls.Add(this.labelTipContact);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.labelDataContact);
             this.Controls.Add(this.textBoxDescriereContact);
             this.Controls.Add(this.dataGridViewChild);
@@ -172,12 +200,14 @@
         private System.Windows.Forms.DataGridView dataGridViewChild;
         private System.Windows.Forms.TextBox textBoxDescriereContact;
         private System.Windows.Forms.Label labelDataContact;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label labelTipContact;
         private System.Windows.Forms.Label labelDescriereContact;
         private System.Windows.Forms.RadioButton radioButtonEmail;
         private System.Windows.Forms.RadioButton radioButtonTelefon;
         private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button deleteButton;
     }
 }
 
